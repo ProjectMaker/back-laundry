@@ -32,7 +32,7 @@ function App() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe">
-                  BO
+                  CL
                 </Avatar>
               }
               title="Back Office Club Laverie"
