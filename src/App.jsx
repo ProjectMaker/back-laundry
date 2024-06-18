@@ -36,6 +36,7 @@ function App() {
                 <Route path={'/laundries'} element={<List />} />
 
                 <Route path={'/laundry/:id?'} element={<FormLaundry />} />
+                <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
               </Route>
             </Routes>
           </Stack>
