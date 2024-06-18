@@ -33,20 +33,9 @@ function App() {
             <Routes>
               <Route path={''} element={<Authenticated><Outlet /></Authenticated>}>
                 <Route path={'/'} element={<Navigate to={'/laundries'} />} />
-                <Route path={'/laundries'} element={(
-                  <>
-                    <HeaderCard>
-                      <Typography variant={'h6'}>Les laveries</Typography>
-                    </HeaderCard>
-                    <Card>
-                      <List />
-                    </Card>
-                  </>
-                  )} />
+                <Route path={'/laundries'} element={<List />} />
 
-                <Route path={'/laundry/:id?'} element={(
-                  <FormLaundry />
-                )} />
+                <Route path={'/laundry/:id?'} element={<FormLaundry />} />
               </Route>
             </Routes>
           </Stack>

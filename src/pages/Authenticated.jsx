@@ -25,7 +25,7 @@ export default function App({children}) {
   }, [])
 
   if (loading) {
-    return <Header><Typography variant={'h6'}>Chargement</Typography></Header>
+    return <Header><Typography variant={'h6'}>Chargement ...</Typography></Header>
   } else if (!session) {
     return (<SignUp />)
   }

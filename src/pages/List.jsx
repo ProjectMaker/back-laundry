@@ -10,14 +10,17 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography
+  Typography,
+  Stack
 } from '@mui/material'
 
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from "@mui/icons-material/Delete.js";
-
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from '@mui/icons-material/Add';
 import {client} from "../App.jsx";
 import {getLaundries, removeLaundry} from '../api/index.js'
+import HeaderCard, { Card } from "../components/HeaderCard.jsx";
+import Header from "../components/HeaderCard.jsx";
 
 const List = () => {
   const navigate = useNavigate()
@@ -27,7 +30,6 @@ const List = () => {
   })
   const mutationRemove = useMutation({
     mutationFn: async (id) => {
-      console.log('iiiiiii')
       await removeLaundry(id)
 
       return id
@@ -37,49 +39,61 @@ const List = () => {
     }
   })
   if (isLoading) {
-    return <Typography variant={'Chargement'} />
+    return <Header><Typography variant={'h6'}>Chargement</Typography></Header>
   } else if (error) {
-    return <Typography variant={"caption"} color={'error'}>{error.message}</Typography>
+    return <Header><Typography variant={'caption'} color={'error'}>{error.message}</Typography></Header>
   }
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Nom</TableCell>
-            <TableCell align="right">Département</TableCell>
-            <TableCell align="right">Ville</TableCell>
-            <TableCell align="right">Surface</TableCell>
-            <TableCell align="right">Prix</TableCell>
-            <TableCell />
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((row) => (
-            <TableRow
-              key={row.id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.postal_code}</TableCell>
-              <TableCell align="right">{row.city}</TableCell>
-              <TableCell align="right">{Number(row.surface).toLocaleString()} m2</TableCell>
-              <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
-              <TableCell align={"right"}>
-                <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
-                  <EditIcon />
-                </IconButton>
-                <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'warning'}>
-                  <DeleteIcon />
-                </IconButton>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      <HeaderCard>
+        <Stack justifyContent={'space-between'} direction={'row'} flex={1}>
+          <Typography variant={'h6'}>Les laveries</Typography>
+          <IconButton color={'success'} onClick={() => navigate('/laundry')}>
+            <AddIcon />
+          </IconButton>
+        </Stack>
+      </HeaderCard>
+      <Card>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Nom</TableCell>
+                <TableCell align="right">Département</TableCell>
+                <TableCell align="right">Ville</TableCell>
+                <TableCell align="right">Surface</TableCell>
+                <TableCell align="right">Prix</TableCell>
+                <TableCell />
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {data.map((row) => (
+                <TableRow
+                  key={row.id}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.postal_code}</TableCell>
+                  <TableCell align="right">{row.city}</TableCell>
+                  <TableCell align="right">{Number(row.surface).toLocaleString()} m2</TableCell>
+                  <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
+                  <TableCell align={"right"}>
+                    <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
+                      <EditIcon />
+                    </IconButton>
+                    <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'warning'}>
+                      <DeleteIcon />
+                    </IconButton>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Card>
+    </>
   );
 }
 
