@@ -9,19 +9,19 @@ import { Link, useLocation } from 'react-router-dom'
 import { useFormContext, Controller } from 'react-hook-form'
 
 
-const Logo = () => {
+const Logo = ({children = 'CL'}) => {
   return (
     <Stack
       sx={{
-        borderRadius: 16,
-        width: 32,
-        height: 32,
-        backgroundColor: '#A5D6A7',
+        borderRadius: 18,
+        width: 36,
+        height: 36,
+        backgroundColor: '#5051F3',
         color: 'white',
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-      CL
+      {children}
     </Stack>
   )
 }
@@ -66,14 +66,16 @@ const Header = ({children}) => {
                 </Link>
               ) : (
                 <Link to={'/public'}>
-                  <Typography variant={'caption'}>Clean map</Typography>
+                  <Typography variant={'caption'}>Wash map</Typography>
                 </Link>
               )
 
           }
         </Box>
         <Stack direction={'row'} flex={1} gap={2} justifyContent={'space-between'}>
-          <Logo />
+          <Logo>
+            {pathname === '/public' ? 'WM' : 'CL'}
+          </Logo>
           {
             children
           }
