@@ -6,7 +6,7 @@ import HeaderCard, { Card } from "../components/HeaderCard.jsx";
 
 const searchClient = algoliasearch(import.meta.env.VITE_ALGOLIA_APPLICATION_ID, import.meta.env.VITE_ALGOLIA_APPLICATION_KEY);
 
-const KEYS = ['road', 'postalcode', 'city', 'country']
+const KEYS = ['road', 'postcode', 'city', 'country']
 function Hit({ hit }) {
   const content = useMemo(() => {
     return KEYS.map(key => {
