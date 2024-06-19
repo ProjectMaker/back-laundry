@@ -81,7 +81,7 @@ const FormLaundry = ({laundry}) => {
   return (
     <>
       <Header><Typography variant={'h6'}>Edition</Typography></Header>
-      <Card>
+      <Card sx={{flexDirection: 'column'}}>
         {
           !!error && <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
         }
