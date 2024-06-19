@@ -1,8 +1,11 @@
 import {
   Stack,
   Card as UICard,
+  Typography,
+  Box,
   TextField as UITextField
 } from '@mui/material'
+import { Link, useLocation } from 'react-router-dom'
 import { useFormContext, Controller } from 'react-hook-form'
 
 
@@ -47,15 +50,35 @@ export const TextField = ({name, ...props}) => {
 }
 
 const Header = ({children}) => {
+  console.log(useLocation())
+  const {pathname} = useLocation()
   return (
     <Card
       variant={'oulined'}
-      sx={{alignItems: 'center'}}
     >
-      <Logo />
-      {
-        children
-      }
+      <Stack width={'100%'}>
+        <Box sx={{textAlign: 'right'}}>
+          {
+            pathname === '/public'
+              ? (
+                <Link to={'/laundries'}>
+                  <Typography variant={'caption'}>Club privé</Typography>
+                </Link>
+              ) : (
+                <Link to={'/public'}>
+                  <Typography variant={'caption'}>Clean map</Typography>
+                </Link>
+              )
+
+          }
+        </Box>
+        <Stack direction={'row'} flex={1} gap={2} justifyContent={'space-between'}>
+          <Logo />
+          {
+            children
+          }
+        </Stack>
+      </Stack>
     </Card>
   )
 }

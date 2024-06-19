@@ -6,3 +6,15 @@ body {
   #min-height: 100vh;
   background: linear-gradient(90deg, rgba(122,171,212,1) 44%, rgba(255,255,255,1) 100%);
 }
+
+ol {
+  list-style-type: none
+}
+
+.ais-SearchBox {
+  flex: 1
+}
+
+.ais-Hits {
+  flex: 1
+}

@@ -7,12 +7,11 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { Routes, Route, Outlet, BrowserRouter as Router, Navigate } from 'react-router-dom'
 import './index.css'
 import Theme from './theme'
-import Typography from '@mui/material/Typography'
-import HeaderCard, {Card} from './components/HeaderCard'
+
 import FormLaundry from "./pages/FormLaundry"
 import List from "./pages/List"
 import Authenticated from './pages/Authenticated'
-
+import LaundryPublic from './pages/LaundryPublic'
 export const client = new QueryClient()
 
 
@@ -36,6 +35,8 @@ function App() {
                 <Route path={'/laundries'} element={<List />} />
 
                 <Route path={'/laundry/:id?'} element={<FormLaundry />} />
+                <Route path={'/public'} element={<LaundryPublic />} />
+
                 <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
               </Route>
             </Routes>
