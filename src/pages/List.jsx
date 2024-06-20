@@ -11,6 +11,7 @@ import {
   TableHead,
   TableRow,
   Typography,
+  Box,
   Stack
 } from '@mui/material'
 
@@ -53,7 +54,7 @@ const List = () => {
           </IconButton>
         </Stack>
       </HeaderCard>
-      <Card>
+      <Card sx={{boxShadow: 0}}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -72,8 +73,8 @@ const List = () => {
                   key={row.id}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
-                    {row.name}
+                  <TableCell component="th" scope="row" sx={{width: 200}}>
+                    <Box>{row.name}</Box>
                   </TableCell>
                   <TableCell align="right">{row.postal_code}</TableCell>
                   <TableCell align="right">{row.city}</TableCell>
@@ -81,10 +82,10 @@ const List = () => {
                   <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
                   <TableCell align={"right"}>
                     <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
-                      <EditIcon />
+                      <EditIcon sx={{fontSize: 18}}/>
                     </IconButton>
                     <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'warning'}>
-                      <DeleteIcon />
+                      <DeleteIcon sx={{fontSize: 18}} />
                     </IconButton>
                   </TableCell>
                 </TableRow>
