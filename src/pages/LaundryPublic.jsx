@@ -1,7 +1,9 @@
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch';
-import { Typography } from '@mui/material'
-import HeaderCard, { Card } from "../components/HeaderCard.jsx";
+import { Typography, Stack } from '@mui/material'
+import HeaderCard, { Card } from "../components/HeaderCard";
+import Map from "../components/Map"
+import landries from '../../scripts/import-files/algolia.json'
 
 const searchClient = algoliasearch(import.meta.env.VITE_ALGOLIA_APPLICATION_ID, import.meta.env.VITE_ALGOLIA_APPLICATION_KEY);
 
@@ -21,7 +23,10 @@ export default function App() {
         <SearchBox />
       </HeaderCard>
       <Card>
-        <Hits hitComponent={Hit} />
+        <Stack gap={2} flex={1}>
+          <Map markers={landries.map(({geometry, address}) => ({position: geometry, address}))} />
+          <Hits hitComponent={Hit} />
+        </Stack>
       </Card>
     </InstantSearch>
   );
