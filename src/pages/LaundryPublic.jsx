@@ -3,7 +3,7 @@ import { InstantSearch, SearchBox, Hits } from 'react-instantsearch';
 import { Typography, Stack } from '@mui/material'
 import HeaderCard, { Card } from "../components/HeaderCard";
 import Map from "../components/Map"
-import landries from '../../scripts/import-files/algolia.json'
+import landries from '../algolia.json'
 
 const searchClient = algoliasearch(import.meta.env.VITE_ALGOLIA_APPLICATION_ID, import.meta.env.VITE_ALGOLIA_APPLICATION_KEY);
 
