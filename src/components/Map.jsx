@@ -1,158 +1,143 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
-import { Box, Typography } from '@mui/material';
-import { Loader } from '@googlemaps/js-api-loader'
+import { useEffect, useState, useRef } from 'react'
+import { Stack, useTheme } from '@mui/material'
+import {APIProvider, Map, AdvancedMarker, Pin, useMap } from '@vis.gl/react-google-maps';
+import { createRoot } from 'react-dom/client'
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+import ZoomOutIcon from '@mui/icons-material/ZoomOut';
+import {MarkerClusterer} from '@googlemaps/markerclusterer';
+import laundries from '../algolia.json'
 
-import useGoogleClusterMap from './use-cluster-map'
-import PinBuilding from './SVGs/PinBuilding'
-
-const styles = [
-  {
-    'featureType': 'poi',
-    'stylers': [
-      {
-        'visibility': 'off'
-      }
-    ]
-  },
-  {
-    'featureType': 'poi.park',
-    'elementType': 'geometry',
-    'stylers': [
-      {
-        'visibility': 'on'
-      }
-    ]
-  },
-  {
-    'featureType': 'transit',
-    'stylers': [
-      {
-        'visibility': 'off'
-      }
-    ]
-  }
-]
-
-const buildBuildingIcon = (google, markerColor) => {
-  const staticElement = renderToStaticMarkup(<PinBuilding fill={markerColor} />)
-  const svg = window.btoa(staticElement)
-
-  return {
-    url: `data:image/svg+xml;base64,${svg}`,
-    scaledSize: new google.maps.Size(26, 34),
-  }
-}
-
-const Cartography = ({
-  google,
-  map,
-  cluster,
-  markers
-}) => {
-  const markersRef = useRef([])
-  console.log(markers[0])
-  // TODO: Replace type when defined by @center/wimap
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-
-  useEffect(() => {
-    cluster.markers = []
-    markersRef.current.forEach(marker => marker.setMap(null))
-
-    markersRef.current = markers.map(({address, ...position }) => {
-      const marker = new google.maps.Marker({
-        ...position,
-        title: address
-      })
-      marker.setMap(map)
-      return marker
-    })
-    cluster.addMarkers(markersRef.current)
-    if (markersRef.current.length === 1) {
-      map.setZoom(18);
-      map.setCenter(markersRef.current[0]?.position);
-    } else if (markersRef.current.length) {
-      const bounds = new google.maps.LatLngBounds();
-      markersRef.current.forEach(({ position }) => bounds.extend(position));
-      map.fitBounds(bounds);
-    } else {
-      map.setCenter(
-        new google.maps.LatLng(48.873259,48.873259)
-      )
-      map.setZoom(5);
-    }
-  }, [markers])
-  return null
-};
-
-const LoaderMap = ({
-  google,
-  mapOptions = {
-   center: { lat: 48.873259, lng: 2.305976 },
-   zoom: 5,
-   mapTypeId: 'roadmap',
-   disableDefaultUI: true,
-   styles,
-  },
-  algorithmOption = {
-   minPoints: 5,
-  },
-  markers
-}) => {
-  const infoWindow = useRef(null)
-  // TODO: Replace type when defined by @center/wimap
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const maps = useGoogleClusterMap({
-    google,
-    mapOptions,
-    algorithmOption,
-    infoWindow,
-  });
+function ZoomButton({onClick, children}) {
+  const theme = useTheme()
   return (
-    <Box sx={{position: 'relative'}}>
-      <Box id="mapViewGlobal" sx={{
-        borderTopRightRadius: '12px',
-        borderBottomRightRadius: '12px',
-        width: 600,
-        height: 400
+    <Stack
+      onClick={onClick}
+      color={'success'}
+      size={'small'}
+      sx={{
+        cursor: 'pointer',
+        width: 32,
+        height: 32,
+        borderRadius: 16,
+        backgroundColor: 'white',
+        color: theme.palette.success.main,
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: `1px solid ${theme.palette.success.main}`
       }}
-      />
-      {
-        maps.ready
-          && <Cartography infoWindow={infoWindow} google={google} map={maps.map} cluster={maps.cluster} markers={markers} />
-      }
-    </Box>
+    >
+      {children}
+    </Stack>
   )
-};
-const LoaderGoogle = (props) => {
-  const [google, setGoogle] = useState(null);
-  useEffect(() => {
-    const apiKey = import.meta.env.VITE_GOOGLE_MAP_KEY
-    if (google === null && apiKey) {
-      (async () => {
-        const loader = new Loader({
-          // eslint-disable-next-line no-undef
-          apiKey,
-          libraries: ['geometry'],
-          version: 'weekly',
-        });
-        loader.load().then((google) => setGoogle(google));
-      })();
-    }
-  }, [google]);
-  if (!google) {
-    return null
-  }
-  return (
-    <>
-      <LoaderMap google={google} {...props} />
-      <Box position="absolute" display="flex" bottom="30px" left="30px">
+}
+function ZoomControl({map}) {
 
-      </Box>
-    </>
+  return (
+    <Stack gap={2} mr={1} mb={1}>
+      <ZoomButton
+        onClick={() => map.setZoom(map.getZoom() + 1)}
+      >
+        <ZoomInIcon />
+      </ZoomButton>
+      <ZoomButton onClick={() => map.setZoom(map.getZoom() - 1)}>
+        <ZoomOutIcon />
+      </ZoomButton>
+    </Stack>
+  )
+}
+function createCenterControl(map) {
+  const controlButton = document.createElement("div");
+  const zoomRoot = createRoot(controlButton)
+  zoomRoot.render(<ZoomControl map={map}/>)
+
+
+  return controlButton;
+}
+
+const initializeControls = (map) => {
+  // Create a DIV to attach the control UI to the Map.
+  const centerControlDiv = document.createElement("div");
+
+// Create the control. This code calls a function that
+// creates a new instance of a button control.
+  const centerControl = createCenterControl(map);
+
+// Append the control to the DIV.
+  centerControlDiv.appendChild(centerControl);
+
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear()
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
+
+}
+const Markers = () => {
+  const map = useMap()
+  const [markers, setMarkers] = useState([])
+  const clusterer = useRef()
+
+  useEffect(() => {
+    if (!map) return;
+    if (!clusterer.current) {
+      clusterer.current = new MarkerClusterer({map});
+    }
+    map.setZoom(8)
+    //map.setCenter(laundries[0].geometry)
+    const bounds = new google.maps.LatLngBounds();
+    laundries.forEach(({geometry}) => bounds.extend(geometry))
+    map.fitBounds(bounds)
+
+    //map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear()
+    initializeControls(map)
+  }, [map]);
+
+  useEffect(() => {
+    clusterer.current?.clearMarkers();
+    clusterer.current?.addMarkers(Object.values(markers));
+  }, [markers]);
+
+  const setMarkerRef = (marker, key) => {
+    if (marker && markers[key]) return;
+    if (!marker && !markers[key]) return;
+
+    setMarkers(prev => {
+      if (marker) {
+        return {...prev, [key]: marker};
+      } else {
+        const newMarkers = {...prev};
+        delete newMarkers[key];
+        return newMarkers;
+      }
+    });
+  };
+
+  return laundries.map(({address, geometry}, i) => (
+    <AdvancedMarker
+      key={i}
+      position={geometry}
+      title={address}
+      ref={marker => setMarkerRef(marker, i)}
+    >
+      <Pin background={'#3B82F6'} glyphColor={'#A5D6A7'} borderColor={'#3B82F6'} />
+    </AdvancedMarker>
+  ))
+}
+
+export default function LaundriesMap () {
+  return (
+    <Stack sx={{width: '100%', height: 400}}>
+      <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAP_KEY} onLoad={() => console.log('Maps API has loaded.')}>
+        <Map
+          mapId={'LAUNDRIES'}
+          zoomControl={false}
+          scaleControl={false}
+          mapTypeControl={false}
+          streetViewControl={false}
+          rotateControl={false}
+          fullscreenControl={false}
+        >
+          <Markers />
+        </Map>
+      </APIProvider>
+    </Stack>
   )
 }
 
-
-
-export default LoaderGoogle
