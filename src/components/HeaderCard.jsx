@@ -3,9 +3,10 @@ import {
   Card as UICard,
   Typography,
   Box,
-  TextField as UITextField
+  TextField as UITextField,
+  useTheme
 } from '@mui/material'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useFormContext, Controller } from 'react-hook-form'
 
 
@@ -49,32 +50,53 @@ export const TextField = ({name, ...props}) => {
   )
 }
 
+const NavButton = ({onClick, active, children}) => {
+  const theme = useTheme()
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        cursor: 'pointer',
+        //padding: '0px 8px',
+        paddingLeft: 1,
+        paddingRight: 1,
+        borderRadius: 4,
+        color: active ? 'white' : 'primary.main',
+        backgroundColor: active ? 'primary.main' : 'white',
+        border: `1px solid ${theme.palette.primary.main}`
+      }}
+      variant={'outline'} onClick={onClick} color={'primary'}
+    >
+      <Typography variant={'caption'} sx={{fontWeight: 700}}>{children}</Typography>
+    </Box>
+  )
+}
+
 const Header = ({children}) => {
-  console.log(useLocation())
+  const navigate = useNavigate()
   const {pathname} = useLocation()
   return (
     <Card
       variant={'oulined'}
     >
-      <Stack width={'100%'}>
-        <Box sx={{textAlign: 'right'}}>
-          {
-            pathname === '/public'
-              ? (
-                <Link to={'/laundries'}>
-                  <Typography variant={'caption'}>Club privé</Typography>
-                </Link>
-              ) : (
-                <Link to={'/public'}>
-                  <Typography variant={'caption'}>Wash map</Typography>
-                </Link>
-              )
-
-          }
-        </Box>
+      <Stack sx={{flex: 1, alignSelf: 'end'}}>
+        <Stack sx={{alignItems: 'end', alignSelf: 'end'}} direction={'row'} gap={2}>
+          <NavButton
+            active={pathname !== '/public'}
+            onClick={() => navigate('/laundries')}
+            >
+            Club laverie
+          </NavButton>
+          <NavButton
+            active={pathname === '/public'}
+            onClick={() => navigate('/public')}
+          >
+            LavMap
+          </NavButton>
+        </Stack>
         <Stack direction={'row'} flex={1} gap={2} justifyContent={'space-between'}>
           <Logo>
-            {pathname === '/public' ? 'WM' : 'CL'}
+            {pathname === '/public' ? 'LM' : 'CL'}
           </Logo>
           {
             children

@@ -20,7 +20,7 @@ const ThemeCenter = createTheme({
       tertiary: '#A2AAB8'
     },
     primary: {
-      main: '#3B82F6'
+      main: '#5051F3'
     },
     success: {
       main: '#A5D6A7',

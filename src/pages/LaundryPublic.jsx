@@ -20,11 +20,11 @@ export default function App() {
     <InstantSearch searchClient={searchClient} indexName="laundry">
       <HeaderCard>
         <Typography variant={'h6'}>Fichiers Laverie</Typography>
-        <SearchBox />
       </HeaderCard>
       <Card>
         <Stack gap={2} flex={1}>
           <Map />
+          <SearchBox />
           <Hits hitComponent={Hit} />
         </Stack>
       </Card>
