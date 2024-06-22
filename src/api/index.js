@@ -82,3 +82,18 @@ export async function getLaundries() {
     return []
   }
 }
+
+
+
+export async  function searchLocations (map, placesLib, verbatim) {
+  const request = {
+    query: verbatim
+  };
+  const placesService = new placesLib.PlacesService(map)
+  const result = await new Promise((resolve) => {
+    placesService.textSearch(request, (result) => {
+      resolve(result)
+    })
+  })
+  return result.map(({geometry, formatted_address}) => ({_geoloc: {lat: geometry.location.lat(), lng: geometry.location.lng()}, address: formatted_address}))
+}

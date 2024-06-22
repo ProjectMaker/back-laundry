@@ -127,6 +127,23 @@ const ThemeCenter = createTheme({
           gap: 16,
         })
       }
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          cursor: 'pointer',
+          //borderRadius: 4,
+          border: `1px solid ${theme.palette.grey[300]}`,
+          borderTop: 0,
+          background: 'white',
+          '&:hover': {
+            background: theme.palette.grey[300],
+          },
+          '&:first-of-type': {
+            borderTop: `1px solid ${theme.palette.grey[300]}`,
+          }
+        })
+      }
     }
   }
 })

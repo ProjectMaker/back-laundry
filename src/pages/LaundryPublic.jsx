@@ -1,11 +1,15 @@
-import { useEffect } from 'react'
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch';
 import { Typography, Stack } from '@mui/material'
+
 import HeaderCard, { Card } from "../components/HeaderCard";
+import Autocomplete from '../components/Autocomplete'
+import Map from '../components/Map'
 
 const searchClient = algoliasearch(import.meta.env.VITE_ALGOLIA_APPLICATION_ID, import.meta.env.VITE_ALGOLIA_APPLICATION_KEY);
-import Map from '../components/Map'
+const index = searchClient.initIndex('laundry')
+
+
 
 function Hit({hit }) {
   return (
@@ -23,9 +27,7 @@ export default function App() {
       </HeaderCard>
       <Card>
         <Stack gap={2} flex={1}>
-          <Map />
-          <SearchBox />
-          <Hits hitComponent={Hit} />
+          <Map index={index}/>
         </Stack>
       </Card>
     </InstantSearch>

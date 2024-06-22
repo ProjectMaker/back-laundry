@@ -23,7 +23,7 @@ import {getLaundries, removeLaundry} from '../api/index.js'
 import HeaderCard, { Card } from "../components/HeaderCard.jsx";
 import Header from "../components/HeaderCard.jsx";
 
-const List = () => {
+const LandriesList = () => {
   const navigate = useNavigate()
   const {data, isLoading, error} = useQuery({
     queryKey: ['laundry'],
@@ -98,4 +98,4 @@ const List = () => {
   );
 }
 
-export default List
+export default LandriesList
