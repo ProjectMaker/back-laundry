@@ -5,11 +5,12 @@ import {APIProvider, Map, AdvancedMarker, Pin, useMap } from '@vis.gl/react-goog
 import { createRoot } from 'react-dom/client'
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ZoomOutIcon from '@mui/icons-material/ZoomOut';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import {MarkerClusterer} from '@googlemaps/markerclusterer';
 import laundries from '../algolia.json'
 import Autocomplete from '../components/Autocomplete'
 
-function ZoomButton({onClick, children}) {
+function MapButton({onClick, children}) {
   const theme = useTheme()
   return (
     <Stack
@@ -33,21 +34,21 @@ function ZoomButton({onClick, children}) {
   )
 }
 function ZoomControl({map}) {
-
   return (
     <Stack gap={2} mr={1} mb={1}>
-      <ZoomButton
+      <MapButton
         onClick={() => map.setZoom(map.getZoom() + 1)}
       >
         <ZoomInIcon />
-      </ZoomButton>
-      <ZoomButton onClick={() => map.setZoom(map.getZoom() - 1)}>
+      </MapButton>
+      <MapButton onClick={() => map.setZoom(map.getZoom() - 1)}>
         <ZoomOutIcon />
-      </ZoomButton>
+      </MapButton>
     </Stack>
   )
 }
-function createCenterControl(map) {
+
+function createZoomControl(map) {
   const controlButton = document.createElement("div");
   const zoomRoot = createRoot(controlButton)
   zoomRoot.render(<ZoomControl map={map}/>)
@@ -56,22 +57,41 @@ function createCenterControl(map) {
   return controlButton;
 }
 
+function createFullscreenControl(map) {
+  const controlButton = document.createElement("div");
+  const zoomRoot = createRoot(controlButton)
+  zoomRoot.render(<MapButton
+    onClick={() => {
+      map.getDiv().firstChild.requestFullscreen()
+    }}>
+    <FullscreenIcon />
+  </MapButton>)
+
+
+  return controlButton;
+}
+
 const initializeControls = (map) => {
   // Create a DIV to attach the control UI to the Map.
-  const centerControlDiv = document.createElement("div");
+  const zoomControlDiv = document.createElement("div");
+  const fullscreenControlDiv = document.createElement("div");
 
 // Create the control. This code calls a function that
 // creates a new instance of a button control.
-  const centerControl = createCenterControl(map);
+  const centerControl = createZoomControl(map);
+  const fullscreenControl = createFullscreenControl(map);
 
 // Append the control to the DIV.
-  centerControlDiv.appendChild(centerControl);
+  zoomControlDiv.appendChild(centerControl);
+  fullscreenControlDiv.appendChild(fullscreenControl);
 
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear()
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
+  map.controls[google.maps.ControlPosition.RIGHT_TOP].clear()
+  map.controls[google.maps.ControlPosition.RIGHT_TOP].push(fullscreenControlDiv);
 }
-const Markers = () => {
+const Markers = ({center}) => {
   const map = useMap()
   const [markers, setMarkers] = useState([])
   const clusterer = useRef()
@@ -82,12 +102,9 @@ const Markers = () => {
       clusterer.current = new MarkerClusterer({map});
     }
 
-    map.setZoom(12)
-    //map.setCenter(laundries[0].geometry)
     const bounds = new google.maps.LatLngBounds();
     laundries.forEach(({geometry}) => bounds.extend(geometry))
     map.fitBounds(bounds)
-
     //map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].clear()
     initializeControls(map)
   }, [map]);
@@ -125,6 +142,7 @@ const Markers = () => {
 }
 
 function LaundriesMap ({index, currentPosition}) {
+  const [initialized, setInitialized] = useState(false)
   const autocompleteRef = useRef(null)
   const mapRef = useRef(null)
   const [geoloc, setGeoloc] = useState(null)
@@ -157,7 +175,15 @@ function LaundriesMap ({index, currentPosition}) {
         />
         <Stack sx={{width: '100%', height: 400}}>
           <Map
-            mapId={'LAUNDRIES'}
+            onTilesLoaded={() => {
+              console.log('ini', initialized)
+              if (!initialized) {
+                map.setCenter(currentPosition)
+                map.setZoom(16)
+                setInitialized(true)
+              }
+            }}
+            mapId={'3c572553938cd25'}
             zoomControl={false}
             scaleControl={false}
             mapTypeControl={false}
@@ -165,10 +191,13 @@ function LaundriesMap ({index, currentPosition}) {
             rotateControl={false}
             fullscreenControl={false}
           >
-            <Markers />
+            <Markers center={currentPosition} />
           </Map>
         </Stack>
         <List>
+          {
+            isLoading && <ListItem><Typography fontSize={14} variant={'caption'}>Chargement ...</Typography></ListItem>
+          }
           {
             data?.map(item =>
               <ListItem
@@ -176,7 +205,7 @@ function LaundriesMap ({index, currentPosition}) {
                   setGeoloc(item._geoloc)
                   map.setCenter(item._geoloc)
                   map.setZoom(16)
-                  autocompleteRef.current.forceItem(item)
+                  autocompleteRef.current.forceValue(item)
                 }}
                 key={item.address}>
                 <Typography variant={'caption'}>{item.address}</Typography>
@@ -211,9 +240,11 @@ export default function Provider ({index}) {
   return (
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAP_KEY} onLoad={() => console.log('Maps API has loaded.')}>
       {
-        loading
+        loading && !currentPosition
           ? <Typography variant={'caption'}>Chargement ...</Typography>
-          : <LaundriesMap index={index} currentPosition={currentPosition}/>
+          : error
+            ? <Typography variant={'caption'} color={'error'}>{error}</Typography>
+            : currentPosition ? <LaundriesMap index={index} currentPosition={currentPosition}/> : null
       }
     </APIProvider>
   )

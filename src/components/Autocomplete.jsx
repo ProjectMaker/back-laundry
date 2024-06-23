@@ -5,7 +5,7 @@ import {searchLocations} from "../api/index.js";
 import {FormProvider, useForm} from "react-hook-form";
 import {TextField} from "./HeaderCard";
 import { useMapsLibrary, useMap } from '@vis.gl/react-google-maps'
-import {Stack, Typography, List, ListItem, InputAdornment, IconButton} from "@mui/material";
+import {Stack, Typography, List, ListItem, InputAdornment, IconButton, Button} from "@mui/material";
 import ClearIcon from '@mui/icons-material/Clear';
 
 const Items = [{
@@ -16,7 +16,6 @@ const Items = [{
 
 const Autocomplete =  forwardRef(({onClick}, ref) => {
   const placesLib = useMapsLibrary('places')
-  const [forced, setForced] = useState(false)
   const map = useMap()
   const [selectedItem, setSelectedItem] = useState(null)
   const [verbatimValue, setVerbatim] = useState('')
@@ -24,7 +23,7 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
   const {isLoading, error, data} = useQuery({
     queryKey: ['locations', verbatim],
     queryFn: () => searchLocations(map, placesLib, verbatim),
-    enabled: verbatim.length >= 3 && !forced
+    enabled: verbatim.length >= 3
   })
   const form = useForm({
     defaultValues: {
@@ -32,8 +31,7 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
     }
   })
   useImperativeHandle(ref, () => ({
-    forceItem: (item) => {
-      setForced(true)
+    forceValue: (item) => {
       setSelectedItem(item)
       form.setValue('verbatim', item.address)
     }
@@ -51,6 +49,21 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
               setVerbatim(e.target.value)
             }}
             InputProps={{
+              startAdornment: selectedItem ? (
+                <InputAdornment position={'start'}>
+                  <Button
+                    size={'small'}
+                    startIcon={<ClearIcon onClick={() => {
+                      form.setValue('verbatim', '')
+                      setSelectedItem(null)
+                    }} />}
+                    color={'success'}
+                    variant={'contained'}
+                    >
+                    {selectedItem.address}
+                  </Button>
+                </InputAdornment>
+              ) : null,
               endAdornment: (
                 <InputAdornment position={'end'}>
                   <IconButton
@@ -58,7 +71,6 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
                     onClick={() => {
                       form.setValue('verbatim', '')
                       setSelectedItem(null)
-                      setForced(false)
                     }}>
                     <ClearIcon />
                   </IconButton>
@@ -79,13 +91,13 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
               )
             }
             {
-              !selectedItem && verbatim.length >= 3 && data?.map(item => (
+              verbatim.length >= 3 && data?.map(item => (
                 <ListItem
                   onClick={() => {
                     onClick(item)
-                    form.setValue('verbatim', item.address)
+                    form.setValue('verbatim', '')
+                    setVerbatim('')
                     setSelectedItem(item)
-                    setForced(false)
                   }}
                   fontSize={14}
                   key={item.address}

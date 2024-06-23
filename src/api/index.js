@@ -89,11 +89,17 @@ export async  function searchLocations (map, placesLib, verbatim) {
   const request = {
     query: verbatim
   };
+  const response = await fetch(`https://api.tomtom.com/search/2/geocode/${verbatim}.json?key=${import.meta.env.VITE_TOMTOM_KEY}`)
+  const {results} = await response.json()
+  console.log(results)
+  /*
   const placesService = new placesLib.PlacesService(map)
   const result = await new Promise((resolve) => {
     placesService.textSearch(request, (result) => {
       resolve(result)
     })
   })
-  return result.map(({geometry, formatted_address}) => ({_geoloc: {lat: geometry.location.lat(), lng: geometry.location.lng()}, address: formatted_address}))
+
+   */
+  return results.map(({address: {freeformAddress: address}, position: {lon: lng, lat}}) => ({_geoloc: {lat, lng}, address}))
 }
