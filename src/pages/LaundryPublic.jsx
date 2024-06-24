@@ -22,14 +22,9 @@ function Hit({hit }) {
 export default function App() {
   return (
     <InstantSearch searchClient={searchClient} indexName="laundry">
-      <HeaderCard>
-        <Typography variant={'h6'}>Fichiers Laverie</Typography>
-      </HeaderCard>
-      <Card>
-        <Stack gap={2} flex={1}>
-          <Map index={index}/>
-        </Stack>
-      </Card>
+      <Stack gap={2} flex={1}>
+        <Map index={index}/>
+      </Stack>
     </InstantSearch>
   );
 }

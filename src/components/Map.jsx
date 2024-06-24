@@ -144,7 +144,6 @@ const Markers = ({center}) => {
 function LaundriesMap ({index, currentPosition}) {
   const [initialized, setInitialized] = useState(false)
   const autocompleteRef = useRef(null)
-  const mapRef = useRef(null)
   const [geoloc, setGeoloc] = useState(null)
   const map = useMap()
   const {data, isLoading, error} = useQuery({
@@ -156,19 +155,12 @@ function LaundriesMap ({index, currentPosition}) {
     enabled: !!geoloc || Boolean(currentPosition)
   })
 
-  useEffect(() => {
-    if (!geoloc && data && map) {
-      //map.setCenter(data[0]._geoloc)
-      //map.setZoom(16)
-      //autocompleteRef.current.forceItem(data[0])
-    }
-  }, [map, geoloc, data]);
   return (
-      <>
+      <Stack gap={1}>
         <Autocomplete
           ref={autocompleteRef}
           onClick={({_geoloc: {lat, lng}}) => {
-            setGeoloc({lat, lng})
+            setGeoloc({lat, lng, marker: true})
             map.setCenter({lat, lng})
             map.setZoom(16)
           }}
@@ -178,6 +170,7 @@ function LaundriesMap ({index, currentPosition}) {
             onTilesLoaded={() => {
               console.log('ini', initialized)
               if (!initialized) {
+                setGeoloc({...currentPosition, marker: true})
                 map.setCenter(currentPosition)
                 map.setZoom(16)
                 setInitialized(true)
@@ -191,6 +184,14 @@ function LaundriesMap ({index, currentPosition}) {
             rotateControl={false}
             fullscreenControl={false}
           >
+            {
+              geoloc?.marker && (
+                <AdvancedMarker
+                  position={geoloc}
+                  title={'Vous'}
+                  />
+              )
+            }
             <Markers center={currentPosition} />
           </Map>
         </Stack>
@@ -213,7 +214,7 @@ function LaundriesMap ({index, currentPosition}) {
             )
           }
         </List>
-      </>
+      </Stack>
   )
 }
 

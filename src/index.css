@@ -7,6 +7,9 @@ body {
   background: linear-gradient(90deg, rgba(122,171,212,1) 44%, rgba(255,255,255,1) 100%);
 }
 
+a {
+  text-decoration: none;
+}
 ol {
   list-style-type: none
 }

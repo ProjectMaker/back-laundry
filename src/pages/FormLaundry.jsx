@@ -80,45 +80,46 @@ const FormLaundry = ({laundry}) => {
   }
   return (
     <>
-      <Header><Typography variant={'h6'}>Edition</Typography></Header>
-      <Card sx={{flexDirection: 'column'}}>
+
         {
           !!error && <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
         }
         <FormProvider {...form}>
-          <Stack gap={2} flex={1}>
+          <Stack gap={2} flex={1} mt={2}>
             <Tabs value={tab} onChange={(e,index) => setTab(index)}>
               <Tab icon={<InfoIcon fontSize={'small'}/>} label="Général"/>
               <Tab icon={<AutoFixHighIcon fontSize={'small'}/>} label="Matériel" />
               <Tab icon={<AddAPhotoIcon fontSize={'small'}/>} label="Photo" />
             </Tabs>
-            {
-              tab === 0 && (
-                <>
-                  <FormControl>
-                    <TextField label="Nom" name={'name'} />
-                  </FormControl>
-                  <Stack gap={2} direction={'row'} flex={1}>
-                    <TextField label="Code postal" name={'postal_code'} />
-                    <TextField label="Ville" name={'city'} sx={{flexGrow: 1}} />
-                  </Stack>
-                  <Stack gap={2} direction={'row'} flex={1}>
-                    <TextField label="Surface" name={'surface'}/>
-                    <TextField label="Prix" name={'price'} />
-                    <TextField label="Loyer" name={'rent'} sx={{flexGrow: 1}} />
-                  </Stack>
-                  <TextField multiline rows={10} name={'description'} label={'Description'} />
-                </>
-              )
-            }
-            {
-              tab === 1 && (
-                <Materials />
-              )
-            }
-            { tab === 2 && (
-              <ImagePicker />
-            )}
+            <Stack mt={2} gap={2}>
+              {
+                tab === 0 && (
+                  <>
+                    <FormControl>
+                      <TextField label="Nom" name={'name'} />
+                    </FormControl>
+                    <Stack gap={2} direction={'row'} flex={1}>
+                      <TextField label="Code postal" name={'postal_code'} />
+                      <TextField label="Ville" name={'city'} sx={{flexGrow: 1}} />
+                    </Stack>
+                    <Stack gap={2} direction={'row'} flex={1}>
+                      <TextField label="Surface" name={'surface'}/>
+                      <TextField label="Prix" name={'price'} />
+                      <TextField label="Loyer" name={'rent'} sx={{flexGrow: 1}} />
+                    </Stack>
+                    <TextField multiline rows={10} name={'description'} label={'Description'} />
+                  </>
+                )
+              }
+              {
+                tab === 1 && (
+                  <Materials />
+                )
+              }
+              { tab === 2 && (
+                <ImagePicker />
+              )}
+            </Stack>
             <Box sx={{display: 'flex', justifyContent: 'flex-end'}} gap={2}>
               <Button
                 color={'warning'}
@@ -140,7 +141,6 @@ const FormLaundry = ({laundry}) => {
             </Box>
           </Stack>
         </FormProvider>
-      </Card>
     </>
   )
 }
@@ -153,9 +153,9 @@ const Proxy = () => {
     enabled: !!id
   })
   if (id && isLoading) {
-    return <Header><Typography variant={'h6'}>Chargement ...</Typography></Header>
+    return <Typography variant={'caption'}>Chargement ...</Typography>
   } else if (error) {
-    return <Header><Typography variant={'caption'} color={'error'}>{error.message}</Typography></Header>
+    return <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
   } else {
     return <FormLaundry laundry={id ? data : DEFAULT_LAUNDRY} />
   }

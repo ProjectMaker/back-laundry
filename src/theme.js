@@ -82,7 +82,29 @@ const ThemeCenter = createTheme({
           width: '100vw',
           height: '100vh',
           background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(122,171,212,1) 44%, rgba(255,255,255,1) 100%)'
+        },
+        a: {
+          textDecoration: 'none !important'
         }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          padding: '2px 8px',
+          textTransform: 'inherit',
+          borderRadius: '16px'
+        }
+      }
+    },
+    MuiTypography: {
+      styleOverrides: {
+        h6: ({theme}) => ({
+          color: theme.palette.primary.main
+        }),
+        subtitle1: ({theme}) => ({
+          color: theme.palette.primary.main
+        })
       }
     },
     MuiTabs: {

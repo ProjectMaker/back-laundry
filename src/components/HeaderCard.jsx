@@ -4,8 +4,10 @@ import {
   Typography,
   Box,
   TextField as UITextField,
-  useTheme
+  useTheme,
+  Breadcrumbs
 } from '@mui/material'
+import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useFormContext, Controller } from 'react-hook-form'
 
@@ -61,6 +63,7 @@ const NavButton = ({onClick, active, children}) => {
       sx={{
         display: 'flex',
         cursor: 'pointer',
+        padding: .25,
         //padding: '0px 8px',
         paddingLeft: 1,
         paddingRight: 1,
@@ -76,38 +79,74 @@ const NavButton = ({onClick, active, children}) => {
   )
 }
 
+const FOLDERS = [{
+  path: '/public',
+  name: 'Laveries près de chez vous'
+}]
+
 const Header = ({children}) => {
   const navigate = useNavigate()
   const {pathname} = useLocation()
+  const folder = FOLDERS.find(({path}) => path === pathname)
   return (
-    <Card
-      variant={'oulined'}
-    >
-      <Stack sx={{flex: 1, alignSelf: 'end'}}>
-        <Stack sx={{alignItems: 'end', alignSelf: 'end'}} direction={'row'} gap={2}>
-          <NavButton
-            active={pathname !== '/public'}
-            onClick={() => navigate('/laundries')}
-            >
-            Club laverie
-          </NavButton>
-          <NavButton
-            active={pathname === '/public'}
-            onClick={() => navigate('/public')}
-          >
-            LavMap
-          </NavButton>
-        </Stack>
-        <Stack direction={'row'} flex={1} gap={2} >
+    <Stack sx={{flex: 1, justifyContent: 'space-between'}} alignItems={'center'} direction={'row'}>
+      <Stack>
+        <Stack direction={'row'} flex={1} gap={2} alignItems={'center'} >
           <Logo>
-            {pathname === '/public' ? 'LM' : 'CL'}
+            <LocalLaundryServiceIcon />
           </Logo>
-          {
-            children
-          }
+          <Breadcrumbs>
+            {
+              pathname.indexOf('/public') === 0 && (
+                <Link to={'/public'}>
+                  <Typography variant={'h6'}>
+                    Lavmap
+                  </Typography>
+                </Link>
+              )
+            }
+            {
+              pathname === '/public' && (
+                <Typography variant={'subtitle2'}>
+                  Près de chez vous
+                </Typography>
+              )
+            }
+            {
+              (pathname.indexOf('/laundries') === 0 || pathname.indexOf('/laundry') === 0 ) && (
+                <Link to={'/laundries'}>
+                  <Typography variant={'h6'}>
+                    Club laverie
+                  </Typography>
+                </Link>
+              )
+            }
+            {
+              pathname.indexOf('/laundry') === 0 && (
+                <Typography variant={'subtitle2'}>
+                  Edition
+                </Typography>
+              )
+            }
+          </Breadcrumbs>
         </Stack>
       </Stack>
-    </Card>
+      <Stack sx={{alignItems: 'end'}} direction={'row'} gap={2}>
+        <NavButton
+          active={pathname !== '/public'}
+          onClick={() => navigate('/laundries')}
+          >
+          Club laverie
+        </NavButton>
+        <NavButton
+          active={pathname === '/public'}
+          onClick={() => navigate('/public')}
+        >
+          LavMap
+        </NavButton>
+      </Stack>
+
+    </Stack>
   )
 }
 // curl -L -X GET 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=rue poulet,Paris&types=geocode&key=AIzaSyDzV1XFsUjc78MN5MmfV5sjsj8qtHYFiZk'
