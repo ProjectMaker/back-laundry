@@ -42,16 +42,19 @@ async function scrapeCityLaundromats(cityUrl) {
 
     const $ = cheerio.load(data);
 
-    let laundromats = [];
+    let laundries = [];
 
-    $("div.company [itemprop='streetAddress']").each((i, elem) => {
-      console.log('--', $(elem).text())
-
-        laundromats.push($(elem).text())
-
-    });
-
-    return laundromats;
+    $("div.company").each((i, company) => {
+      const address = $(company).find("[itemprop='streetAddress']").text()
+      let comments = []
+      $(company).find(".comments p").each((i, comment) => {
+        if (i>0) {
+          comments.push($(comment).text().replace(/[\t\n]/ig, '').trim())
+        }
+      })
+      laundries.push({address, comments})
+    })
+    return laundries;
 
   } catch (error) {
 
@@ -66,25 +69,23 @@ async function scrapeCityLaundromats(cityUrl) {
 async function main() {
 
   const cityUrls = await getCityUrls();
-  let allLaundromats = [];
+  let laundries = [];
 
 
 
   for (const cityUrl of cityUrls) {
 
-    const cityName = cityUrl.split("/").pop().replace("-", " ").replace("laveries", "").trim();
-    //console.log(cityUrls)
     const addresses = await scrapeCityLaundromats(cityUrl);
 
-    allLaundromats = allLaundromats.concat(addresses)
+    laundries = laundries.concat(addresses)
 
   }
 
 
 
-  fs.writeFileSync('./laundromats.json', JSON.stringify(allLaundromats, null, 2), 'utf-8');
+  fs.writeFileSync('./scripts/import-files/laverie-info/source-1.json', JSON.stringify(laundries, null, 2), 'utf-8');
 
-  console.log("Laundromat addresses saved to laundromats.json");
+  console.log(laundries)
 
 }
 

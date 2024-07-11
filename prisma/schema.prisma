@@ -12,33 +12,29 @@ datasource db {
 
 
 
-model RealEstateAd {
+model laundry {
     id                  Int         @id @default(autoincrement())
-    reference           String
-    externalId         String
-    codeType            String
-    labelType           String
-    postalCode          String
-    city                String
-    department          String
-    title               String
-    price               Float
-    rent                Float
-    surface             Float       @default(0)
-    dpeVierge          Boolean
-    dpeSoumis          Boolean
-    content             String
-    publishedAt         DateTime
-    disabledAt          DateTime?   @db.Timestamp(0)
-    createdAt           DateTime    @default(now())
-    updatedAt           DateTime    @updatedAt
-    pictures            RealEstateAdPicture[]
-    type                String      @default("UNKNOWN")
+    name           			String?
+    address							String?
+    postal_code         String
+    city            		String
+    description         String
+    surface          		Float
+    rent          			Int
+    price          			Int
+    materials           Json				@default("[]")
+    pictures						laundry_picture[]
+    created_at          DateTime    @default(now())
 }
 
-model RealEstateAdPicture {
-    id                  Int             @id @default(autoincrement())
-    realEstateAdId      Int
-    realEstateAd        RealEstateAd    @relation(fields: [realEstateAdId], references: [id])
-    url                 String
+model laundry_picture {
+		id									Int					@id @default(autoincrement())
+    laundry_id          Int
+    data_url      			String
+    laundry        			laundry    	@relation(fields: [laundry_id], references: [id])
+}
+
+model laundry_public {
+		id                  Int         @id @default(autoincrement())
+		geoloc							JSON				@default("{}")
 }

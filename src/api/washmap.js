@@ -42,3 +42,24 @@ export const useLaundries = ({latitude, longitude}) => {
     error
   }
 }
+
+export const useLaundry = ({id}) => {
+  const {data, isLoading, error} = useQuery({
+    queryKey: ['laundry', id],
+    queryFn: async () => {
+      const {data, error} = await supabase
+        .rpc('get_public_laundry', {
+          id
+        })
+      if (error) {
+        throw new Error(error.message)
+      }
+      return deserializeLaundry(data[0])
+    }
+  })
+  return {
+    data,
+    isLoading,
+    error
+  }
+}

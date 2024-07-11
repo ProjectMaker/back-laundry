@@ -1,0 +1,5574 @@
+[
+    {
+        "address": "31 bd de charonne",
+        "postal_code": "75011",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8510158,
+                    "lng": 2.3983082
+                },
+                "southwest": {
+                    "lat": 48.8509158,
+                    "lng": 2.3982082
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier Sainte-Marguerite",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "31",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75011",
+                "region": "France métropolitaine",
+                "road": "Boulevard de Charonne",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Paris 11e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "31 Boulevard de Charonne, 75011 Paris, France",
+            "geometry": {
+                "lat": 48.8509658,
+                "lng": 2.3982582
+            }
+        }
+    },
+    {
+        "address": "160 avenue jean l'olive",
+        "postal_code": "93500",
+        "city": "PANTIN",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Bobigny",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-Saint-Denis",
+                "local_administrative_area": "Arrondissement de Bobigny",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "93500",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "93500 Arrondissement de Bobigny, France",
+            "geometry": {
+                "lat": 48.8944,
+                "lng": 2.4093
+            }
+        }
+    },
+    {
+        "address": "263 route de marsilly",
+        "postal_code": "45160",
+        "city": "ARDON",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement d’Orléans",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Loiret",
+                "local_administrative_area": "Arrondissement d’Orléans",
+                "local_authority": "Orléans Métropole",
+                "political_union": "European Union",
+                "postcode": "45160",
+                "state": "Centre"
+            },
+            "confidence": 7,
+            "formatted": "45160 Arrondissement d’Orléans, France",
+            "geometry": {
+                "lat": 47.8661,
+                "lng": 1.8335
+            }
+        }
+    },
+    {
+        "address": "20 avenue cherré",
+        "postal_code": "94420",
+        "city": "LE PLESSIS TREVISE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Nogent-sur-Marne",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "local_administrative_area": "Arrondissement de Nogent-sur-Marne",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "94420",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "94420 Arrondissement de Nogent-sur-Marne, France",
+            "geometry": {
+                "lat": 48.8107,
+                "lng": 2.5736
+            }
+        }
+    },
+    {
+        "address": "31 rue des etats generaux",
+        "postal_code": "78000",
+        "city": "VERSAILLES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.7989944,
+                    "lng": 2.1341026
+                },
+                "southwest": {
+                    "lat": 48.7988944,
+                    "lng": 2.1340026
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-78"
+                ],
+                "_category": "building",
+                "_normalized_city": "Versailles",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Yvelines",
+                "house_number": "31",
+                "local_authority": "Communauté d'agglomération Versailles Grand Parc",
+                "municipality": "Versailles",
+                "political_union": "European Union",
+                "postcode": "78000",
+                "region": "France métropolitaine",
+                "road": "Rue des États Généraux",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Chantiers",
+                "town": "Versailles"
+            },
+            "confidence": 10,
+            "formatted": "31 Rue des États Généraux, 78000 Versailles, France",
+            "geometry": {
+                "lat": 48.7989444,
+                "lng": 2.1340526
+            }
+        }
+    },
+    {
+        "address": "60 quai victor berrière",
+        "postal_code": "94360",
+        "city": "BRY SUR MARNE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.840512,
+                    "lng": 2.51342
+                },
+                "southwest": {
+                    "lat": 48.840412,
+                    "lng": 2.51332
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Bry-sur-Marne",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "60",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Nogent-sur-Marne",
+                "political_union": "European Union",
+                "postcode": "94360",
+                "region": "France métropolitaine",
+                "road": "Quai Victor Berrière",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "town": "Bry-sur-Marne"
+            },
+            "confidence": 10,
+            "formatted": "60 Quai Victor Berrière, 94360 Bry-sur-Marne, France",
+            "geometry": {
+                "lat": 48.840462,
+                "lng": 2.51337
+            }
+        }
+    },
+    {
+        "address": "RUE DE LA BERGERIE",
+        "postal_code": "27600",
+        "city": "GAILLON",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.1695558,
+                    "lng": 1.3504335
+                },
+                "southwest": {
+                    "lat": 49.1633236,
+                    "lng": 1.349923
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NOR",
+                    "FR-27"
+                ],
+                "_category": "road",
+                "_normalized_city": "Zone industrielle de la Bergerie",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Eure",
+                "industrial": "Zone industrielle de la Bergerie",
+                "local_authority": "Communauté d'agglomération Seine-Eure",
+                "municipality": "Les Andelys",
+                "political_union": "European Union",
+                "postcode": "27600",
+                "region": "France métropolitaine",
+                "road": "Rue de la Bergerie",
+                "state": "Normandie",
+                "state_code": "NOR",
+                "village": "Gaillon"
+            },
+            "confidence": 9,
+            "formatted": "Rue de la Bergerie, 27600 Gaillon, France",
+            "geometry": {
+                "lat": 49.166443,
+                "lng": 1.3501959
+            }
+        }
+    },
+    {
+        "address": "RUE DE LA BERGERIE",
+        "postal_code": "27600",
+        "city": "GAILLON",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.1695558,
+                    "lng": 1.3504335
+                },
+                "southwest": {
+                    "lat": 49.1633236,
+                    "lng": 1.349923
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NOR",
+                    "FR-27"
+                ],
+                "_category": "road",
+                "_normalized_city": "Zone industrielle de la Bergerie",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Eure",
+                "industrial": "Zone industrielle de la Bergerie",
+                "local_authority": "Communauté d'agglomération Seine-Eure",
+                "municipality": "Les Andelys",
+                "political_union": "European Union",
+                "postcode": "27600",
+                "region": "France métropolitaine",
+                "road": "Rue de la Bergerie",
+                "state": "Normandie",
+                "state_code": "NOR",
+                "village": "Gaillon"
+            },
+            "confidence": 9,
+            "formatted": "Rue de la Bergerie, 27600 Gaillon, France",
+            "geometry": {
+                "lat": 49.166443,
+                "lng": 1.3501959
+            }
+        }
+    },
+    {
+        "address": "14 AVENUE DE LA MOTTE PICQUET",
+        "postal_code": "75007",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8566813,
+                    "lng": 2.3087347
+                },
+                "southwest": {
+                    "lat": 48.8565813,
+                    "lng": 2.3086347
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier du Gros-Caillou",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "14",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75007",
+                "region": "France métropolitaine",
+                "road": "Avenue de la Motte-Picquet",
+                "suburb": "Paris 7e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "14 Avenue de la Motte-Picquet, 75007 Paris, France",
+            "geometry": {
+                "lat": 48.8566313,
+                "lng": 2.3086847
+            }
+        }
+    },
+    {
+        "address": "32 avenue jean jaures",
+        "postal_code": "94250",
+        "city": "GENTILLY",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.812801,
+                    "lng": 2.351604
+                },
+                "southwest": {
+                    "lat": 48.812701,
+                    "lng": 2.351504
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Gentilly",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "32",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "L'Haÿ-les-Roses",
+                "political_union": "European Union",
+                "postcode": "94250",
+                "region": "France métropolitaine",
+                "road": "Avenue Jean Jaurès",
+                "town": "Gentilly"
+            },
+            "confidence": 10,
+            "formatted": "32 Avenue Jean Jaurès, 94250 Gentilly, France",
+            "geometry": {
+                "lat": 48.812751,
+                "lng": 2.351554
+            }
+        }
+    },
+    {
+        "address": "37 AVENUE PIERRE GRENIER",
+        "postal_code": "92100",
+        "city": "BOULOGNE BILLANCOURT",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8268774,
+                    "lng": 2.2494484
+                },
+                "southwest": {
+                    "lat": 48.8265966,
+                    "lng": 2.2492639
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-92"
+                ],
+                "_category": "road",
+                "_normalized_city": "Boulogne-Billancourt",
+                "_type": "road",
+                "city": "Boulogne-Billancourt",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Boulogne-Billancourt",
+                "political_union": "European Union",
+                "postcode": "92100",
+                "region": "France métropolitaine",
+                "road": "Avenue Pierre Grenier",
+                "road_type": "secondary",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Point du Jour"
+            },
+            "confidence": 9,
+            "formatted": "Avenue Pierre Grenier, 92100 Boulogne-Billancourt, France",
+            "geometry": {
+                "lat": 48.8267058,
+                "lng": 2.2493351
+            }
+        }
+    },
+    {
+        "address": "17 AVE DE LA POINTE RINGALE",
+        "postal_code": "91250",
+        "city": "ST GERMAIN LES CORBEIL",
+        "geoloc": {
+            "annotations": {
+                "pips": 0
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 42.817535,
+                    "lng": 0.727329
+                },
+                "southwest": {
+                    "lat": 42.805904,
+                    "lng": 0.692825
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "ES",
+                "ISO_3166-1_alpha-3": "ESP",
+                "_category": "place",
+                "_normalized_city": "Les",
+                "_type": "city",
+                "continent": "Europe",
+                "country": "Spain",
+                "country_code": "es",
+                "county": "Lleida",
+                "county_code": "L",
+                "local_administrative_area": "Les",
+                "political_union": "European Union",
+                "state": "Catalonia",
+                "state_code": "CT",
+                "town": "Les"
+            },
+            "confidence": 7,
+            "formatted": "Les, Catalonia, Spain",
+            "geometry": {
+                "lat": 42.81076,
+                "lng": 0.7105
+            }
+        }
+    },
+    {
+        "address": "2 RUE DES CARMES",
+        "postal_code": "49000",
+        "city": "ANGERS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.4741251,
+                    "lng": -0.5598989
+                },
+                "southwest": {
+                    "lat": 47.4740251,
+                    "lng": -0.5599989
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL",
+                    "FR-49"
+                ],
+                "_category": "building",
+                "_normalized_city": "Angers",
+                "_type": "building",
+                "city": "Angers",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Maine-et-Loire",
+                "house_number": "2",
+                "local_authority": "Angers Loire Métropole",
+                "municipality": "Angers",
+                "neighbourhood": "La Doutre",
+                "political_union": "European Union",
+                "postcode": "49100",
+                "quarter": "Doutre-Saint-Jacques-Nazareth",
+                "region": "France métropolitaine",
+                "road": "Rue des Carmes",
+                "state": "Pays de la Loire",
+                "state_code": "PDL"
+            },
+            "confidence": 10,
+            "formatted": "2 Rue des Carmes, 49100 Angers, France",
+            "geometry": {
+                "lat": 47.4740751,
+                "lng": -0.5599489
+            }
+        }
+    },
+    {
+        "address": "68 ROUTE NATIONALE",
+        "postal_code": "51460",
+        "city": "COURTISOLS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.9862385,
+                    "lng": 4.4939729
+                },
+                "southwest": {
+                    "lat": 48.9826209,
+                    "lng": 4.4826518
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-GES",
+                    "FR-51"
+                ],
+                "_category": "road",
+                "_normalized_city": "Courtisols",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Marne",
+                "local_authority": "Communauté de communes de la Moivre à la Coole",
+                "municipality": "Châlons-en-Champagne",
+                "political_union": "European Union",
+                "postcode": "51460",
+                "region": "France métropolitaine",
+                "road": "Route Nationale",
+                "road_type": "primary",
+                "state": "Grand Est",
+                "state_code": "GES",
+                "village": "Courtisols"
+            },
+            "confidence": 9,
+            "formatted": "Route Nationale, 51460 Courtisols, France",
+            "geometry": {
+                "lat": 48.9847869,
+                "lng": 4.4883165
+            }
+        }
+    },
+    {
+        "address": "110 bd maréchalo joffre",
+        "postal_code": "92340",
+        "city": "BOURG LA REINE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement d'Antony",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement d'Antony",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92340",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92340 Arrondissement d'Antony, France",
+            "geometry": {
+                "lat": 48.7789,
+                "lng": 2.3178
+            }
+        }
+    },
+    {
+        "address": "110 bd maréchalo joffre",
+        "postal_code": "92340",
+        "city": "BOURG LA REINE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement d'Antony",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement d'Antony",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92340",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92340 Arrondissement d'Antony, France",
+            "geometry": {
+                "lat": 48.7789,
+                "lng": 2.3178
+            }
+        }
+    },
+    {
+        "address": "3 RUE EUGENE SUE",
+        "postal_code": "75018",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8909845,
+                    "lng": 2.3459831
+                },
+                "southwest": {
+                    "lat": 48.8908845,
+                    "lng": 2.3458831
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "3",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75018",
+                "region": "France métropolitaine",
+                "road": "Rue Eugène Sue",
+                "suburb": "Quartier de Clignancourt"
+            },
+            "confidence": 10,
+            "formatted": "3 Rue Eugène Sue, 75018 Paris, France",
+            "geometry": {
+                "lat": 48.8909345,
+                "lng": 2.3459331
+            }
+        }
+    },
+    {
+        "address": "45B RUE DU PERIGORD",
+        "postal_code": "33160",
+        "city": "SAINT MEDARD EN JALLES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 44.9002482,
+                    "lng": -0.6978457
+                },
+                "southwest": {
+                    "lat": 44.8958281,
+                    "lng": -0.7018059
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-33"
+                ],
+                "_category": "road",
+                "_normalized_city": "Saint-Médard-en-Jalles",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Gironde",
+                "hamlet": "Le Cramat",
+                "local_authority": "Bordeaux Métropole",
+                "municipality": "Bordeaux",
+                "political_union": "European Union",
+                "postcode": "33160",
+                "region": "France métropolitaine",
+                "road": "Rue du Périgord",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "town": "Saint-Médard-en-Jalles"
+            },
+            "confidence": 9,
+            "formatted": "Rue du Périgord, 33160 Saint-Médard-en-Jalles, France",
+            "geometry": {
+                "lat": 44.8983064,
+                "lng": -0.6993545
+            }
+        }
+    },
+    {
+        "address": "LOUISE MICHEL",
+        "postal_code": "92300",
+        "city": "COURBEVOIE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Nanterre",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement de Nanterre",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92300",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92300 Arrondissement de Nanterre, France",
+            "geometry": {
+                "lat": 48.8939,
+                "lng": 2.2886
+            }
+        }
+    },
+    {
+        "address": "34 RUE CHARLES DE GAULLE",
+        "postal_code": "91440",
+        "city": "BURES SUR YVETTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.6972973,
+                    "lng": 2.1644445
+                },
+                "southwest": {
+                    "lat": 48.6971973,
+                    "lng": 2.1643445
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-91"
+                ],
+                "_category": "building",
+                "_normalized_city": "Bures Cottage",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Essonne",
+                "house_number": "34",
+                "local_authority": "Communauté Paris-Saclay",
+                "municipality": "Palaiseau",
+                "neighbourhood": "Bures Cottage",
+                "political_union": "European Union",
+                "postcode": "91440",
+                "region": "France métropolitaine",
+                "road": "Rue Charles de Gaulle",
+                "village": "Bures-sur-Yvette"
+            },
+            "confidence": 10,
+            "formatted": "34 Rue Charles de Gaulle, 91440 Bures-sur-Yvette, France",
+            "geometry": {
+                "lat": 48.6972473,
+                "lng": 2.1643945
+            }
+        }
+    },
+    {
+        "address": "12 rue du général thiry",
+        "postal_code": "54230",
+        "city": "NEUVES MAISONS",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-GES"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Nancy",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Meurthe et Moselle",
+                "local_administrative_area": "Arrondissement de Nancy",
+                "local_authority": "Communauté de communes Moselle et Madon",
+                "political_union": "European Union",
+                "postcode": "54230",
+                "state": "Grand Est",
+                "state_code": "GES"
+            },
+            "confidence": 7,
+            "formatted": "54230 Arrondissement de Nancy, France",
+            "geometry": {
+                "lat": 48.6203,
+                "lng": 6.107
+            }
+        }
+    },
+    {
+        "address": "43 AVENUE FELIX LOUAT",
+        "postal_code": "60300",
+        "city": "SENLIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.2037377,
+                    "lng": 2.6079234
+                },
+                "southwest": {
+                    "lat": 49.2036077,
+                    "lng": 2.6065435
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF"
+                ],
+                "_category": "road",
+                "_normalized_city": "Senlis",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-France",
+                "industrial": "Zone d'activités",
+                "local_authority": "Communauté de communes Senlis Sud Oise",
+                "political_union": "European Union",
+                "postcode": "60300",
+                "region": "France métropolitaine",
+                "road": "Avenue Félix Louat",
+                "road_type": "residential",
+                "state": "Hauts-de-France",
+                "state_code": "HDF",
+                "town": "Senlis"
+            },
+            "confidence": 9,
+            "formatted": "Avenue Félix Louat, 60300 Senlis, France",
+            "geometry": {
+                "lat": 49.2036991,
+                "lng": 2.6075121
+            }
+        }
+    },
+    {
+        "address": "15 ALLEE WRAY HORNBY",
+        "postal_code": "49220",
+        "city": "GREZ NEUVILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.6029579,
+                    "lng": -0.678607
+                },
+                "southwest": {
+                    "lat": 47.6028579,
+                    "lng": -0.678707
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL",
+                    "FR-49"
+                ],
+                "_category": "building",
+                "_normalized_city": "Grez-Neuville",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Maine-et-Loire",
+                "house_number": "15",
+                "isolated_dwelling": "L'Ormeau",
+                "local_authority": "Communauté de communes des Vallées du Haut-Anjou",
+                "municipality": "Segré",
+                "political_union": "European Union",
+                "postcode": "49220",
+                "region": "France métropolitaine",
+                "road": "Allée de Wray et Hornby",
+                "state": "Pays de la Loire",
+                "state_code": "PDL",
+                "village": "Grez-Neuville"
+            },
+            "confidence": 10,
+            "formatted": "L'Ormeau, 15 Allée de Wray et Hornby, 49220 Grez-Neuville, France",
+            "geometry": {
+                "lat": 47.6029079,
+                "lng": -0.678657
+            }
+        }
+    },
+    {
+        "address": "52 AVENUE FOCH",
+        "postal_code": "77500",
+        "city": "CHELLES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8708684,
+                    "lng": 2.5763201
+                },
+                "southwest": {
+                    "lat": 48.8707684,
+                    "lng": 2.5762201
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-77"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Chelles",
+                "_type": "shop",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-et-Marne",
+                "house_number": "52",
+                "local_authority": "Communauté d'agglomération Paris - Vallée de la Marne",
+                "municipality": "Torcy",
+                "political_union": "European Union",
+                "postcode": "77500",
+                "quarter": "Alsace-Lorraine",
+                "region": "France métropolitaine",
+                "road": "Avenue du Maréchal Foch",
+                "shop": "Laverie Ma-net",
+                "suburb": "Les Abbesses",
+                "town": "Chelles"
+            },
+            "confidence": 9,
+            "formatted": "Laverie Ma-net, 52 Avenue du Maréchal Foch, 77500 Chelles, France",
+            "geometry": {
+                "lat": 48.8708184,
+                "lng": 2.5762701
+            }
+        }
+    },
+    {
+        "address": "12 B ROUTE DE LA REINE",
+        "postal_code": "92100",
+        "city": "BOULOGNE-BILLANCOURT",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8397636,
+                    "lng": 2.2397522
+                },
+                "southwest": {
+                    "lat": 48.8397555,
+                    "lng": 2.2394292
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-92"
+                ],
+                "_category": "road",
+                "_normalized_city": "Boulogne-Billancourt",
+                "_type": "road",
+                "city": "Boulogne-Billancourt",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Boulogne-Billancourt",
+                "political_union": "European Union",
+                "postcode": "92100",
+                "region": "France métropolitaine",
+                "road": "Route de la Reine",
+                "road_type": "primary",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Parchamp - Albert Kahn"
+            },
+            "confidence": 9,
+            "formatted": "Route de la Reine, 92100 Boulogne-Billancourt, France",
+            "geometry": {
+                "lat": 48.8397636,
+                "lng": 2.2396542
+            }
+        }
+    },
+    {
+        "address": "55 B RUE DU GENERAL LECLERC",
+        "postal_code": "95410",
+        "city": "GROSLAY",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.985328,
+                    "lng": 2.3546606
+                },
+                "southwest": {
+                    "lat": 48.9852944,
+                    "lng": 2.3535369
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "road",
+                "_normalized_city": "Groslay",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "France métropolitaine",
+                "local_authority": "Communauté d'agglomération Plaine Vallée",
+                "political_union": "European Union",
+                "postcode": "95410",
+                "region": "France métropolitaine",
+                "road": "Rue du Général Leclerc",
+                "village": "Groslay"
+            },
+            "confidence": 9,
+            "formatted": "Rue du Général Leclerc, 95410 Groslay, France",
+            "geometry": {
+                "lat": 48.985328,
+                "lng": 2.3536317
+            }
+        }
+    },
+    {
+        "address": "17 ALLEE DE LA MADELEINE",
+        "postal_code": "92220",
+        "city": "BAGNEUX",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.7985696,
+                    "lng": 2.3110527
+                },
+                "southwest": {
+                    "lat": 48.7982417,
+                    "lng": 2.3102972
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-92"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bagneux",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "hamlet": "Résidence Pablo Picasso",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Antony",
+                "neighbourhood": "Porte d'En Bas",
+                "political_union": "European Union",
+                "postcode": "92220",
+                "region": "France métropolitaine",
+                "road": "Allée de la Madeleine",
+                "road_type": "footway",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "town": "Bagneux"
+            },
+            "confidence": 9,
+            "formatted": "Allée de la Madeleine, 92220 Bagneux, France",
+            "geometry": {
+                "lat": 48.7982417,
+                "lng": 2.3104171
+            }
+        }
+    },
+    {
+        "address": "93 RUE DU LEVANT",
+        "postal_code": "59200",
+        "city": "TOURCOING",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 50.71935,
+                    "lng": 3.177485
+                },
+                "southwest": {
+                    "lat": 50.71925,
+                    "lng": 3.177385
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF",
+                    "FR-59"
+                ],
+                "_category": "building",
+                "_normalized_city": "Tourcoing",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Nord",
+                "house_number": "93",
+                "local_authority": "Métropole Européenne de Lille",
+                "municipality": "Lille",
+                "neighbourhood": "L'Épidème",
+                "political_union": "European Union",
+                "postcode": "59200",
+                "region": "France métropolitaine",
+                "road": "Rue du Levant",
+                "state": "Hauts-de-France",
+                "state_code": "HDF",
+                "suburb": "Malcense Égalité",
+                "town": "Tourcoing"
+            },
+            "confidence": 10,
+            "formatted": "93 Rue du Levant, 59200 Tourcoing, France",
+            "geometry": {
+                "lat": 50.7193,
+                "lng": 3.177435
+            }
+        }
+    },
+    {
+        "address": "29 RUE JEAN MERMOZ",
+        "postal_code": "01100",
+        "city": "OYONNAX",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 46.26581,
+                    "lng": 5.646507
+                },
+                "southwest": {
+                    "lat": 46.26571,
+                    "lng": 5.646407
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-01"
+                ],
+                "_category": "building",
+                "_normalized_city": "Oyonnax",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Ain",
+                "house_number": "29",
+                "local_authority": "Haut-Bugey Agglomération",
+                "municipality": "Nantua",
+                "political_union": "European Union",
+                "postcode": "01100",
+                "region": "France métropolitaine",
+                "residential": "Oyonnax",
+                "road": "Rue Jean Mermoz",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "suburb": "La Forge",
+                "town": "Oyonnax",
+                "village": "Veyziat"
+            },
+            "confidence": 10,
+            "formatted": "29 Rue Jean Mermoz, 01100 Oyonnax, France",
+            "geometry": {
+                "lat": 46.26576,
+                "lng": 5.646457
+            }
+        }
+    },
+    {
+        "address": "9 RUE LOUIS DUPRE",
+        "postal_code": "94100",
+        "city": "SAINT MAUR DES FOSSES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8034232,
+                    "lng": 2.4781278
+                },
+                "southwest": {
+                    "lat": 48.8033232,
+                    "lng": 2.4780278
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Maur-des-Fossés",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "9",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Nogent-sur-Marne",
+                "political_union": "European Union",
+                "postcode": "94100",
+                "region": "France métropolitaine",
+                "road": "Rue Louis Dupré",
+                "suburb": "Adamville",
+                "town": "Saint-Maur-des-Fossés"
+            },
+            "confidence": 10,
+            "formatted": "9 Rue Louis Dupré, 94100 Saint-Maur-des-Fossés, France",
+            "geometry": {
+                "lat": 48.8033732,
+                "lng": 2.4780778
+            }
+        }
+    },
+    {
+        "address": "KORTRIJKSTRAAT 146",
+        "postal_code": "8560",
+        "city": "WEVELGEM",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 50.8113593,
+                    "lng": 3.1920487
+                },
+                "southwest": {
+                    "lat": 50.8111701,
+                    "lng": 3.1918173
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "BE",
+                "ISO_3166-1_alpha-3": "BEL",
+                "ISO_3166-2": [
+                    "BE-VLG",
+                    "BE-VWV"
+                ],
+                "_category": "building",
+                "_normalized_city": "Wevelgem",
+                "_type": "building",
+                "city_district": "Wevelgem",
+                "continent": "Europe",
+                "country": "België / Belgique / Belgien",
+                "country_code": "be",
+                "county": "Kortrijk",
+                "house_number": "146",
+                "political_union": "European Union",
+                "postcode": "8560",
+                "region": "Vlaanderen",
+                "road": "Kortrijkstraat",
+                "state": "West-Vlaanderen",
+                "state_code": "VWV",
+                "village": "Wevelgem"
+            },
+            "confidence": 10,
+            "formatted": "Kortrijkstraat 146, 8560 Wevelgem, België / Belgique / Belgien",
+            "geometry": {
+                "lat": 50.8112722,
+                "lng": 3.1918974
+            }
+        }
+    },
+    {
+        "address": "4 RUE DE LA CROIX FARON",
+        "postal_code": "93217",
+        "city": "LA PLAINE ST DENIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.9126195,
+                    "lng": 2.3626826
+                },
+                "southwest": {
+                    "lat": 48.9120432,
+                    "lng": 2.3618968
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-93"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Denis",
+                "_type": "building",
+                "city": "Saint-Denis",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-Saint-Denis",
+                "house_number": "4",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Saint-Denis",
+                "political_union": "European Union",
+                "postcode": "93210",
+                "quarter": "La Montjoie",
+                "region": "France métropolitaine",
+                "road": "Rue de la Croix Faron",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "La Plaine"
+            },
+            "confidence": 10,
+            "formatted": "4 Rue de la Croix Faron, 93210 Saint-Denis, France",
+            "geometry": {
+                "lat": 48.9123328,
+                "lng": 2.3622705
+            }
+        }
+    },
+    {
+        "address": "DOMAINE DE CLAIRIS",
+        "postal_code": "89150",
+        "city": "SAVIGNY SUR CLAIRIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.0896622,
+                    "lng": 3.0869274
+                },
+                "southwest": {
+                    "lat": 48.0728612,
+                    "lng": 3.0716001
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BFC",
+                    "FR-89"
+                ],
+                "_category": "place",
+                "_normalized_city": "Domaine de Clairis",
+                "_type": "neighbourhood",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Yonne",
+                "local_authority": "Communauté de communes du Gâtinais en Bourgogne",
+                "municipality": "Sens",
+                "political_union": "European Union",
+                "postcode": "89150",
+                "region": "France métropolitaine",
+                "residential": "Domaine de Clairis",
+                "state": "Bourgogne-Franche-Comté",
+                "state_code": "BFC",
+                "village": "Savigny-sur-Clairis"
+            },
+            "confidence": 8,
+            "formatted": "89150 Savigny-sur-Clairis, France",
+            "geometry": {
+                "lat": 48.0837228,
+                "lng": 3.0837985
+            }
+        }
+    },
+    {
+        "address": "72 RUE DE LA CHAPELLE",
+        "postal_code": "75018",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8955116,
+                    "lng": 2.3601905
+                },
+                "southwest": {
+                    "lat": 48.8954116,
+                    "lng": 2.3600905
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "72",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75018",
+                "region": "France métropolitaine",
+                "road": "Rue de la Chapelle",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Quartier de la Chapelle"
+            },
+            "confidence": 10,
+            "formatted": "72 Rue de la Chapelle, 75018 Paris, France",
+            "geometry": {
+                "lat": 48.8954616,
+                "lng": 2.3601405
+            }
+        }
+    },
+    {
+        "address": "110 BOULEVARD MARECHAL J'OFFRE",
+        "postal_code": "92340",
+        "city": "BOURG LA REINE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement d'Antony",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement d'Antony",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92340",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92340 Arrondissement d'Antony, France",
+            "geometry": {
+                "lat": 48.7789,
+                "lng": 2.3178
+            }
+        }
+    },
+    {
+        "address": "176 BLD CHARLES DE GAULLE",
+        "postal_code": "92700",
+        "city": "COLOMBES",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Nanterre",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement de Nanterre",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92700",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92700 Arrondissement de Nanterre, France",
+            "geometry": {
+                "lat": 48.9188,
+                "lng": 2.254
+            }
+        }
+    },
+    {
+        "address": "6RUE PAUL DOUMER",
+        "postal_code": "17200",
+        "city": "ROYAN",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.6267913,
+                    "lng": -1.0274198
+                },
+                "southwest": {
+                    "lat": 45.6265543,
+                    "lng": -1.0275996
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-17"
+                ],
+                "_category": "road",
+                "_normalized_city": "Royan",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Charente-Maritime",
+                "local_authority": "Communauté d'agglomération Royan Atlantique",
+                "municipality": "Rochefort",
+                "political_union": "European Union",
+                "postcode": "17200",
+                "quarter": "Saint-Pierre",
+                "region": "France métropolitaine",
+                "road": "Rue Paul Doumer",
+                "road_type": "tertiary",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "town": "Royan"
+            },
+            "confidence": 9,
+            "formatted": "Rue Paul Doumer, 17200 Royan, France",
+            "geometry": {
+                "lat": 45.6265543,
+                "lng": -1.0274198
+            }
+        }
+    },
+    {
+        "address": "46 RUE PIERRE BUTIN",
+        "postal_code": "95800",
+        "city": "COURDIMANCHE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Pontoise",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val d'Oise",
+                "local_administrative_area": "Arrondissement de Pontoise",
+                "local_authority": "Communauté d'agglomération de Cergy-Pontoise",
+                "political_union": "European Union",
+                "postcode": "95800",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "95800 Arrondissement de Pontoise, France",
+            "geometry": {
+                "lat": 49.0364,
+                "lng": 2.0761
+            }
+        }
+    },
+    {
+        "address": "165 RUE LEGENDRE",
+        "postal_code": "75017",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8913477,
+                    "lng": 2.3254485
+                },
+                "southwest": {
+                    "lat": 48.8912477,
+                    "lng": 2.3253485
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier des Épinettes",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "165",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75017",
+                "region": "France métropolitaine",
+                "road": "Rue Legendre",
+                "suburb": "Paris 17e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "165 Rue Legendre, 75017 Paris, France",
+            "geometry": {
+                "lat": 48.8912977,
+                "lng": 2.3253985
+            }
+        }
+    },
+    {
+        "address": "33 AV GRAMMONT",
+        "postal_code": "64200",
+        "city": "BIARRITZ",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Bayonne",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Pyrénées-Atlantiques",
+                "local_administrative_area": "Arrondissement de Bayonne",
+                "local_authority": "Communauté d'agglomération du Pays Basque",
+                "political_union": "European Union",
+                "postcode": "64200",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ"
+            },
+            "confidence": 7,
+            "formatted": "64200 Arrondissement de Bayonne, France",
+            "geometry": {
+                "lat": 43.4312,
+                "lng": -1.5224
+            }
+        }
+    },
+    {
+        "address": "13 ROUTE DE BEAUREGARD",
+        "postal_code": "24570",
+        "city": "LE LARDIN SAINT LAZARE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.141594,
+                    "lng": 1.2355664
+                },
+                "southwest": {
+                    "lat": 45.141494,
+                    "lng": 1.2354664
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-24"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Lazare",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Dordogne",
+                "hamlet": "Lage",
+                "house_number": "13",
+                "local_authority": "Communauté de communes Terrassonnais Haut Périgord Noir",
+                "municipality": "Sarlat-la-Canéda",
+                "political_union": "European Union",
+                "postcode": "24570",
+                "region": "France métropolitaine",
+                "road": "Route de Beauregard",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "village": "Saint-Lazare"
+            },
+            "confidence": 10,
+            "formatted": "13 Route de Beauregard, 24570 Saint-Lazare, France",
+            "geometry": {
+                "lat": 45.141544,
+                "lng": 1.2355164
+            }
+        }
+    },
+    {
+        "address": "RUE ALEXANDRE TRISSOT",
+        "postal_code": "97200",
+        "city": "FORT DE FRANCE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 14.6098647,
+                    "lng": -61.0691317
+                },
+                "southwest": {
+                    "lat": 14.6093236,
+                    "lng": -61.0712428
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "MQ",
+                "ISO_3166-1_alpha-3": "MTQ",
+                "ISO_3166-2": [
+                    "FR-972"
+                ],
+                "_category": "road",
+                "_normalized_city": "Fort-de-France",
+                "_type": "road",
+                "city": "Fort-de-France",
+                "continent": "North America",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Martinique",
+                "local_authority": "Communauté d'agglomération du Centre de la Martinique",
+                "municipality": "Fort-de-France",
+                "political_union": "European Union",
+                "postcode": "97200",
+                "road": "Rue Alexandre Trissot",
+                "road_type": "residential",
+                "state": "Martinique",
+                "state_code": "MQ"
+            },
+            "confidence": 9,
+            "formatted": "Rue Alexandre Trissot, 97200 Fort-de-France, France",
+            "geometry": {
+                "lat": 14.6096316,
+                "lng": -61.0700562
+            }
+        }
+    },
+    {
+        "address": "1 RUE DE LA PEYRIGNE",
+        "postal_code": "32500",
+        "city": "FLEURANCE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.8414079,
+                    "lng": 0.6658864
+                },
+                "southwest": {
+                    "lat": 43.8413079,
+                    "lng": 0.6657864
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-OCC",
+                    "FR-32"
+                ],
+                "_category": "building",
+                "_normalized_city": "La Crouts",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Gers",
+                "house_number": "1",
+                "isolated_dwelling": "Au Juge",
+                "local_authority": "Communauté de communes de la Lomagne Gersoise",
+                "municipality": "Condom",
+                "neighbourhood": "La Crouts",
+                "political_union": "European Union",
+                "postcode": "32500",
+                "region": "France métropolitaine",
+                "road": "Rue de la Peyrigne",
+                "state": "Occitanie",
+                "state_code": "OCC",
+                "village": "Fleurance"
+            },
+            "confidence": 10,
+            "formatted": "Au Juge, 1 Rue de la Peyrigne, 32500 Fleurance, France",
+            "geometry": {
+                "lat": 43.8413579,
+                "lng": 0.6658364
+            }
+        }
+    },
+    {
+        "address": "1 RUE DES AULNES",
+        "postal_code": "35590",
+        "city": "SAINT GILLES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.1552232,
+                    "lng": -1.8205081
+                },
+                "southwest": {
+                    "lat": 48.1551232,
+                    "lng": -1.8206081
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BRE",
+                    "FR-35"
+                ],
+                "_category": "building",
+                "_normalized_city": "Zone industrielle du Gripail",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Ille-et-Vilaine",
+                "hamlet": "Le Moulinet",
+                "house_number": "1",
+                "industrial": "Zone industrielle du Gripail",
+                "local_authority": "Rennes Métropole",
+                "municipality": "Rennes",
+                "political_union": "European Union",
+                "postcode": "35590",
+                "region": "France métropolitaine",
+                "road": "Rue des Aulnes",
+                "state": "Bretagne",
+                "state_code": "BRE",
+                "village": "Saint-Gilles"
+            },
+            "confidence": 10,
+            "formatted": "1 Rue des Aulnes, 35590 Saint-Gilles, France",
+            "geometry": {
+                "lat": 48.1551732,
+                "lng": -1.8205581
+            }
+        }
+    },
+    {
+        "address": "28 RUE OSMIN DUPUY",
+        "postal_code": "33260",
+        "city": "CAZAUX",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 44.5317406,
+                    "lng": -1.1599195
+                },
+                "southwest": {
+                    "lat": 44.5299121,
+                    "lng": -1.1649749
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-33"
+                ],
+                "_category": "road",
+                "_normalized_city": "La Teste-de-Buch",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Gironde",
+                "local_authority": "Communauté d'agglomération Bassin d'Arcachon Sud",
+                "municipality": "Arcachon",
+                "political_union": "European Union",
+                "postcode": "33260",
+                "quarter": "Lotissement Les Berges du Lac",
+                "region": "France métropolitaine",
+                "road": "Rue Osmin Dupuy",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "suburb": "Cazaux",
+                "town": "La Teste-de-Buch"
+            },
+            "confidence": 9,
+            "formatted": "Rue Osmin Dupuy, 33260 La Teste-de-Buch, France",
+            "geometry": {
+                "lat": 44.5314108,
+                "lng": -1.1628073
+            }
+        }
+    },
+    {
+        "address": "28 RUE OSMIN DUPUY",
+        "postal_code": "33260",
+        "city": "CAZAUX",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 44.5317406,
+                    "lng": -1.1599195
+                },
+                "southwest": {
+                    "lat": 44.5299121,
+                    "lng": -1.1649749
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-33"
+                ],
+                "_category": "road",
+                "_normalized_city": "La Teste-de-Buch",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Gironde",
+                "local_authority": "Communauté d'agglomération Bassin d'Arcachon Sud",
+                "municipality": "Arcachon",
+                "political_union": "European Union",
+                "postcode": "33260",
+                "quarter": "Lotissement Les Berges du Lac",
+                "region": "France métropolitaine",
+                "road": "Rue Osmin Dupuy",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "suburb": "Cazaux",
+                "town": "La Teste-de-Buch"
+            },
+            "confidence": 9,
+            "formatted": "Rue Osmin Dupuy, 33260 La Teste-de-Buch, France",
+            "geometry": {
+                "lat": 44.5314108,
+                "lng": -1.1628073
+            }
+        }
+    },
+    {
+        "address": "59 ROUTE DU CROISIO",
+        "postal_code": "56730",
+        "city": "ST GILDAS DE RHUYS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.5256691,
+                    "lng": -2.8455657
+                },
+                "southwest": {
+                    "lat": 47.5196339,
+                    "lng": -2.8477819
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BRE",
+                    "FR-56"
+                ],
+                "_category": "road",
+                "_normalized_city": "Saint-Gildas-de-Rhuys",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Morbihan",
+                "hamlet": "Kerpont",
+                "local_authority": "Golfe du Morbihan - Vannes agglomération",
+                "municipality": "Vannes",
+                "political_union": "European Union",
+                "postcode": "56730",
+                "region": "France métropolitaine",
+                "road": "Route du Croisio",
+                "road_type": "residential",
+                "state": "Bretagne",
+                "state_code": "BRE",
+                "village": "Saint-Gildas-de-Rhuys"
+            },
+            "confidence": 9,
+            "formatted": "Route du Croisio, 56730 Saint-Gildas-de-Rhuys, France",
+            "geometry": {
+                "lat": 47.5229788,
+                "lng": -2.8476743
+            }
+        }
+    },
+    {
+        "address": "4 RUE EUGENE SUE",
+        "postal_code": "75018",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8908888,
+                    "lng": 2.3460552
+                },
+                "southwest": {
+                    "lat": 48.8907888,
+                    "lng": 2.3459552
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "4",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75018",
+                "region": "France métropolitaine",
+                "road": "Rue Eugène Sue",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Quartier de Clignancourt"
+            },
+            "confidence": 10,
+            "formatted": "4 Rue Eugène Sue, 75018 Paris, France",
+            "geometry": {
+                "lat": 48.8908388,
+                "lng": 2.3460052
+            }
+        }
+    },
+    {
+        "address": "97 RUE DU LANDY",
+        "postal_code": "93210",
+        "city": "LA PLAINE SAINT DENIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.915329,
+                    "lng": 2.354527
+                },
+                "southwest": {
+                    "lat": 48.915229,
+                    "lng": 2.354427
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-93"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Denis",
+                "_type": "building",
+                "city": "Saint-Denis",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-Saint-Denis",
+                "house_number": "97",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Saint-Denis",
+                "political_union": "European Union",
+                "postcode": "93210",
+                "quarter": "La Montjoie",
+                "region": "France métropolitaine",
+                "road": "Rue du Landy",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "La Plaine"
+            },
+            "confidence": 10,
+            "formatted": "97 Rue du Landy, 93210 Saint-Denis, France",
+            "geometry": {
+                "lat": 48.915279,
+                "lng": 2.354477
+            }
+        }
+    },
+    {
+        "address": "30 AVENUE PIERRE KERAUTRET",
+        "postal_code": "93230",
+        "city": "ROMAINVILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.879079,
+                    "lng": 2.4491592
+                },
+                "southwest": {
+                    "lat": 48.8790133,
+                    "lng": 2.4491087
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-93"
+                ],
+                "_category": "road",
+                "_normalized_city": "Romainville",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-Saint-Denis",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Bobigny",
+                "neighbourhood": "Cité Maurice Thorez",
+                "political_union": "European Union",
+                "postcode": "93230",
+                "region": "France métropolitaine",
+                "road": "Avenue Pierre Kérautret",
+                "road_type": "secondary",
+                "town": "Romainville"
+            },
+            "confidence": 9,
+            "formatted": "Avenue Pierre Kérautret, 93230 Romainville, France",
+            "geometry": {
+                "lat": 48.8790133,
+                "lng": 2.4491592
+            }
+        }
+    },
+    {
+        "address": "RESIDENCE COTES DE SEINE",
+        "postal_code": "78200",
+        "city": "MANTES LA JOLIE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Mantes-la-Jolie",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Yvelines",
+                "local_administrative_area": "Arrondissement de Mantes-la-Jolie",
+                "local_authority": "Communauté de communes du Pays Houdanais",
+                "political_union": "European Union",
+                "postcode": "78200",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "78200 Arrondissement de Mantes-la-Jolie, France",
+            "geometry": {
+                "lat": 48.9176,
+                "lng": 1.6612
+            }
+        }
+    },
+    {
+        "address": "LA BASTIDE, LA MOUSSIERE II, 21 CHEMIN",
+        "postal_code": "13013",
+        "city": "MARSEILLE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PAC"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Marseille",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Bouches-du-Rhône",
+                "local_administrative_area": "Arrondissement de Marseille",
+                "local_authority": "Aix-Marseille-Provence",
+                "political_union": "European Union",
+                "postcode": "13013",
+                "state": "Provence-Alpes-Côte d'Azur",
+                "state_code": "PAC"
+            },
+            "confidence": 7,
+            "formatted": "13013 Arrondissement de Marseille, France",
+            "geometry": {
+                "lat": 43.3186,
+                "lng": 5.4084
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "VIA PALERMO 49/A",
+        "postal_code": "95034",
+        "city": "BRONTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 37.7936747,
+                    "lng": 14.8307867
+                },
+                "southwest": {
+                    "lat": 37.7912132,
+                    "lng": 14.8276426
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "ISO_3166-2": [
+                    "IT-82",
+                    "IT-CT"
+                ],
+                "_category": "road",
+                "_normalized_city": "Bronte",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "Italia",
+                "country_code": "it",
+                "county": "Catania",
+                "county_code": "CT",
+                "neighbourhood": "Sciarotta",
+                "political_union": "European Union",
+                "postcode": "95034",
+                "road": "Via Palermo",
+                "road_type": "tertiary",
+                "state": "Sicilia",
+                "state_code": "SIC",
+                "town": "Bronte"
+            },
+            "confidence": 9,
+            "formatted": "Via Palermo, 95034 Bronte CT, Italia",
+            "geometry": {
+                "lat": 37.7925911,
+                "lng": 14.8294255
+            }
+        }
+    },
+    {
+        "address": "FOND PANIER",
+        "postal_code": "97224",
+        "city": "DUCOS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 14.5882107,
+                    "lng": -60.9687229
+                },
+                "southwest": {
+                    "lat": 14.5682107,
+                    "lng": -60.9887229
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "MQ",
+                "ISO_3166-1_alpha-3": "MTQ",
+                "ISO_3166-2": [
+                    "FR-972"
+                ],
+                "_category": "place",
+                "_normalized_city": "Ducos",
+                "_type": "neighbourhood",
+                "continent": "North America",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Martinique",
+                "local_authority": "Communauté d'agglomération de l'Espace Sud de la Martinique",
+                "municipality": "Le Marin",
+                "neighbourhood": "Fond Panier",
+                "political_union": "European Union",
+                "postcode": "97224",
+                "state": "Martinique",
+                "state_code": "MQ",
+                "town": "Ducos"
+            },
+            "confidence": 7,
+            "formatted": "97224 Ducos, France",
+            "geometry": {
+                "lat": 14.5782107,
+                "lng": -60.9787229
+            }
+        }
+    },
+    {
+        "address": "53 RUE CENSIER",
+        "postal_code": "75005",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8404325,
+                    "lng": 2.3530197
+                },
+                "southwest": {
+                    "lat": 48.8401401,
+                    "lng": 2.3521088
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "road",
+                "_normalized_city": "Paris",
+                "_type": "road",
+                "city": "Paris",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75005",
+                "region": "France métropolitaine",
+                "road": "Rue Censier",
+                "road_type": "residential",
+                "suburb": "Paris 5e Arrondissement"
+            },
+            "confidence": 9,
+            "formatted": "Rue Censier, 75005 Paris, France",
+            "geometry": {
+                "lat": 48.8404325,
+                "lng": 2.3530197
+            }
+        }
+    },
+    {
+        "address": "760 CHEMIN DE LA TIRE",
+        "postal_code": "06250",
+        "city": "MOUGINS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.6069996,
+                    "lng": 7.0146929
+                },
+                "southwest": {
+                    "lat": 43.6064307,
+                    "lng": 7.0141435
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PAC",
+                    "FR-06"
+                ],
+                "_category": "road",
+                "_normalized_city": "Mougins",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Alpes-Maritimes",
+                "local_authority": "Communauté d'agglomération Cannes Pays de Lérins",
+                "municipality": "Grasse",
+                "political_union": "European Union",
+                "postcode": "06250",
+                "region": "France métropolitaine",
+                "road": "Chemin de la Tire",
+                "road_type": "residential",
+                "state": "Provence-Alpes-Côte d'Azur",
+                "state_code": "PAC",
+                "suburb": "Font de l'Orme",
+                "town": "Mougins"
+            },
+            "confidence": 9,
+            "formatted": "Chemin de la Tire, 06250 Mougins, France",
+            "geometry": {
+                "lat": 43.6066264,
+                "lng": 7.0142875
+            }
+        }
+    },
+    {
+        "address": "46 RUE PIERRE BUTIN",
+        "postal_code": "95300",
+        "city": "PONTOISE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.0490502,
+                    "lng": 2.0984423
+                },
+                "southwest": {
+                    "lat": 49.0489502,
+                    "lng": 2.0983423
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "building",
+                "_normalized_city": "Pontoise",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "France métropolitaine",
+                "house_number": "46",
+                "local_authority": "Communauté d'agglomération de Cergy-Pontoise",
+                "municipality": "Pontoise",
+                "political_union": "European Union",
+                "postcode": "95300",
+                "region": "France métropolitaine",
+                "road": "Rue Pierre Butin",
+                "suburb": "Centre-Ville",
+                "town": "Pontoise"
+            },
+            "confidence": 10,
+            "formatted": "46 Rue Pierre Butin, 95300 Pontoise, France",
+            "geometry": {
+                "lat": 49.0490002,
+                "lng": 2.0983923
+            }
+        }
+    },
+    {
+        "address": "4 RUE FELIX EBOUE",
+        "postal_code": "94140",
+        "city": "ALFORTVILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8088851,
+                    "lng": 2.4118268
+                },
+                "southwest": {
+                    "lat": 48.8087851,
+                    "lng": 2.4117268
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Alfortville",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "4",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Créteil",
+                "political_union": "European Union",
+                "postcode": "94140",
+                "region": "France métropolitaine",
+                "road": "Rue Félix Éboué",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Blanc-Seine",
+                "town": "Alfortville"
+            },
+            "confidence": 10,
+            "formatted": "4 Rue Félix Éboué, 94140 Alfortville, France",
+            "geometry": {
+                "lat": 48.8088351,
+                "lng": 2.4117768
+            }
+        }
+    },
+    {
+        "address": "8 AVENUE DE LA HAYE RENAUD",
+        "postal_code": "35830",
+        "city": "BETTON",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.1804751,
+                    "lng": -1.6353071
+                },
+                "southwest": {
+                    "lat": 48.1803751,
+                    "lng": -1.6354071
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BRE",
+                    "FR-35"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Betton",
+                "_type": "shop",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Ille-et-Vilaine",
+                "hamlet": "Le Buisson",
+                "house_number": "8",
+                "local_authority": "Rennes Métropole",
+                "municipality": "Rennes",
+                "political_union": "European Union",
+                "postcode": "35830",
+                "region": "France métropolitaine",
+                "road": "Avenue de la Haye Renaud",
+                "shop": "Dmt France",
+                "state": "Bretagne",
+                "state_code": "BRE",
+                "town": "Betton"
+            },
+            "confidence": 9,
+            "formatted": "Dmt France, 8 Avenue de la Haye Renaud, 35830 Betton, France",
+            "geometry": {
+                "lat": 48.1804251,
+                "lng": -1.6353571
+            }
+        }
+    },
+    {
+        "address": "16 RUE THEODOR BOTREL",
+        "postal_code": "22580",
+        "city": "PLOUHA",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Saint-Brieuc",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Côtes-d'Armor",
+                "local_administrative_area": "Arrondissement de Saint-Brieuc",
+                "local_authority": "Guingamp-Paimpol Agglomération",
+                "political_union": "European Union",
+                "postcode": "22580",
+                "state": "Brittany",
+                "state_code": "BRE"
+            },
+            "confidence": 7,
+            "formatted": "22580 Arrondissement de Saint-Brieuc, France",
+            "geometry": {
+                "lat": 48.7128,
+                "lng": -2.9655
+            }
+        }
+    },
+    {
+        "address": "28 BD DU GENERAL DE GAULLE",
+        "postal_code": "95190",
+        "city": "GOUSSAINVILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.0275468,
+                    "lng": 2.4734478
+                },
+                "southwest": {
+                    "lat": 49.0274035,
+                    "lng": 2.4734066
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "road",
+                "_normalized_city": "Goussainville",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "France métropolitaine",
+                "local_authority": "Communauté d'agglomération Roissy Pays de France",
+                "political_union": "European Union",
+                "postcode": "95190",
+                "region": "France métropolitaine",
+                "road": "Boulevard du Général de Gaulle",
+                "road_type": "tertiary",
+                "town": "Goussainville"
+            },
+            "confidence": 9,
+            "formatted": "Boulevard du Général de Gaulle, 95190 Goussainville, France",
+            "geometry": {
+                "lat": 49.0274035,
+                "lng": 2.4734066
+            }
+        }
+    },
+    {
+        "address": "96 RUE DU GAL DE GAULLE",
+        "postal_code": "62320",
+        "city": "ROUVROY",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Lens",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Pas-de-Calais",
+                "local_administrative_area": "Arrondissement de Lens",
+                "local_authority": "Communauté d'agglomération Hénin-Carvin",
+                "political_union": "European Union",
+                "postcode": "62320",
+                "state": "Hauts-de-France",
+                "state_code": "HDF"
+            },
+            "confidence": 7,
+            "formatted": "62320 Arrondissement de Lens, France",
+            "geometry": {
+                "lat": 50.3925,
+                "lng": 2.904
+            }
+        }
+    },
+    {
+        "address": "ZA LAPRADE",
+        "postal_code": "43700",
+        "city": "SAINT GERMAIN LAPRADE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.0454913,
+                    "lng": 3.9633903
+                },
+                "southwest": {
+                    "lat": 45.0447932,
+                    "lng": 3.9609949
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-43"
+                ],
+                "_category": "road",
+                "_normalized_city": "Saint-Germain-Laprade",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Haute-Loire",
+                "local_authority": "Communauté d'agglomération du Puy-en-Velay",
+                "municipality": "Le Puy-en-Velay",
+                "political_union": "European Union",
+                "postcode": "43700",
+                "region": "France métropolitaine",
+                "road": "Impasse de Laprade",
+                "road_type": "residential",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "village": "Saint-Germain-Laprade"
+            },
+            "confidence": 9,
+            "formatted": "Impasse de Laprade, 43700 Saint-Germain-Laprade, France",
+            "geometry": {
+                "lat": 45.0453843,
+                "lng": 3.9622705
+            }
+        }
+    },
+    {
+        "address": "34 BD DES ITALIENS",
+        "postal_code": "75009",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8713487,
+                    "lng": 2.3351731
+                },
+                "southwest": {
+                    "lat": 48.8712487,
+                    "lng": 2.3350731
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier de la Chaussée-d'Antin",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "34",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75009",
+                "region": "France métropolitaine",
+                "road": "Boulevard des Italiens",
+                "suburb": "Paris 9e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "34 Boulevard des Italiens, 75009 Paris, France",
+            "geometry": {
+                "lat": 48.8712987,
+                "lng": 2.3351231
+            }
+        }
+    },
+    {
+        "address": "5 CHEMIN DU STADE",
+        "postal_code": "95450",
+        "city": "ABLEIGES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.067603,
+                    "lng": 1.9662198
+                },
+                "southwest": {
+                    "lat": 49.0670792,
+                    "lng": 1.9657865
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-95"
+                ],
+                "_category": "road",
+                "_normalized_city": "Ableiges",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-d'Oise",
+                "hamlet": "La Villeneuve Saint-Martin",
+                "local_authority": "Communauté de communes Vexin Centre",
+                "municipality": "Pontoise",
+                "political_union": "European Union",
+                "postcode": "95450",
+                "region": "France métropolitaine",
+                "road": "Chemin du Stade",
+                "road_type": "track",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "village": "Ableiges"
+            },
+            "confidence": 9,
+            "formatted": "Chemin du Stade, 95450 Ableiges, France",
+            "geometry": {
+                "lat": 49.0675246,
+                "lng": 1.9661756
+            }
+        }
+    },
+    {
+        "address": "12 COURS MONSEIGNEUR ROMERO",
+        "postal_code": "91000",
+        "city": "EVRY",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.6230239,
+                    "lng": 2.4288161
+                },
+                "southwest": {
+                    "lat": 48.6229239,
+                    "lng": 2.4287161
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-91"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Évry",
+                "_type": "restaurant",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Essonne",
+                "house_number": "12",
+                "local_authority": "Communauté d'agglomération Grand Paris Sud Seine Essonne Sénart",
+                "municipality": "Évry",
+                "neighbourhood": "Droits de l'Homme",
+                "political_union": "European Union",
+                "postcode": "91000",
+                "region": "France métropolitaine",
+                "restaurant": "B&Co",
+                "road": "Cours Monseigneur Roméro",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "town": "Évry"
+            },
+            "confidence": 9,
+            "formatted": "B&Co, 12 Cours Monseigneur Roméro, 91000 Évry, France",
+            "geometry": {
+                "lat": 48.6229739,
+                "lng": 2.4287661
+            }
+        }
+    },
+    {
+        "address": "AV PHILIPPE P BUR",
+        "postal_code": "77550",
+        "city": "MOISYCRMAIEL"
+    },
+    {
+        "address": "239, RUE DE TRIGNAC",
+        "postal_code": "44600",
+        "city": "SAINT NAZAIRE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.3010545,
+                    "lng": -2.1834586
+                },
+                "southwest": {
+                    "lat": 47.3009545,
+                    "lng": -2.1835586
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL",
+                    "FR-44"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Nazaire",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Loire-Atlantique",
+                "house_number": "239",
+                "local_authority": "Communauté d'agglomération de la Région Nazairienne et de l'Estuaire",
+                "municipality": "Saint-Nazaire",
+                "political_union": "European Union",
+                "postcode": "44600",
+                "region": "France métropolitaine",
+                "road": "Rue de Trignac",
+                "state": "Pays de la Loire",
+                "state_code": "PDL",
+                "suburb": "Méan",
+                "town": "Saint-Nazaire"
+            },
+            "confidence": 10,
+            "formatted": "239 Rue de Trignac, 44600 Saint-Nazaire, France",
+            "geometry": {
+                "lat": 47.3010045,
+                "lng": -2.1835086
+            }
+        }
+    },
+    {
+        "address": "76 RUE VOLTAIRE",
+        "postal_code": "17300",
+        "city": "ROCHEFORT",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.9410648,
+                    "lng": -0.9655729
+                },
+                "southwest": {
+                    "lat": 45.9401264,
+                    "lng": -0.9686315
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-17"
+                ],
+                "_category": "road",
+                "_normalized_city": "Rochefort",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Charente-Maritime",
+                "local_authority": "Communauté d'agglomération Rochefort Océan",
+                "municipality": "Rochefort",
+                "neighbourhood": "Faubourg Nord",
+                "political_union": "European Union",
+                "postcode": "17300",
+                "region": "France métropolitaine",
+                "road": "Rue Voltaire",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "town": "Rochefort"
+            },
+            "confidence": 9,
+            "formatted": "Rue Voltaire, 17300 Rochefort, France",
+            "geometry": {
+                "lat": 45.9406945,
+                "lng": -0.9674246
+            }
+        }
+    },
+    {
+        "address": "76 RUE VOLTAIRE",
+        "postal_code": "17300",
+        "city": "ROCHEFORT",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.9410648,
+                    "lng": -0.9655729
+                },
+                "southwest": {
+                    "lat": 45.9401264,
+                    "lng": -0.9686315
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-17"
+                ],
+                "_category": "road",
+                "_normalized_city": "Rochefort",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Charente-Maritime",
+                "local_authority": "Communauté d'agglomération Rochefort Océan",
+                "municipality": "Rochefort",
+                "neighbourhood": "Faubourg Nord",
+                "political_union": "European Union",
+                "postcode": "17300",
+                "region": "France métropolitaine",
+                "road": "Rue Voltaire",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "town": "Rochefort"
+            },
+            "confidence": 9,
+            "formatted": "Rue Voltaire, 17300 Rochefort, France",
+            "geometry": {
+                "lat": 45.9406945,
+                "lng": -0.9674246
+            }
+        }
+    },
+    {
+        "address": "27 RUE  A.FRANCE",
+        "postal_code": "10150",
+        "city": "PONT SAINTE MARIE",
+        "geoloc": {
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-GES",
+                    "FR-10"
+                ],
+                "_category": "building",
+                "_normalized_city": "Pont-Sainte-Marie",
+                "_type": "building",
+                "city": "Pont-Sainte-Marie",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Aube",
+                "house_number": "27",
+                "local_authority": "Troyes Champagne Métropole",
+                "political_union": "European Union",
+                "postcode": "10150",
+                "road": "Rue Anatole France",
+                "state": "Grand Est",
+                "state_code": "GES"
+            },
+            "confidence": 10,
+            "formatted": "27 Rue Anatole France, 10150 Pont-Sainte-Marie, France",
+            "geometry": {
+                "lat": 48.320866,
+                "lng": 4.096966
+            }
+        }
+    },
+    {
+        "address": "ZA CROIX FORT, STATION-SERVICE INTERMA",
+        "postal_code": "17220",
+        "city": "LA JARRIE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Jonzac",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Charente-Maritime",
+                "local_administrative_area": "Arrondissement de Jonzac",
+                "local_authority": "Communauté de communes de la Haute Saintonge",
+                "political_union": "European Union",
+                "postcode": "17220",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ"
+            },
+            "confidence": 7,
+            "formatted": "17220 Arrondissement de Jonzac, France",
+            "geometry": {
+                "lat": 45.3167,
+                "lng": -0.2961
+            }
+        }
+    },
+    {
+        "address": "122 BLD DU GENERAL LECLERC",
+        "postal_code": "92110",
+        "city": "CLICHY",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Nanterre",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "local_administrative_area": "Arrondissement de Nanterre",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "92110",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "92110 Arrondissement de Nanterre, France",
+            "geometry": {
+                "lat": 48.9002,
+                "lng": 2.3095
+            }
+        }
+    },
+    {
+        "address": "10 RUE EMILE GRAND",
+        "postal_code": "81000",
+        "city": "ALBI",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.9306406,
+                    "lng": 2.146551
+                },
+                "southwest": {
+                    "lat": 43.930531,
+                    "lng": 2.1464135
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-OCC",
+                    "FR-81"
+                ],
+                "_category": "building",
+                "_normalized_city": "Albi",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Tarn",
+                "house_number": "10",
+                "local_authority": "Albigeois",
+                "municipality": "Albi",
+                "political_union": "European Union",
+                "postcode": "81000",
+                "region": "France métropolitaine",
+                "road": "Rue Émile Grand",
+                "state": "Occitanie",
+                "state_code": "OCC",
+                "town": "Albi"
+            },
+            "confidence": 10,
+            "formatted": "10 Rue Émile Grand, 81000 Albi, France",
+            "geometry": {
+                "lat": 43.9305624,
+                "lng": 2.1464762
+            }
+        }
+    },
+    {
+        "address": "11 RUE A.SPEECKAERT",
+        "postal_code": "94240",
+        "city": "L'HAY-LES-ROSES",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de L'Haÿ-les-Roses",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "local_administrative_area": "Arrondissement de L'Haÿ-les-Roses",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "postcode": "94240",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 7,
+            "formatted": "94240 Arrondissement de L'Haÿ-les-Roses, France",
+            "geometry": {
+                "lat": 48.7833,
+                "lng": 2.3333
+            }
+        }
+    },
+    {
+        "address": "47 AVENUE DE LA LIBERTE",
+        "postal_code": "94260",
+        "city": "FRESNES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.7638924,
+                    "lng": 2.318163
+                },
+                "southwest": {
+                    "lat": 48.7637924,
+                    "lng": 2.318063
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Fresnes",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "47",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "L'Haÿ-les-Roses",
+                "political_union": "European Union",
+                "postcode": "94260",
+                "region": "France métropolitaine",
+                "road": "Avenue de la Liberté",
+                "town": "Fresnes"
+            },
+            "confidence": 10,
+            "formatted": "47 Avenue de la Liberté, 94260 Fresnes, France",
+            "geometry": {
+                "lat": 48.7638424,
+                "lng": 2.318113
+            }
+        }
+    },
+    {
+        "address": "28 RUE RASPAIL",
+        "postal_code": "69100",
+        "city": "VILLEURBANNE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.7733579,
+                    "lng": 4.8830549
+                },
+                "southwest": {
+                    "lat": 45.7732579,
+                    "lng": 4.8829549
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-69M"
+                ],
+                "_category": "building",
+                "_normalized_city": "Villeurbanne",
+                "_type": "building",
+                "city": "Villeurbanne",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Métropole de Lyon",
+                "house_number": "28",
+                "local_authority": "Métropole de Lyon",
+                "municipality": "Lyon",
+                "political_union": "European Union",
+                "postcode": "69100",
+                "region": "France métropolitaine",
+                "road": "Rue Raspail",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "state_district": "Rhône",
+                "suburb": "Gratte-Ciel"
+            },
+            "confidence": 10,
+            "formatted": "28 Rue Raspail, 69100 Villeurbanne, France",
+            "geometry": {
+                "lat": 45.7733079,
+                "lng": 4.8830049
+            }
+        }
+    },
+    {
+        "address": "7 RUE D'ESTIENNE D'ORVES",
+        "postal_code": "94200",
+        "city": "IVRY SUR SEINE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8132802,
+                    "lng": 2.3820144
+                },
+                "southwest": {
+                    "lat": 48.8131802,
+                    "lng": 2.3819144
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Ivry-sur-Seine",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "7",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "L'Haÿ-les-Roses",
+                "political_union": "European Union",
+                "postcode": "94200",
+                "region": "France métropolitaine",
+                "road": "Rue d'Estienne d'Orves",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Centre-ville",
+                "town": "Ivry-sur-Seine"
+            },
+            "confidence": 10,
+            "formatted": "7 Rue d'Estienne d'Orves, 94200 Ivry-sur-Seine, France",
+            "geometry": {
+                "lat": 48.8132302,
+                "lng": 2.3819644
+            }
+        }
+    },
+    {
+        "address": "33 RUE LAENNEC  CC LE PARC CHOLET",
+        "postal_code": "49300",
+        "city": "CHOLET",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Cholet",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Maine-et-Loire",
+                "local_administrative_area": "Arrondissement de Cholet",
+                "local_authority": "Cholet Agglomération",
+                "political_union": "European Union",
+                "postcode": "49300",
+                "state": "Pays de la Loire",
+                "state_code": "PDL"
+            },
+            "confidence": 7,
+            "formatted": "49300 Arrondissement de Cholet, France",
+            "geometry": {
+                "lat": 47.0667,
+                "lng": -0.8833
+            }
+        }
+    },
+    {
+        "address": "34 RUE CHARLES DE GAULLE",
+        "postal_code": "91440",
+        "city": "BURES SUR YVETTE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.6972973,
+                    "lng": 2.1644445
+                },
+                "southwest": {
+                    "lat": 48.6971973,
+                    "lng": 2.1643445
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-91"
+                ],
+                "_category": "building",
+                "_normalized_city": "Bures Cottage",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Essonne",
+                "house_number": "34",
+                "local_authority": "Communauté Paris-Saclay",
+                "municipality": "Palaiseau",
+                "neighbourhood": "Bures Cottage",
+                "political_union": "European Union",
+                "postcode": "91440",
+                "region": "France métropolitaine",
+                "road": "Rue Charles de Gaulle",
+                "village": "Bures-sur-Yvette"
+            },
+            "confidence": 10,
+            "formatted": "34 Rue Charles de Gaulle, 91440 Bures-sur-Yvette, France",
+            "geometry": {
+                "lat": 48.6972473,
+                "lng": 2.1643945
+            }
+        }
+    },
+    {
+        "address": "IMMEUBLE COEUR DE VILLE BAT A",
+        "postal_code": "97412",
+        "city": "BRAS-PANON",
+        "geoloc": {
+            "annotations": {
+                "pips": 0
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "RE",
+                "ISO_3166-1_alpha-3": "REU",
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Saint-Benoît",
+                "_type": "postcode",
+                "continent": "Africa",
+                "country": "Reunion",
+                "country_code": "re",
+                "county": "Réunion",
+                "local_administrative_area": "Arrondissement de Saint-Benoît",
+                "postcode": "97412",
+                "state": "Réunion"
+            },
+            "confidence": 7,
+            "formatted": "97412 Arrondissement de Saint-Benoît, La Réunion, France",
+            "geometry": {
+                "lat": -20.9967,
+                "lng": 55.6782
+            }
+        }
+    },
+    {
+        "address": "28 RUE RASPAIL",
+        "postal_code": "69100",
+        "city": "VILLEURBANNE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.7733579,
+                    "lng": 4.8830549
+                },
+                "southwest": {
+                    "lat": 45.7732579,
+                    "lng": 4.8829549
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-69M"
+                ],
+                "_category": "building",
+                "_normalized_city": "Villeurbanne",
+                "_type": "building",
+                "city": "Villeurbanne",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Métropole de Lyon",
+                "house_number": "28",
+                "local_authority": "Métropole de Lyon",
+                "municipality": "Lyon",
+                "political_union": "European Union",
+                "postcode": "69100",
+                "region": "France métropolitaine",
+                "road": "Rue Raspail",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "state_district": "Rhône",
+                "suburb": "Gratte-Ciel"
+            },
+            "confidence": 10,
+            "formatted": "28 Rue Raspail, 69100 Villeurbanne, France",
+            "geometry": {
+                "lat": 45.7733079,
+                "lng": 4.8830049
+            }
+        }
+    },
+    {
+        "address": "15 RUE DE PARIS",
+        "postal_code": "60200",
+        "city": "COMPIEGNE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.4155861,
+                    "lng": 2.8225609
+                },
+                "southwest": {
+                    "lat": 49.4154861,
+                    "lng": 2.8224609
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF",
+                    "FR-60"
+                ],
+                "_category": "building",
+                "_normalized_city": "Compiègne",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Oise",
+                "house_number": "15",
+                "local_authority": "Communauté d'agglomération de la Région de Compiègne et de la Basse Automne",
+                "municipality": "Compiègne",
+                "political_union": "European Union",
+                "postcode": "60200",
+                "region": "France métropolitaine",
+                "road": "Rue de Paris",
+                "state": "Hauts-de-France",
+                "state_code": "HDF",
+                "suburb": "Centre Ville",
+                "town": "Compiègne"
+            },
+            "confidence": 10,
+            "formatted": "15 Rue de Paris, 60200 Compiègne, France",
+            "geometry": {
+                "lat": 49.4155361,
+                "lng": 2.8225109
+            }
+        }
+    },
+    {
+        "address": "58 RUE LAMBRECHTS",
+        "postal_code": "92400",
+        "city": "COURBEVOIE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8993426,
+                    "lng": 2.2614612
+                },
+                "southwest": {
+                    "lat": 48.8992426,
+                    "lng": 2.2613612
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-92"
+                ],
+                "_category": "building",
+                "_normalized_city": "Courbevoie",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "house_number": "58",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Nanterre",
+                "political_union": "European Union",
+                "postcode": "92400",
+                "region": "France métropolitaine",
+                "road": "Rue Lambrechts",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Quartier Cœur de Ville",
+                "town": "Courbevoie"
+            },
+            "confidence": 10,
+            "formatted": "58 Rue Lambrechts, 92400 Courbevoie, France",
+            "geometry": {
+                "lat": 48.8992926,
+                "lng": 2.2614112
+            }
+        }
+    },
+    {
+        "address": "PLACE DU 22 MAI",
+        "postal_code": "97200",
+        "city": "FORT DE FRANCE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 14.6129884,
+                    "lng": -61.0707883
+                },
+                "southwest": {
+                    "lat": 14.6129742,
+                    "lng": -61.070803
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "MQ",
+                "ISO_3166-1_alpha-3": "MTQ",
+                "ISO_3166-2": [
+                    "FR-972"
+                ],
+                "_category": "road",
+                "_normalized_city": "Fort-de-France",
+                "_type": "road",
+                "city": "Fort-de-France",
+                "continent": "North America",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Martinique",
+                "local_authority": "Communauté d'agglomération du Centre de la Martinique",
+                "municipality": "Fort-de-France",
+                "political_union": "European Union",
+                "postcode": "97200",
+                "road": "Place du 22 Mai 1848",
+                "road_type": "pedestrian",
+                "state": "Martinique",
+                "state_code": "MQ"
+            },
+            "confidence": 9,
+            "formatted": "Place du 22 Mai 1848, 97200 Fort-de-France, France",
+            "geometry": {
+                "lat": 14.6129884,
+                "lng": -61.0707883
+            }
+        }
+    },
+    {
+        "address": "191 RUE DES MAILLETS",
+        "postal_code": "72000",
+        "city": "LE MANS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.0161132,
+                    "lng": 0.2143769
+                },
+                "southwest": {
+                    "lat": 48.0160132,
+                    "lng": 0.2142769
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL",
+                    "FR-72"
+                ],
+                "_category": "building",
+                "_normalized_city": "Le Mans",
+                "_type": "building",
+                "city": "Le Mans",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Sarthe",
+                "house_number": "191B",
+                "local_authority": "Le Mans Métropole",
+                "municipality": "Le Mans",
+                "neighbourhood": "Cité des Maillets",
+                "political_union": "European Union",
+                "postcode": "72000",
+                "region": "France métropolitaine",
+                "road": "Rue des Maillets",
+                "state": "Pays de la Loire",
+                "state_code": "PDL"
+            },
+            "confidence": 10,
+            "formatted": "191B Rue des Maillets, 72000 Le Mans, France",
+            "geometry": {
+                "lat": 48.0160632,
+                "lng": 0.2143269
+            }
+        }
+    },
+    {
+        "address": "760 CHEMIN DE LA TIRE",
+        "postal_code": "06250",
+        "city": "MOUGINS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.6069996,
+                    "lng": 7.0146929
+                },
+                "southwest": {
+                    "lat": 43.6064307,
+                    "lng": 7.0141435
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PAC",
+                    "FR-06"
+                ],
+                "_category": "road",
+                "_normalized_city": "Mougins",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Alpes-Maritimes",
+                "local_authority": "Communauté d'agglomération Cannes Pays de Lérins",
+                "municipality": "Grasse",
+                "political_union": "European Union",
+                "postcode": "06250",
+                "region": "France métropolitaine",
+                "road": "Chemin de la Tire",
+                "road_type": "residential",
+                "state": "Provence-Alpes-Côte d'Azur",
+                "state_code": "PAC",
+                "suburb": "Font de l'Orme",
+                "town": "Mougins"
+            },
+            "confidence": 9,
+            "formatted": "Chemin de la Tire, 06250 Mougins, France",
+            "geometry": {
+                "lat": 43.6066264,
+                "lng": 7.0142875
+            }
+        }
+    },
+    {
+        "address": "151 RUE LEON GAMBETTA",
+        "postal_code": "59000",
+        "city": "LILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 50.6296991,
+                    "lng": 3.0554037
+                },
+                "southwest": {
+                    "lat": 50.6295991,
+                    "lng": 3.0553037
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF",
+                    "FR-59"
+                ],
+                "_category": "building",
+                "_normalized_city": "Lille",
+                "_type": "building",
+                "city": "Lille",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Nord",
+                "house_number": "151",
+                "local_authority": "Métropole Européenne de Lille",
+                "municipality": "Lille",
+                "political_union": "European Union",
+                "postcode": "59046",
+                "region": "France métropolitaine",
+                "road": "Rue Léon Gambetta",
+                "state": "Hauts-de-France",
+                "state_code": "HDF",
+                "suburb": "Wazemmes"
+            },
+            "confidence": 10,
+            "formatted": "151 Rue Léon Gambetta, 59046 Lille, France",
+            "geometry": {
+                "lat": 50.6296491,
+                "lng": 3.0553537
+            }
+        }
+    },
+    {
+        "address": "7 RUE DE LA BOURRELIERE",
+        "postal_code": "59551",
+        "city": "TOURMIGNIES",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-HDF"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Lille",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "North",
+                "local_administrative_area": "Arrondissement de Lille",
+                "local_authority": "Communauté de communes Pévèle-Carembault",
+                "political_union": "European Union",
+                "postcode": "59551",
+                "state": "Hauts-de-France",
+                "state_code": "HDF"
+            },
+            "confidence": 7,
+            "formatted": "59551 Arrondissement de Lille, France",
+            "geometry": {
+                "lat": 50.5222,
+                "lng": 3.0622
+            }
+        }
+    },
+    {
+        "address": "CENTRE COMMERCIAL DE LAMBALLE",
+        "postal_code": "45400",
+        "city": "FLEURY LES AUBRAIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.9277337,
+                    "lng": 1.9181774
+                },
+                "southwest": {
+                    "lat": 47.9276337,
+                    "lng": 1.9180774
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-CVL",
+                    "FR-45"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Fleury-les-Aubrais",
+                "_type": "retail",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Loiret",
+                "hamlet": "Clos du Bourg",
+                "local_authority": "Orléans Métropole",
+                "municipality": "Orléans",
+                "political_union": "European Union",
+                "postcode": "45400",
+                "region": "France métropolitaine",
+                "retail": "Centre Commercial Lamballe",
+                "road": "Centre Commercial Lamballe",
+                "shop": "Centre Commercial de Lamballe",
+                "state": "Centre-Val de Loire",
+                "state_code": "CVL",
+                "town": "Fleury-les-Aubrais"
+            },
+            "confidence": 9,
+            "formatted": "Centre Commercial Lamballe, Centre Commercial de Lamballe, Centre Commercial Lamballe, 45400 Fleury-les-Aubrais, France",
+            "geometry": {
+                "lat": 47.9276837,
+                "lng": 1.9181274
+            }
+        }
+    },
+    {
+        "address": "4 RUE LEON PELOUSE",
+        "postal_code": "95480",
+        "city": "PIERRELAYE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 49.0234607,
+                    "lng": 2.1548491
+                },
+                "southwest": {
+                    "lat": 49.0221658,
+                    "lng": 2.1539256
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "road",
+                "_normalized_city": "Résidence du Petit Bois",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "France métropolitaine",
+                "local_authority": "Communauté d'agglomération Val Parisis",
+                "municipality": "Argenteuil",
+                "neighbourhood": "Résidence du Petit Bois",
+                "political_union": "European Union",
+                "postcode": "95480",
+                "region": "France métropolitaine",
+                "road": "Rue Léon Pelouse",
+                "road_type": "tertiary",
+                "village": "Pierrelaye"
+            },
+            "confidence": 9,
+            "formatted": "Rue Léon Pelouse, 95480 Pierrelaye, France",
+            "geometry": {
+                "lat": 49.0227071,
+                "lng": 2.1540309
+            }
+        }
+    },
+    {
+        "address": "15 AV PH DURAND DASSIER",
+        "postal_code": "33290",
+        "city": "PAREMPUYRE",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Bordeaux",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Gironde",
+                "local_administrative_area": "Arrondissement de Bordeaux",
+                "local_authority": "Communauté de communes Médoc Estuaire",
+                "political_union": "European Union",
+                "postcode": "33290",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ"
+            },
+            "confidence": 7,
+            "formatted": "33290 Arrondissement de Bordeaux, France",
+            "geometry": {
+                "lat": 44.9812,
+                "lng": -0.6025
+            }
+        }
+    },
+    {
+        "address": "RUA SENHORA DO MONTE, 5A,",
+        "postal_code": "1170-358",
+        "city": "LISBOA",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 38.8335166,
+                    "lng": -9.092325
+                },
+                "southwest": {
+                    "lat": 38.832759,
+                    "lng": -9.0928501
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "PT",
+                "ISO_3166-1_alpha-3": "PRT",
+                "ISO_3166-2": [
+                    "PT-11"
+                ],
+                "_category": "road",
+                "_normalized_city": "Loures",
+                "_type": "road",
+                "city": "Loures",
+                "city_district": "Santa Iria de Azoia, São João da Talha e Bobadela",
+                "continent": "Europe",
+                "country": "Portugal",
+                "country_code": "pt",
+                "county": "Lisboa",
+                "county_code": "LSB",
+                "hamlet": "Pirescoxe",
+                "neighbourhood": "Estacal Novo",
+                "political_union": "European Union",
+                "postcode": "2690-214",
+                "road": "Rua Senhora do Monte",
+                "road_type": "residential"
+            },
+            "confidence": 9,
+            "formatted": "Rua Senhora do Monte, 2690-214 Loures, Portugal",
+            "geometry": {
+                "lat": 38.832759,
+                "lng": -9.0928501
+            }
+        }
+    },
+    {
+        "address": "1 AVENUE CORNEBARRIEU",
+        "postal_code": "31700",
+        "city": "BLAGNAC",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.6371648,
+                    "lng": 1.390271
+                },
+                "southwest": {
+                    "lat": 43.6370648,
+                    "lng": 1.390171
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-OCC",
+                    "FR-31"
+                ],
+                "_category": "building",
+                "_normalized_city": "Blagnac",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Haute-Garonne",
+                "house_number": "1",
+                "local_authority": "Toulouse Métropole",
+                "municipality": "Toulouse",
+                "political_union": "European Union",
+                "postcode": "31700",
+                "region": "France métropolitaine",
+                "road": "Avenue de Cornebarrieu",
+                "state": "Occitanie",
+                "state_code": "OCC",
+                "town": "Blagnac"
+            },
+            "confidence": 10,
+            "formatted": "1 Avenue de Cornebarrieu, 31700 Blagnac, France",
+            "geometry": {
+                "lat": 43.6371148,
+                "lng": 1.390221
+            }
+        }
+    },
+    {
+        "address": "7, RUE DES TIV",
+        "postal_code": "56380",
+        "city": "GUER",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Vannes",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Morbihan",
+                "local_administrative_area": "Arrondissement de Vannes",
+                "local_authority": "De l'Oust à Brocéliande Communauté",
+                "political_union": "European Union",
+                "postcode": "56380",
+                "state": "Brittany",
+                "state_code": "BRE"
+            },
+            "confidence": 7,
+            "formatted": "56380 Arrondissement de Vannes, France",
+            "geometry": {
+                "lat": 47.9587,
+                "lng": -2.1479
+            }
+        }
+    },
+    {
+        "address": "7, RUE DES TIV",
+        "postal_code": "56380",
+        "city": "GUER",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Vannes",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Morbihan",
+                "local_administrative_area": "Arrondissement de Vannes",
+                "local_authority": "De l'Oust à Brocéliande Communauté",
+                "political_union": "European Union",
+                "postcode": "56380",
+                "state": "Brittany",
+                "state_code": "BRE"
+            },
+            "confidence": 7,
+            "formatted": "56380 Arrondissement de Vannes, France",
+            "geometry": {
+                "lat": 47.9587,
+                "lng": -2.1479
+            }
+        }
+    },
+    {
+        "address": "63 RUE MONGE",
+        "postal_code": "75005",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8442305,
+                    "lng": 2.3525695
+                },
+                "southwest": {
+                    "lat": 48.8441305,
+                    "lng": 2.3524695
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Paris",
+                "_type": "shop",
+                "city": "Paris",
+                "city_block": "Quartier Saint-Victor",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "63",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75005",
+                "region": "France métropolitaine",
+                "road": "Rue Monge",
+                "shop": "Lavomatique S.A.R.L.",
+                "suburb": "Paris 5e Arrondissement"
+            },
+            "confidence": 9,
+            "formatted": "Lavomatique S.A.R.L., 63 Rue Monge, 75005 Paris, France",
+            "geometry": {
+                "lat": 48.8441805,
+                "lng": 2.3525195
+            }
+        }
+    },
+    {
+        "address": "8 BOULEVARD JASSOT",
+        "postal_code": "84000",
+        "city": "AVIGNON",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.934841,
+                    "lng": 4.813309
+                },
+                "southwest": {
+                    "lat": 43.934741,
+                    "lng": 4.813209
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PAC",
+                    "FR-84"
+                ],
+                "_category": "building",
+                "_normalized_city": "Avignon",
+                "_type": "building",
+                "city": "Avignon",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Vaucluse",
+                "house_number": "8",
+                "local_authority": "Grand Avignon",
+                "municipality": "Avignon",
+                "political_union": "European Union",
+                "postcode": "84000",
+                "quarter": "Sacré-Coeur",
+                "region": "France métropolitaine",
+                "road": "Boulevard Jassot",
+                "state": "Provence-Alpes-Côte d'Azur",
+                "state_code": "PAC",
+                "suburb": "Quartier Nord Rocade"
+            },
+            "confidence": 10,
+            "formatted": "8 Boulevard Jassot, 84000 Avignon, France",
+            "geometry": {
+                "lat": 43.934791,
+                "lng": 4.813259
+            }
+        }
+    },
+    {
+        "address": "13 RUE CHARLES LECOCQ",
+        "postal_code": "75015",
+        "city": "PARIS 15",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF"
+                ],
+                "_category": "place",
+                "_normalized_city": "Paris",
+                "_type": "municipality",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "local_administrative_area": "Paris",
+                "local_authority": "Métropole du Grand Paris",
+                "political_union": "European Union",
+                "state": "Île-de-France",
+                "state_code": "IDF"
+            },
+            "confidence": 9,
+            "formatted": "Paris, France",
+            "geometry": {
+                "lat": 48.8412,
+                "lng": 2.3003
+            }
+        }
+    },
+    {
+        "address": "65 PLACE ST BRUNO",
+        "postal_code": "38000",
+        "city": "GRENOBLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.187056,
+                    "lng": 5.7144933
+                },
+                "southwest": {
+                    "lat": 45.1865008,
+                    "lng": 5.7139684
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-38"
+                ],
+                "_category": "road",
+                "_normalized_city": "Grenoble",
+                "_type": "road",
+                "city": "Grenoble",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Isère",
+                "local_authority": "Grenoble-Alpes Métropole",
+                "municipality": "Grenoble",
+                "political_union": "European Union",
+                "postcode": "38000",
+                "region": "France métropolitaine",
+                "road": "Place Saint-Bruno",
+                "road_type": "residential",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "suburb": "Berriat Saint-Bruno"
+            },
+            "confidence": 9,
+            "formatted": "Place Saint-Bruno, 38000 Grenoble, France",
+            "geometry": {
+                "lat": 45.1865916,
+                "lng": 5.7142054
+            }
+        }
+    },
+    {
+        "address": "IMPASSE DES TONDERIES",
+        "postal_code": "19270",
+        "city": "USSAC",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.1849935,
+                    "lng": 1.5439924
+                },
+                "southwest": {
+                    "lat": 45.183293,
+                    "lng": 1.5419272
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-NAQ",
+                    "FR-19"
+                ],
+                "_category": "road",
+                "_normalized_city": "Les Tonderies",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Corrèze",
+                "local_authority": "Communauté d'agglomération du Bassin de Brive",
+                "municipality": "Brive-la-Gaillarde",
+                "neighbourhood": "Les Tonderies",
+                "political_union": "European Union",
+                "postcode": "19270",
+                "region": "France métropolitaine",
+                "road": "Impasse des Tonderies",
+                "road_type": "residential",
+                "state": "Nouvelle-Aquitaine",
+                "state_code": "NAQ",
+                "village": "Ussac"
+            },
+            "confidence": 9,
+            "formatted": "Impasse des Tonderies, 19270 Ussac, France",
+            "geometry": {
+                "lat": 45.1848574,
+                "lng": 1.543118
+            }
+        }
+    },
+    {
+        "address": "15 AVENUE DU CRISTAL",
+        "postal_code": "44300",
+        "city": "NANTES",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.2547002,
+                    "lng": -1.5357755
+                },
+                "southwest": {
+                    "lat": 47.2546002,
+                    "lng": -1.5358755
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL",
+                    "FR-44"
+                ],
+                "_category": "building",
+                "_normalized_city": "Nantes",
+                "_type": "building",
+                "city": "Nantes",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Loire-Atlantique",
+                "house_number": "15",
+                "local_authority": "Nantes Métropole",
+                "municipality": "Nantes",
+                "neighbourhood": "Éraudière",
+                "political_union": "European Union",
+                "postcode": "44300",
+                "region": "France métropolitaine",
+                "road": "Avenue du Cristal",
+                "state": "Pays de la Loire",
+                "state_code": "PDL",
+                "suburb": "Nantes Erdre"
+            },
+            "confidence": 10,
+            "formatted": "15 Avenue du Cristal, 44300 Nantes, France",
+            "geometry": {
+                "lat": 47.2546502,
+                "lng": -1.5358255
+            }
+        }
+    },
+    {
+        "address": "3 ALLEE CLAUDE MONET",
+        "postal_code": "92300",
+        "city": "LEVALLOIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8981363,
+                    "lng": 2.2729847
+                },
+                "southwest": {
+                    "lat": 48.8980363,
+                    "lng": 2.2728847
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-92"
+                ],
+                "_category": "building",
+                "_normalized_city": "Levallois-Perret",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "house_number": "3",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Nanterre",
+                "political_union": "European Union",
+                "postcode": "92300",
+                "region": "France métropolitaine",
+                "road": "Allée Claude Monet",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "town": "Levallois-Perret"
+            },
+            "confidence": 10,
+            "formatted": "3 Allée Claude Monet, 92300 Levallois-Perret, France",
+            "geometry": {
+                "lat": 48.8980863,
+                "lng": 2.2729347
+            }
+        }
+    },
+    {
+        "address": "31 RUE DE CHOISY",
+        "postal_code": "94140",
+        "city": "ALFORTVILLE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.7896396,
+                    "lng": 2.4254226
+                },
+                "southwest": {
+                    "lat": 48.7895396,
+                    "lng": 2.4253226
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-94"
+                ],
+                "_category": "building",
+                "_normalized_city": "Alfortville",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Val-de-Marne",
+                "house_number": "31",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Créteil",
+                "neighbourhood": "Résidence Les Peupliers",
+                "political_union": "European Union",
+                "postcode": "94140",
+                "region": "France métropolitaine",
+                "road": "Rue de Choisy",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Pont du Port à l'Anglais",
+                "town": "Alfortville"
+            },
+            "confidence": 10,
+            "formatted": "31 Rue de Choisy, 94140 Alfortville, France",
+            "geometry": {
+                "lat": 48.7895896,
+                "lng": 2.4253726
+            }
+        }
+    },
+    {
+        "address": "7, RUE BERCIER",
+        "postal_code": "89000",
+        "city": "AUXERRE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.8018403,
+                    "lng": 3.5832984
+                },
+                "southwest": {
+                    "lat": 47.8017403,
+                    "lng": 3.5831984
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BFC",
+                    "FR-89"
+                ],
+                "_category": "building",
+                "_normalized_city": "Auxerre",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Yonne",
+                "house_number": "7",
+                "local_authority": "Communauté d'agglomération de l'Auxerrois",
+                "municipality": "Auxerre",
+                "neighbourhood": "Saint-Gervais",
+                "political_union": "European Union",
+                "postcode": "89000",
+                "region": "France métropolitaine",
+                "road": "Rue Bercier",
+                "state": "Bourgogne-Franche-Comté",
+                "state_code": "BFC",
+                "town": "Auxerre"
+            },
+            "confidence": 10,
+            "formatted": "7 Rue Bercier, 89000 Auxerre, France",
+            "geometry": {
+                "lat": 47.8017903,
+                "lng": 3.5832484
+            }
+        }
+    },
+    {
+        "address": "9 RTE D HEYRIEUX",
+        "postal_code": "69800",
+        "city": "SAINT PRIEST",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 45.6898882,
+                    "lng": 4.9383646
+                },
+                "southwest": {
+                    "lat": 45.6897882,
+                    "lng": 4.9382646
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-ARA",
+                    "FR-69M"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Priest",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Métropole de Lyon",
+                "house_number": "9",
+                "local_authority": "Métropole de Lyon",
+                "municipality": "Lyon",
+                "political_union": "European Union",
+                "postcode": "69800",
+                "region": "France métropolitaine",
+                "road": "Route d'Heyrieux",
+                "state": "Auvergne-Rhône-Alpes",
+                "state_code": "ARA",
+                "state_district": "Rhône",
+                "suburb": "Centre-Ville / Gare / Garibaldi",
+                "town": "Saint-Priest"
+            },
+            "confidence": 10,
+            "formatted": "9 Route d'Heyrieux, 69800 Saint-Priest, France",
+            "geometry": {
+                "lat": 45.6898382,
+                "lng": 4.9383146
+            }
+        }
+    },
+    {
+        "address": "24 RUE CLAUDE TERRASSE",
+        "postal_code": "75016",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8387444,
+                    "lng": 2.2621111
+                },
+                "southwest": {
+                    "lat": 48.8386444,
+                    "lng": 2.2620111
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "24",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75016",
+                "region": "France métropolitaine",
+                "road": "Rue Claude Terrasse",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Quartier d'Auteuil"
+            },
+            "confidence": 10,
+            "formatted": "24 Rue Claude Terrasse, 75016 Paris, France",
+            "geometry": {
+                "lat": 48.8386944,
+                "lng": 2.2620611
+            }
+        }
+    },
+    {
+        "address": "CCAL DU PARC 33 RUE LAËNNEC",
+        "postal_code": "49300",
+        "city": "CHOLET",
+        "geoloc": {
+            "annotations": {
+                "pips": 1
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PDL"
+                ],
+                "_category": "postcode",
+                "_normalized_city": "Arrondissement de Cholet",
+                "_type": "postcode",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Maine-et-Loire",
+                "local_administrative_area": "Arrondissement de Cholet",
+                "local_authority": "Cholet Agglomération",
+                "political_union": "European Union",
+                "postcode": "49300",
+                "state": "Pays de la Loire",
+                "state_code": "PDL"
+            },
+            "confidence": 7,
+            "formatted": "49300 Arrondissement de Cholet, France",
+            "geometry": {
+                "lat": 47.0667,
+                "lng": -0.8833
+            }
+        }
+    },
+    {
+        "address": "18, RUE DU CAPITAINE DREYFUS",
+        "postal_code": "68100",
+        "city": "MULHOUSE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 47.6684555,
+                    "lng": 7.439789
+                },
+                "southwest": {
+                    "lat": 47.6683555,
+                    "lng": 7.439689
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-GES",
+                    "FR-6AE",
+                    "FR-68"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Hochkirch",
+                "_type": "shop",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Haut-Rhin",
+                "hamlet": "Landstrasse",
+                "house_number": "18",
+                "local_authority": "Saint-Louis Agglomération",
+                "municipality": "Mulhouse",
+                "political_union": "European Union",
+                "postcode": "68510",
+                "quarter": "Hochkirch",
+                "region": "France métropolitaine",
+                "road": "Rue du Capitaine Dreyfus",
+                "shop": "Action",
+                "state": "Grand Est",
+                "state_code": "GES",
+                "village": "Sierentz"
+            },
+            "confidence": 9,
+            "formatted": "Action, 18 Rue du Capitaine Dreyfus, 68510 Sierentz, France",
+            "geometry": {
+                "lat": 47.6684055,
+                "lng": 7.439739
+            }
+        }
+    },
+    {
+        "address": "3 ALLEE CLAUDE MONET",
+        "postal_code": "92300",
+        "city": "LEVALLOIS PERRET",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8981363,
+                    "lng": 2.2729847
+                },
+                "southwest": {
+                    "lat": 48.8980363,
+                    "lng": 2.2728847
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-92"
+                ],
+                "_category": "building",
+                "_normalized_city": "Levallois-Perret",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "house_number": "3",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Nanterre",
+                "political_union": "European Union",
+                "postcode": "92300",
+                "region": "France métropolitaine",
+                "road": "Allée Claude Monet",
+                "town": "Levallois-Perret"
+            },
+            "confidence": 10,
+            "formatted": "3 Allée Claude Monet, 92300 Levallois-Perret, France",
+            "geometry": {
+                "lat": 48.8980863,
+                "lng": 2.2729347
+            }
+        }
+    },
+    {
+        "address": "22-24 RUE DE LA FONTAINE AU ROI",
+        "postal_code": "75011",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.868301,
+                    "lng": 2.3710916
+                },
+                "southwest": {
+                    "lat": 48.868201,
+                    "lng": 2.3709916
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-75C"
+                ],
+                "_category": "commerce",
+                "_normalized_city": "Paris",
+                "_type": "gallery",
+                "city": "Paris",
+                "city_block": "Quartier de la Folie-Méricourt",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "gallery": "La Ralentie",
+                "house_number": "22-24",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75011",
+                "region": "France métropolitaine",
+                "road": "Rue de la Fontaine au Roi",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "suburb": "Paris 11e Arrondissement"
+            },
+            "confidence": 9,
+            "formatted": "La Ralentie, 22-24 Rue de la Fontaine au Roi, 75011 Paris, France",
+            "geometry": {
+                "lat": 48.868251,
+                "lng": 2.3710416
+            }
+        }
+    },
+    {
+        "address": "14 RUELLE DES CORMIERS",
+        "postal_code": "77690",
+        "city": "MONTIGNY SUR LOING",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.335227,
+                    "lng": 2.744195
+                },
+                "southwest": {
+                    "lat": 48.335184,
+                    "lng": 2.744128
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-IDF",
+                    "FR-77"
+                ],
+                "_category": "building",
+                "_normalized_city": "Montigny-sur-Loing",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Seine-et-Marne",
+                "hamlet": "Le Veau",
+                "house_number": "14",
+                "local_authority": "Communauté de communes Moret Seine et Loing",
+                "municipality": "Fontainebleau",
+                "political_union": "European Union",
+                "postcode": "77690",
+                "region": "France métropolitaine",
+                "road": "Ruelle des Cormiers",
+                "state": "Île-de-France",
+                "state_code": "IDF",
+                "village": "Montigny-sur-Loing"
+            },
+            "confidence": 10,
+            "formatted": "14 Ruelle des Cormiers, 77690 Montigny-sur-Loing, France",
+            "geometry": {
+                "lat": 48.335203,
+                "lng": 2.7441601
+            }
+        }
+    },
+    {
+        "address": "36,RUE RACINE",
+        "postal_code": "92120",
+        "city": "MONTROUGE",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8124088,
+                    "lng": 2.3144759
+                },
+                "southwest": {
+                    "lat": 48.8123088,
+                    "lng": 2.3143759
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-92"
+                ],
+                "_category": "building",
+                "_normalized_city": "Montrouge",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hauts-de-Seine",
+                "house_number": "36",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Antony",
+                "political_union": "European Union",
+                "postcode": "92120",
+                "region": "France métropolitaine",
+                "road": "Rue Racine",
+                "town": "Montrouge"
+            },
+            "confidence": 10,
+            "formatted": "36 Rue Racine, 92120 Montrouge, France",
+            "geometry": {
+                "lat": 48.8123588,
+                "lng": 2.3144259
+            }
+        }
+    },
+    {
+        "address": "4, RUE LIGNER",
+        "postal_code": "75020",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8572836,
+                    "lng": 2.3973985
+                },
+                "southwest": {
+                    "lat": 48.8571836,
+                    "lng": 2.3972985
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier du Père-Lachaise",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "4",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75020",
+                "region": "France métropolitaine",
+                "road": "Rue Ligner",
+                "suburb": "Paris 20e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "4 Rue Ligner, 75020 Paris, France",
+            "geometry": {
+                "lat": 48.8572336,
+                "lng": 2.3973485
+            }
+        }
+    },
+    {
+        "address": "62 RUE DE LA PORTE",
+        "postal_code": "29200",
+        "city": "BREST",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.3839842,
+                    "lng": -4.5033607
+                },
+                "southwest": {
+                    "lat": 48.3838842,
+                    "lng": -4.5034607
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BRE",
+                    "FR-29"
+                ],
+                "_category": "building",
+                "_normalized_city": "Brest",
+                "_type": "building",
+                "city": "Brest",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Finistère",
+                "house_number": "62",
+                "local_authority": "Brest Métropole",
+                "municipality": "Brest",
+                "neighbourhood": "Prat-Lédan",
+                "political_union": "European Union",
+                "postcode": "29200",
+                "region": "France métropolitaine",
+                "road": "Rue de la Porte",
+                "state": "Bretagne",
+                "state_code": "BRE",
+                "suburb": "Recouvrance"
+            },
+            "confidence": 10,
+            "formatted": "62 Rue de la Porte, 29200 Brest, France",
+            "geometry": {
+                "lat": 48.3839342,
+                "lng": -4.5034107
+            }
+        }
+    },
+    {
+        "address": "71, RUE DE GOUEDIC",
+        "postal_code": "22000",
+        "city": "SAINT BRIEUC",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.5091012,
+                    "lng": -2.7540093
+                },
+                "southwest": {
+                    "lat": 48.5090012,
+                    "lng": -2.7541093
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-BRE",
+                    "FR-22"
+                ],
+                "_category": "building",
+                "_normalized_city": "Saint-Brieuc",
+                "_type": "building",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Côtes-d'Armor",
+                "house_number": "71",
+                "local_authority": "Saint-Brieuc Armor Agglomération",
+                "municipality": "Saint-Brieuc",
+                "neighbourhood": "Gouédic",
+                "political_union": "European Union",
+                "postcode": "22000",
+                "region": "France métropolitaine",
+                "road": "Rue de Gouédic",
+                "state": "Bretagne",
+                "state_code": "BRE",
+                "town": "Saint-Brieuc"
+            },
+            "confidence": 10,
+            "formatted": "71 Rue de Gouédic, 22000 Saint-Brieuc, France",
+            "geometry": {
+                "lat": 48.5090512,
+                "lng": -2.7540593
+            }
+        }
+    },
+    {
+        "address": "30 RUE ROUCHER",
+        "postal_code": "34000",
+        "city": "MONTPELLIER",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.608111,
+                    "lng": 3.874729
+                },
+                "southwest": {
+                    "lat": 43.608011,
+                    "lng": 3.874629
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-OCC",
+                    "FR-34"
+                ],
+                "_category": "building",
+                "_normalized_city": "Montpellier",
+                "_type": "building",
+                "city": "Montpellier",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Hérault",
+                "house_number": "30",
+                "local_authority": "Montpellier Méditerranée Métropole",
+                "municipality": "Montpellier",
+                "neighbourhood": "Centre Historique",
+                "political_union": "European Union",
+                "postcode": "34062",
+                "region": "France métropolitaine",
+                "road": "Rue Roucher",
+                "state": "Occitanie",
+                "state_code": "OCC",
+                "suburb": "Centre"
+            },
+            "confidence": 10,
+            "formatted": "30 Rue Roucher, 34062 Montpellier, France",
+            "geometry": {
+                "lat": 43.608061,
+                "lng": 3.874679
+            }
+        }
+    },
+    {
+        "address": "34, BD DES ITALIENS",
+        "postal_code": "75009",
+        "city": "PARIS",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 48.8713487,
+                    "lng": 2.3351731
+                },
+                "southwest": {
+                    "lat": 48.8712487,
+                    "lng": 2.3350731
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-75C"
+                ],
+                "_category": "building",
+                "_normalized_city": "Paris",
+                "_type": "building",
+                "city": "Paris",
+                "city_block": "Quartier de la Chaussée-d'Antin",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Paris",
+                "house_number": "34",
+                "local_authority": "Métropole du Grand Paris",
+                "municipality": "Paris",
+                "political_union": "European Union",
+                "postcode": "75009",
+                "region": "France métropolitaine",
+                "road": "Boulevard des Italiens",
+                "suburb": "Paris 9e Arrondissement"
+            },
+            "confidence": 10,
+            "formatted": "34 Boulevard des Italiens, 75009 Paris, France",
+            "geometry": {
+                "lat": 48.8712987,
+                "lng": 2.3351231
+            }
+        }
+    },
+    {
+        "address": "3 RUE DU DRAGON",
+        "postal_code": "83300",
+        "city": "DRAGUIGNAN",
+        "geoloc": {
+            "bounds": {
+                "northeast": {
+                    "lat": 43.5409449,
+                    "lng": 6.4653002
+                },
+                "southwest": {
+                    "lat": 43.5407902,
+                    "lng": 6.4648974
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "FR",
+                "ISO_3166-1_alpha-3": "FRA",
+                "ISO_3166-2": [
+                    "FR-PAC",
+                    "FR-83"
+                ],
+                "_category": "road",
+                "_normalized_city": "Draguignan",
+                "_type": "road",
+                "continent": "Europe",
+                "country": "France",
+                "country_code": "fr",
+                "county": "Var",
+                "local_authority": "Dracénie Provence Verdon agglomération",
+                "municipality": "Draguignan",
+                "neighbourhood": "Cité comtale",
+                "political_union": "European Union",
+                "postcode": "83300",
+                "region": "France métropolitaine",
+                "road": "Rue du Dragon",
+                "road_type": "residential",
+                "state": "Provence-Alpes-Côte d'Azur",
+                "state_code": "PAC",
+                "town": "Draguignan"
+            },
+            "confidence": 9,
+            "formatted": "Rue du Dragon, 83300 Draguignan, France",
+            "geometry": {
+                "lat": 43.5409449,
+                "lng": 6.4648974
+            }
+        }
+    }
+]

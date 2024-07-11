@@ -6,7 +6,9 @@ import SaveIcon from "@mui/icons-material/Save"
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
 import {signUp, supabase} from "../api/index";
 
-import Header, {Card, TextField} from './HeaderCard'
+import Header, {Card} from './HeaderCard'
+import { TextField } from './Form'
+
 import {buildSignUpSchema} from "../api/schema";
 
 
@@ -89,7 +91,7 @@ export default function App({children}) {
   }, [])
 
   if (loading) {
-    return <Header><Typography variant={'h6'}>Chargement ...</Typography></Header>
+    return <Card><Header><Typography variant={'h6'}>Chargement ...</Typography></Header></Card>
   } else if (!session) {
     return (<SignUp />)
   }

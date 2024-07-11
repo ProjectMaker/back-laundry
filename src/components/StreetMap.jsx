@@ -89,7 +89,7 @@ const initializeControls = (map) => {
   map.controls[google.maps.ControlPosition.RIGHT_TOP].clear()
   map.controls[google.maps.ControlPosition.RIGHT_TOP].push(fullscreenControlDiv);
 }
-const Markers = ({items}) => {
+const Markers = ({items, onMarkerClick}) => {
   const map = useMap()
   const [markers, setMarkers] = useState([])
   const clusterer = useRef()
@@ -127,27 +127,33 @@ const Markers = ({items}) => {
     });
   };
 
-  return items.map(({address, coordinate}, i) => (
+  return items.map((item, i) => (
     <AdvancedMarker
       key={i}
-      position={{lat: coordinate.latitude, lng: coordinate.longitude}}
-      title={address}
+      position={{lat: item.coordinate.latitude, lng: item.coordinate.longitude}}
+      title={item.address}
       ref={marker => setMarkerRef(marker, i)}
+      onClick={() => onMarkerClick(item)}
     >
       <Pin background={'#3B82F6'} glyphColor={'#A5D6A7'} borderColor={'#3B82F6'} />
     </AdvancedMarker>
   ))
 }
 
-const StreetMap = forwardRef(({initialRegion, onRegionChange, markers}, ref) => {
+const StreetMap = forwardRef(({
+  initialRegion,
+  onRegionChange,
+  markers,
+  onMarkerClick
+}, ref) => {
   const [initialized, setInitialized] = useState(false)
   const map = useMap()
-  useImperativeHandle(ref, () => {
+  useImperativeHandle(ref, () => ({
     panTo: ({latitude, longitude}) => {
       map.setCenter({lat: latitude, lng: longitude})
       map.setZoom(14)
     }
-  })
+  }))
   useEffect(() => {
     if (map) {
       map.addListener('center_changed', () => {
@@ -177,9 +183,7 @@ const StreetMap = forwardRef(({initialRegion, onRegionChange, markers}, ref) => 
         position={{lat: initialRegion.latitude, lng: initialRegion.longitude}}
         title={'Vous'}
       />
-      {
-        <Markers items={markers} />
-      }
+      <Markers items={markers} onMarkerClick={onMarkerClick} />
     </Map>
   )
 })

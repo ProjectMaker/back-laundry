@@ -18,8 +18,8 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
   const placesLib = useMapsLibrary('places')
   const map = useMap()
   const [selectedItem, setSelectedItem] = useState(null)
-  const [verbatimValue, setVerbatim] = useState('')
-  const [verbatim] = useDebounce(verbatimValue, 500)
+  const [_verbatim, setVerbatim] = useState('')
+  const [verbatim] = useDebounce(_verbatim, 500)
   const {isLoading, error, data} = useQuery({
     queryKey: ['locations', verbatim],
     queryFn: () => searchLocations(map, placesLib, verbatim),

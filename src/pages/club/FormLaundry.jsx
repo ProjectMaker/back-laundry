@@ -22,13 +22,13 @@ import { useQuery } from '@tanstack/react-query'
 
 import { getLaundry } from "../../api/index.js";
 import useSave, { buildSchema, DEFAULT_LAUNDRY } from './use-save'
-import { TextField } from '../../components/HeaderCard'
+import { TextField } from '../../components/Form'
 import ImagePicker from '../../components/ImagePicker'
 
 
 const Materials = () => {
   const {control, formState} = useFormContext()
-  const { fields, append, prepend, remove, swap, move, insert } = useFieldArray({
+  const { fields, append, remove, swap, move, insert } = useFieldArray({
     control, // control props comes from useForm (optional: if you are using FormProvider)
     name: "materials", // unique name for your Field Array
   });

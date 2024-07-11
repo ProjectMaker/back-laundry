@@ -1,17 +1,18 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, createRef } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { Stack, List, ListItem, Typography } from '@mui/material'
+import {Box, Stack, List, ListItem, Typography, Button} from '@mui/material'
 import {useDebounce} from "use-debounce";
 import {APIProvider } from '@vis.gl/react-google-maps';
 import Autocomplete from '../../components/Autocomplete'
 import { useLaundries } from '../../api/washmap'
 import StreetMap from '../../components/StreetMap'
+import AddIcon from "@mui/icons-material/Add.js";
 
 
 
 const LaundriesMap = ({initialPosition}) => {
   const autocompleteRef = useRef(null)
-  const mapRef = useRef(null)
+  const mapRef = createRef(null)
   const navigate = useNavigate()
   const [_geoloc, setGeoloc] = useState(initialPosition)
   const [geoloc] = useDebounce(_geoloc, 750)
@@ -19,16 +20,29 @@ const LaundriesMap = ({initialPosition}) => {
 
   return (
     <Stack gap={1}>
-      <Autocomplete
-        ref={autocompleteRef}
-        onClick={({latitude, longitude}) => {
-          setGeoloc({latitude, longitude})
-          mapRef.current.panTo({latitude, longitude})
-        }}
-      />
+      <Stack justifyContent={'space-between'} alignItems='center' direction={'row'} flex={1}>
+        <Autocomplete
+          ref={autocompleteRef}
+          onClick={({latitude, longitude}) => {
+            setGeoloc({latitude, longitude})
+            console.log(mapRef)
+            mapRef.current.panTo({latitude, longitude})
+          }}
+        />
+        <Box ml={1}>
+          <Button
+            startIcon={<AddIcon />}
+            size={'small'}
+            onClick={() => navigate('/laundry')} color={'success'} variant={'contained'}
+          >
+            Ajouter
+          </Button>
+        </Box>
+      </Stack>
       <Stack sx={{width: '100%', height: 400}}>
         <StreetMap
           ref={mapRef}
+          onMarkerClick={(item) => navigate(`/washmap/${item.objectID}`)}
           initialRegion={initialPosition}
           onRegionChange={region => setGeoloc(region)}
           markers={data}
@@ -36,7 +50,7 @@ const LaundriesMap = ({initialPosition}) => {
       </Stack>
       <List>
         {
-          isLoading && <ListItem><Typography fontSize={14} variant={'caption'}>Chargement ...</Typography></ListItem>
+          isLoading && <ListItem><Typography variant={'caption'}>Chargement ...</Typography></ListItem>
         }
         {
           data?.map(item =>
@@ -44,7 +58,7 @@ const LaundriesMap = ({initialPosition}) => {
               onClick={() => {
                 navigate(`/washmap/${item.objectID}`)
               }}
-              key={item.address}>
+              key={item.objectID}>
               <Typography variant={'caption'}>{item.address}</Typography>
             </ListItem>
           )
