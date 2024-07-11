@@ -1,8 +1,8 @@
 import { object, string, number, array } from 'yup'
 import { useMutation } from "@tanstack/react-query";
 
-import { upsertLaundry, removePictures, addPictures, removeLaundry } from '../api'
-import { client } from '../App'
+import { upsertLaundry, removePictures, addPictures } from '../../api'
+
 export const DEFAULT_LAUNDRY = {
   name: '',
   postal_code: '',
@@ -30,13 +30,7 @@ export const buildSchema = () => {
   })
 }
 
-export const buildSignUpSchema = () => {
-  return object({
-    email: string()
-      .required('Requis'),
-    password: string().required('Requis')
-  })
-}
+
 const useSave = () => {
   const saveLaundry = async (newLaundry) => {
     return upsertLaundry(newLaundry)

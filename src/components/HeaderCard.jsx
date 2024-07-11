@@ -97,16 +97,16 @@ const Header = ({children}) => {
           </Logo>
           <Breadcrumbs>
             {
-              pathname.indexOf('/public') === 0 && (
-                <Link to={'/public'}>
+              pathname.indexOf('/washmap') === 0 && (
+                <Link to={'/washmap'}>
                   <Typography variant={'h6'}>
-                    Lavmap
+                    Washmap
                   </Typography>
                 </Link>
               )
             }
             {
-              pathname === '/public' && (
+              pathname === '/washmap' && (
                 <Typography variant={'subtitle2'}>
                   Près de chez vous
                 </Typography>
@@ -133,16 +133,16 @@ const Header = ({children}) => {
       </Stack>
       <Stack sx={{alignItems: 'end'}} direction={'row'} gap={2}>
         <NavButton
-          active={pathname !== '/public'}
+          active={pathname !== '/washmap'}
           onClick={() => navigate('/laundries')}
           >
           Club laverie
         </NavButton>
         <NavButton
-          active={pathname === '/public'}
-          onClick={() => navigate('/public')}
+          active={pathname === '/washmap'}
+          onClick={() => navigate('/washmap')}
         >
-          LavMap
+          WashMap
         </NavButton>
       </Stack>
 

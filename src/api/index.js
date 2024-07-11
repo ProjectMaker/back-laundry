@@ -35,11 +35,6 @@ export async function removePictures(ids) {
 }
 
 export async function removeLaundry(id) {
-  const a = await supabase
-    .from('laundry_picture')
-    .delete()
-    .eq('laundry_id', id)
-
   await supabase
     .from('laundry')
     .delete()
@@ -101,5 +96,5 @@ export async  function searchLocations (map, placesLib, verbatim) {
   })
 
    */
-  return results.map(({address: {freeformAddress: address}, position: {lon: lng, lat}}) => ({_geoloc: {lat, lng}, address}))
+  return results.map(({address: {freeformAddress: address}, position: {lon: lng, lat}}) => ({latitude: lat, longitude: lng, address}))
 }

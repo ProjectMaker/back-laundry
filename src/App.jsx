@@ -9,11 +9,13 @@ import { Routes, Route, Outlet, BrowserRouter as Router, Navigate } from 'react-
 import './index.css'
 import Theme from './theme'
 import Header from './components/HeaderCard'
+import Authenticated from './components/AuthenticatedRoute'
 
-import FormLaundry from "./pages/FormLaundry"
-import List from "./pages/List"
-import Authenticated from './pages/Authenticated'
-import LaundryPublic from './pages/LaundryPublic'
+import FormLaundry from "./pages/club/FormLaundry"
+import List from "./pages/club/List"
+import Detail from "./pages/washmap/Detail"
+import Washmap from './pages/washmap/Home'
+
 export const client = new QueryClient()
 
 
@@ -47,8 +49,9 @@ function App() {
                 <Route path={'/laundries'} element={<List />} />
 
                 <Route path={'/laundry/:id?'} element={<FormLaundry />} />
-                <Route path={'/public'} element={<LaundryPublic />} />
-
+                <Route path={'/washmap'} element={<Washmap />}>
+                  <Route path={':id'} element={<Detail />} />
+                </Route>
                 <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
               </Route>
             </Routes>

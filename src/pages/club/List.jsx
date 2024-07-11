@@ -19,9 +19,8 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from '@mui/icons-material/Add';
-import {client} from "../App.jsx";
-import {getLaundries, removeLaundry} from '../api/index.js'
-import Header from "../components/HeaderCard.jsx";
+import {client} from "../../App.jsx";
+import {getLaundries, removeLaundry} from '../../api/index'
 
 const LandriesList = () => {
   const navigate = useNavigate()

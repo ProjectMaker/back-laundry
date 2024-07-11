@@ -1,19 +1,14 @@
-import {
-  Box,
-  Button,
-  Stack,
-  Typography
-} from '@mui/material'
-import {
-  useMutation
-} from '@tanstack/react-query'
+import { useState, useEffect } from 'react'
+import {Box, Button, Stack, Typography} from "@mui/material";
+import {useMutation} from "@tanstack/react-query";
 import { useForm, FormProvider } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
-
-import { signUp } from "../api/index.js";
-import Header, {Card, TextField} from '../components/HeaderCard.jsx'
-import { buildSignUpSchema } from './use-save'
 import SaveIcon from "@mui/icons-material/Save"
+import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
+import {signUp, supabase} from "../api/index";
+
+import Header, {Card, TextField} from './HeaderCard'
+import {buildSignUpSchema} from "../api/schema";
+
 
 const SignUp = () => {
   const form = useForm({
@@ -27,9 +22,6 @@ const SignUp = () => {
     mutationFn: ({email, password}) => signUp({email, password}),
     onError: (err) => {
       console.log(err)
-    },
-    onSuccess: (data) => {
-
     }
   })
 
@@ -76,4 +68,32 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default function App({children}) {
+  const [loading, setLoading] = useState(true)
+  const [session, setSession] = useState(null)
+
+  useEffect(() => {
+    setLoading(true)
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+      setLoading(false)
+    })
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+
+    return () => subscription.unsubscribe()
+  }, [])
+
+  if (loading) {
+    return <Header><Typography variant={'h6'}>Chargement ...</Typography></Header>
+  } else if (!session) {
+    return (<SignUp />)
+  }
+  else {
+    return children
+  }
+}

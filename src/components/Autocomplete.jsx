@@ -94,6 +94,7 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
               verbatim.length >= 3 && data?.map(item => (
                 <ListItem
                   onClick={() => {
+                    console.log(item)
                     onClick(item)
                     form.setValue('verbatim', '')
                     setVerbatim('')

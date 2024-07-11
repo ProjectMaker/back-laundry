@@ -6,7 +6,8 @@ import {
   Button,
   Tab,
   Tabs,
-  IconButton
+  IconButton,
+  Typography
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddBoxIcon from '@mui/icons-material/AddBox';
@@ -19,11 +20,10 @@ import { FormProvider, useForm, useFormContext, useFieldArray } from 'react-hook
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
 import { useQuery } from '@tanstack/react-query'
 
-import { getLaundry } from "../api/index.js";
+import { getLaundry } from "../../api/index.js";
 import useSave, { buildSchema, DEFAULT_LAUNDRY } from './use-save'
-import Header, { TextField, Card } from '../components/HeaderCard'
-import ImagePicker from '../components/ImagePicker'
-import Typography from "@mui/material/Typography";
+import { TextField } from '../../components/HeaderCard'
+import ImagePicker from '../../components/ImagePicker'
 
 
 const Materials = () => {
@@ -80,67 +80,66 @@ const FormLaundry = ({laundry}) => {
   }
   return (
     <>
-
-        {
-          !!error && <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
-        }
-        <FormProvider {...form}>
-          <Stack gap={2} flex={1} mt={2}>
-            <Tabs value={tab} onChange={(e,index) => setTab(index)}>
-              <Tab icon={<InfoIcon fontSize={'small'}/>} label="Général"/>
-              <Tab icon={<AutoFixHighIcon fontSize={'small'}/>} label="Matériel" />
-              <Tab icon={<AddAPhotoIcon fontSize={'small'}/>} label="Photo" />
-            </Tabs>
-            <Stack mt={2} gap={2}>
-              {
-                tab === 0 && (
-                  <>
-                    <FormControl>
-                      <TextField label="Nom" name={'name'} />
-                    </FormControl>
-                    <Stack gap={2} direction={'row'} flex={1}>
-                      <TextField label="Code postal" name={'postal_code'} />
-                      <TextField label="Ville" name={'city'} sx={{flexGrow: 1}} />
-                    </Stack>
-                    <Stack gap={2} direction={'row'} flex={1}>
-                      <TextField label="Surface" name={'surface'}/>
-                      <TextField label="Prix" name={'price'} />
-                      <TextField label="Loyer" name={'rent'} sx={{flexGrow: 1}} />
-                    </Stack>
-                    <TextField multiline rows={10} name={'description'} label={'Description'} />
-                  </>
-                )
-              }
-              {
-                tab === 1 && (
-                  <Materials />
-                )
-              }
-              { tab === 2 && (
-                <ImagePicker />
-              )}
-            </Stack>
-            <Box sx={{display: 'flex', justifyContent: 'flex-end'}} gap={2}>
-              <Button
-                color={'warning'}
-                variant={'contained'}
-                size={'small'}
-                onClick={() => navigate('/laundries')}
-                >
-                Retour à la liste
-              </Button>
-              <Button
-                color={'success'}
-                variant={'contained'}
-                size={'small'}
-                onClick={form.handleSubmit(handleSubmit)}
-                startIcon={<SaveIcon />}
-              >
-                {loading ? 'En cours ...' : 'Valider'}
-              </Button>
-            </Box>
+      {
+        !!error && <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
+      }
+      <FormProvider {...form}>
+        <Stack gap={2} flex={1} mt={2}>
+          <Tabs value={tab} onChange={(e,index) => setTab(index)}>
+            <Tab icon={<InfoIcon fontSize={'small'}/>} label="Général"/>
+            <Tab icon={<AutoFixHighIcon fontSize={'small'}/>} label="Matériel" />
+            <Tab icon={<AddAPhotoIcon fontSize={'small'}/>} label="Photo" />
+          </Tabs>
+          <Stack mt={2} gap={2}>
+            {
+              tab === 0 && (
+                <>
+                  <FormControl>
+                    <TextField label="Nom" name={'name'} />
+                  </FormControl>
+                  <Stack gap={2} direction={'row'} flex={1}>
+                    <TextField label="Code postal" name={'postal_code'} />
+                    <TextField label="Ville" name={'city'} sx={{flexGrow: 1}} />
+                  </Stack>
+                  <Stack gap={2} direction={'row'} flex={1}>
+                    <TextField label="Surface" name={'surface'}/>
+                    <TextField label="Prix" name={'price'} />
+                    <TextField label="Loyer" name={'rent'} sx={{flexGrow: 1}} />
+                  </Stack>
+                  <TextField multiline rows={10} name={'description'} label={'Description'} />
+                </>
+              )
+            }
+            {
+              tab === 1 && (
+                <Materials />
+              )
+            }
+            { tab === 2 && (
+              <ImagePicker />
+            )}
           </Stack>
-        </FormProvider>
+          <Box sx={{display: 'flex', justifyContent: 'flex-end'}} gap={2}>
+            <Button
+              color={'warning'}
+              variant={'contained'}
+              size={'small'}
+              onClick={() => navigate('/laundries')}
+              >
+              Retour à la liste
+            </Button>
+            <Button
+              color={'success'}
+              variant={'contained'}
+              size={'small'}
+              onClick={form.handleSubmit(handleSubmit)}
+              startIcon={<SaveIcon />}
+            >
+              {loading ? 'En cours ...' : 'Valider'}
+            </Button>
+          </Box>
+        </Stack>
+      </FormProvider>
     </>
   )
 }

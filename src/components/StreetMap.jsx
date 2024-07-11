@@ -1,14 +1,12 @@
-import { useEffect, useState, useRef } from 'react'
-import { Stack, useTheme, List, ListItem, Typography } from '@mui/material'
-import { useQuery } from '@tanstack/react-query'
-import {APIProvider, Map, AdvancedMarker, Pin, useMap } from '@vis.gl/react-google-maps';
+import { useEffect, useState, useRef, forwardRef, useImperativeHandle } from 'react'
+import { Stack, useTheme } from '@mui/material'
+import {Map, AdvancedMarker, Pin, useMap } from '@vis.gl/react-google-maps';
 import { createRoot } from 'react-dom/client'
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ZoomOutIcon from '@mui/icons-material/ZoomOut';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import {MarkerClusterer} from '@googlemaps/markerclusterer';
 import laundries from '../algolia.json'
-import Autocomplete from '../components/Autocomplete'
 
 function MapButton({onClick, children}) {
   const theme = useTheme()
@@ -91,7 +89,7 @@ const initializeControls = (map) => {
   map.controls[google.maps.ControlPosition.RIGHT_TOP].clear()
   map.controls[google.maps.ControlPosition.RIGHT_TOP].push(fullscreenControlDiv);
 }
-const Markers = ({center}) => {
+const Markers = ({items}) => {
   const map = useMap()
   const [markers, setMarkers] = useState([])
   const clusterer = useRef()
@@ -129,10 +127,10 @@ const Markers = ({center}) => {
     });
   };
 
-  return laundries.map(({address, geometry}, i) => (
+  return items.map(({address, coordinate}, i) => (
     <AdvancedMarker
       key={i}
-      position={geometry}
+      position={{lat: coordinate.latitude, lng: coordinate.longitude}}
       title={address}
       ref={marker => setMarkerRef(marker, i)}
     >
@@ -141,112 +139,50 @@ const Markers = ({center}) => {
   ))
 }
 
-function LaundriesMap ({index, currentPosition}) {
+const StreetMap = forwardRef(({initialRegion, onRegionChange, markers}, ref) => {
   const [initialized, setInitialized] = useState(false)
-  const autocompleteRef = useRef(null)
-  const [geoloc, setGeoloc] = useState(null)
   const map = useMap()
-  const {data, isLoading, error} = useQuery({
-    queryKey: ['geoloc', `${geoloc?.lat}${geoloc?.lng}`],
-    queryFn: async () => {
-      const { hits } = await index.search('', { aroundLatLng: geoloc ? `${geoloc.lat}, ${geoloc.lng}` : `${currentPosition.lat}, ${currentPosition.lng}`})
-      return hits
-    },
-    enabled: !!geoloc || Boolean(currentPosition)
+  useImperativeHandle(ref, () => {
+    panTo: ({latitude, longitude}) => {
+      map.setCenter({lat: latitude, lng: longitude})
+      map.setZoom(14)
+    }
   })
-
-  return (
-      <Stack gap={1}>
-        <Autocomplete
-          ref={autocompleteRef}
-          onClick={({_geoloc: {lat, lng}}) => {
-            setGeoloc({lat, lng, marker: true})
-            map.setCenter({lat, lng})
-            map.setZoom(16)
-          }}
-        />
-        <Stack sx={{width: '100%', height: 400}}>
-          <Map
-            onTilesLoaded={() => {
-              console.log('ini', initialized)
-              if (!initialized) {
-                setGeoloc({...currentPosition, marker: true})
-                map.setCenter(currentPosition)
-                map.setZoom(16)
-                setInitialized(true)
-              }
-            }}
-            mapId={'3c572553938cd25'}
-            zoomControl={false}
-            scaleControl={false}
-            mapTypeControl={false}
-            streetViewControl={false}
-            rotateControl={false}
-            fullscreenControl={false}
-          >
-            {
-              geoloc?.marker && (
-                <AdvancedMarker
-                  position={geoloc}
-                  title={'Vous'}
-                  />
-              )
-            }
-            <Markers center={currentPosition} />
-          </Map>
-        </Stack>
-        <List>
-          {
-            isLoading && <ListItem><Typography fontSize={14} variant={'caption'}>Chargement ...</Typography></ListItem>
-          }
-          {
-            data?.map(item =>
-              <ListItem
-                onClick={() => {
-                  setGeoloc(item._geoloc)
-                  map.setCenter(item._geoloc)
-                  map.setZoom(16)
-                  autocompleteRef.current.forceValue(item)
-                }}
-                key={item.address}>
-                <Typography variant={'caption'}>{item.address}</Typography>
-              </ListItem>
-            )
-          }
-        </List>
-      </Stack>
-  )
-}
-
-export default function Provider ({index}) {
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [currentPosition, setCurrentPosition] = useState(null)
-
   useEffect(() => {
-    (async () => {
-      try {
-        const r = await new Promise((resolve, reject) => {
-          navigator.geolocation.getCurrentPosition(resolve, reject)
-        })
-        setCurrentPosition({lat: r.coords.latitude, lng: r.coords.longitude})
-      } catch (e) {
-        setError(e.message)
-      } finally {
-        setLoading(false)
-      }
+    if (map) {
+      map.addListener('center_changed', () => {
+        onRegionChange({latitude: map.getCenter().lat(), longitude: map.getCenter().lng()})
+      })
+    }
+  }, [map])
 
-    })()
-  }, [])
   return (
-    <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAP_KEY} onLoad={() => console.log('Maps API has loaded.')}>
+    <Map
+      onTilesLoaded={() => {
+        if (!initialized) {
+          map.setCenter({lat: initialRegion.latitude, lng: initialRegion.longitude})
+          map.setZoom(14)
+          setInitialized(true)
+        }
+      }}
+      mapId={'3c572553938cd25'}
+      zoomControl={false}
+      scaleControl={false}
+      mapTypeControl={false}
+      streetViewControl={false}
+      rotateControl={false}
+      fullscreenControl={false}
+    >
+      <AdvancedMarker
+        position={{lat: initialRegion.latitude, lng: initialRegion.longitude}}
+        title={'Vous'}
+      />
       {
-        loading && !currentPosition
-          ? <Typography variant={'caption'}>Chargement ...</Typography>
-          : error
-            ? <Typography variant={'caption'} color={'error'}>{error}</Typography>
-            : currentPosition ? <LaundriesMap index={index} currentPosition={currentPosition}/> : null
+        <Markers items={markers} />
       }
-    </APIProvider>
+    </Map>
   )
-}
+})
+
+export default StreetMap
+
