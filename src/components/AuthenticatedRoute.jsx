@@ -28,10 +28,8 @@ const SignUp = () => {
   })
 
   const handleSubmit = async ({email, password}) => {
-    const r = await mutate({email, password})
-    console.log(r)
+    await mutate({email, password})
   }
-  console.log(error)
   return (
     <Stack gap={2}>
       <Header>

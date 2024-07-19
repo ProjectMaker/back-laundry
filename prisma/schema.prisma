@@ -34,7 +34,13 @@ model laundry_picture {
     laundry        			laundry    	@relation(fields: [laundry_id], references: [id])
 }
 
-model laundry_public {
+model public_laundries {
 		id                  Int         @id @default(autoincrement())
-		geoloc							JSON				@default("{}")
+		address							String
+		location						Unsupported("geography(Point, 4326)")
+		dispenser_laundry 	Boolean			@default(false)
+		dispenser_softener 	Boolean			@default(false)
+		dispenser_hygiene_product 	Boolean			@default(false)
+		dispenser_snack 	Boolean			@default(false)
+		dispenser_drink 	Boolean			@default(false)
 }

@@ -4,7 +4,8 @@ import {
   Card
 } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { RecoilRoot } from 'recoil'
 import { Routes, Route, Outlet, BrowserRouter as Router, Navigate } from 'react-router-dom'
 import './index.css'
 import Theme from './theme'
@@ -15,8 +16,7 @@ import FormLaundry from "./pages/club/FormLaundry"
 import List from "./pages/club/List"
 import Detail from "./pages/washmap/Detail"
 import Washmap from './pages/washmap/Home'
-
-export const client = new QueryClient()
+import { client } from './api'
 
 
 const Page = () => {
@@ -29,35 +29,35 @@ const Page = () => {
     </Authenticated>
   )
 }
-function App() {
 
+
+function App() {
   return (
     <QueryClientProvider client={client}>
-      <CssBaseline />
-      <Router>
-        <ThemeProvider theme={Theme}>
-          <Stack
-            align='center'
-            justifyContent='center'
-            alignItems='center'
-            gap={4}
-            m={4}
-          >
-            <Routes>
-              <Route path={''} element={<Page />}>
-                <Route path={'/'} element={<Navigate to={'/laundries'} />} />
-                <Route path={'/laundries'} element={<List />} />
+      <RecoilRoot>
+        <CssBaseline />
+        <Router>
+          <ThemeProvider theme={Theme}>
+            <Stack
+              gap={4}
+              m={4}
+            >
+              <Routes>
+                <Route path={''} element={<Page />}>
+                  <Route path={'/'} element={<Navigate to={'/laundries'} />} />
+                  <Route path={'/laundries'} element={<List />} />
 
-                <Route path={'/laundry/:id?'} element={<FormLaundry />} />
-                <Route path={'/washmap'} element={<Washmap />}>
-                  <Route path={':id'} element={<Detail />} />
+                  <Route path={'/laundry/:id?'} element={<FormLaundry />} />
+                  <Route path={'/washmap'} element={<Washmap />} />
+                  <Route path={'/washmap/new'} element={<Detail />} />
+                  <Route path={'/washmap/:id?'} element={<Detail />} />
+                  <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
                 </Route>
-                <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
-              </Route>
-            </Routes>
-          </Stack>
-        </ThemeProvider>
-      </Router>
+              </Routes>
+            </Stack>
+          </ThemeProvider>
+        </Router>
+      </RecoilRoot>
     </QueryClientProvider>
   )
 }

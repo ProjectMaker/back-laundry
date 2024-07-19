@@ -19,8 +19,7 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from '@mui/icons-material/Add';
-import {client} from "../../App.jsx";
-import {getLaundries, removeLaundry} from '../../api/index'
+import {client, getLaundries, removeLaundry} from '../../api'
 
 const LandriesList = () => {
   const navigate = useNavigate()
@@ -83,7 +82,7 @@ const LandriesList = () => {
                   <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
                     <EditIcon sx={{fontSize: 18}}/>
                   </IconButton>
-                  <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'warning'}>
+                  <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'error'}>
                     <DeleteIcon sx={{fontSize: 18}} />
                   </IconButton>
                 </TableCell>

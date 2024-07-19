@@ -3,21 +3,19 @@ import {useDebounce} from "use-debounce";
 import {useQuery} from "@tanstack/react-query";
 import {searchLocations} from "../api/index.js";
 import {FormProvider, useForm} from "react-hook-form";
-import {TextField} from "./HeaderCard";
+import {TextField} from "./Form";
 import { useMapsLibrary, useMap } from '@vis.gl/react-google-maps'
 import {Stack, Typography, List, ListItem, InputAdornment, IconButton, Button} from "@mui/material";
 import ClearIcon from '@mui/icons-material/Clear';
 
-const Items = [{
-  address: '38 rue de la colombe'
-}, {
-  address: '121 rue Jean Moulin'
-}]
-
-const Autocomplete =  forwardRef(({onClick}, ref) => {
+const Autocomplete =  forwardRef(({
+  onClick = () => {},
+  onClear = () => {},
+  defaultValue
+}, ref) => {
   const placesLib = useMapsLibrary('places')
   const map = useMap()
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(defaultValue)
   const [_verbatim, setVerbatim] = useState('')
   const [verbatim] = useDebounce(_verbatim, 500)
   const {isLoading, error, data} = useQuery({
@@ -33,7 +31,6 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
   useImperativeHandle(ref, () => ({
     forceValue: (item) => {
       setSelectedItem(item)
-      form.setValue('verbatim', item.address)
     }
   }))
   return (
@@ -56,6 +53,7 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
                     startIcon={<ClearIcon onClick={() => {
                       form.setValue('verbatim', '')
                       setSelectedItem(null)
+                      onClear()
                     }} />}
                     color={'success'}
                     variant={'contained'}
@@ -71,6 +69,7 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
                     onClick={() => {
                       form.setValue('verbatim', '')
                       setSelectedItem(null)
+                      onClear()
                     }}>
                     <ClearIcon />
                   </IconButton>
@@ -93,15 +92,15 @@ const Autocomplete =  forwardRef(({onClick}, ref) => {
             {
               verbatim.length >= 3 && data?.map(item => (
                 <ListItem
+                  className={'clickable'}
                   onClick={() => {
-                    console.log(item)
                     onClick(item)
                     form.setValue('verbatim', '')
                     setVerbatim('')
                     setSelectedItem(item)
                   }}
                   fontSize={14}
-                  key={item.address}
+                  key={item.id}
                 >
                   <Typography fontSize={14} variant={'caption'}>{item.address}</Typography>
                 </ListItem>

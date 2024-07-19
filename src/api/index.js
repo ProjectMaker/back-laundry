@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import {QueryClient} from "@tanstack/react-query";
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_KEY
@@ -11,6 +12,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   },
 })
 
+export const client = new QueryClient()
 
 export async function signUp({email, password}) {
   return supabase.auth.signInWithPassword({email, password})
@@ -79,14 +81,12 @@ export async function getLaundries() {
 }
 
 
-
 export async  function searchLocations (map, placesLib, verbatim) {
   const request = {
     query: verbatim
   };
   const response = await fetch(`https://api.tomtom.com/search/2/geocode/${verbatim}.json?key=${import.meta.env.VITE_TOMTOM_KEY}`)
   const {results} = await response.json()
-  console.log(results)
   /*
   const placesService = new placesLib.PlacesService(map)
   const result = await new Promise((resolve) => {

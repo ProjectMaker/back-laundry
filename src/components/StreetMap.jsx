@@ -126,7 +126,6 @@ const Markers = ({items, onMarkerClick}) => {
       }
     });
   };
-
   return items.map((item, i) => (
     <AdvancedMarker
       key={i}
@@ -142,9 +141,9 @@ const Markers = ({items, onMarkerClick}) => {
 
 const StreetMap = forwardRef(({
   initialRegion,
-  onRegionChange,
-  markers,
-  onMarkerClick
+  onRegionChange = () => {},
+  markers = [],
+  onMarkerClick = () => {}
 }, ref) => {
   const [initialized, setInitialized] = useState(false)
   const map = useMap()

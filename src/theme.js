@@ -153,12 +153,14 @@ const ThemeCenter = createTheme({
     MuiListItem: {
       styleOverrides: {
         root: ({theme}) => ({
-          cursor: 'pointer',
+          '&.clickable': {
+            cursor: 'pointer'
+          },
           //borderRadius: 4,
           border: `1px solid ${theme.palette.grey[300]}`,
           borderTop: 0,
           background: 'white',
-          '&:hover': {
+          '&.clickable:hover': {
             background: theme.palette.grey[300],
           },
           '&:first-of-type': {

@@ -109,13 +109,13 @@ const Header = ({children}) => {
       </Stack>
       <Stack sx={{alignItems: 'end'}} direction={'row'} gap={2}>
         <NavButton
-          active={pathname !== '/washmap'}
+          active={pathname.indexOf('/washmap') === -1}
           onClick={() => navigate('/laundries')}
           >
           Club laverie
         </NavButton>
         <NavButton
-          active={pathname === '/washmap'}
+          active={pathname.indexOf('/washmap') === 0}
           onClick={() => navigate('/washmap')}
         >
           WashMap
