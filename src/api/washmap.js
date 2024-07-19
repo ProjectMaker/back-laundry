@@ -87,8 +87,8 @@ export const useRemoveLaundry = ({id, latitude, longitude}) => {
       }
     },
     onSuccess: (data, old) => {
-      queryClient.setQueryData( ['laundries', latitude, longitude], (old) => {
-        return old.filter(laundry => laundry.id !== id)
+      queryClient.setQueryData( ['laundries', latitude.toFixed(2), longitude.toFixed(2)], (old) => {
+        return old?.filter(laundry => laundry.id !== id)
       })
     }
   })
@@ -172,7 +172,10 @@ export const useLaundry = ({id}) => {
         })
       if (error) {
         throw new Error(error.message)
+      } else if (!data.length) {
+        throw new Error(`Not found ${id}`)
       }
+
       return deserializeLaundry(data[0])
     },
     enabled: !!id

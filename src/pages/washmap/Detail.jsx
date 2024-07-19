@@ -177,9 +177,10 @@ const Detail = ({}) => {
   const navigate = useNavigate()
   const {state} = useLocation()
   const [currentCoordinate] = useCurrentCoordinate()
-  const {data, isLoading} = useLaundry({id})
+  const {data, isLoading, error} = useLaundry({id})
   const loading = useMemo(() => id !== 'new' && (isLoading || !data), [id, data, isLoading])
-
+    console.log(error)
+    console.log(data)
   return (loading && !!id)
     ? <Typography variant={'caption'}>Chargement ...</Typography>
     : (
