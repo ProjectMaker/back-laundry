@@ -13,6 +13,7 @@ const Autocomplete =  forwardRef(({
   onClear = () => {},
   defaultValue
 }, ref) => {
+  console.log('default', defaultValue)
   const placesLib = useMapsLibrary('places')
   const map = useMap()
   const [selectedItem, setSelectedItem] = useState(defaultValue)
@@ -45,8 +46,9 @@ const Autocomplete =  forwardRef(({
             onChange={e => {
               setVerbatim(e.target.value)
             }}
+            label={'Adresse'}
             InputProps={{
-              startAdornment: selectedItem ? (
+              startAdornment: selectedItem.address ? (
                 <InputAdornment position={'start'}>
                   <Button
                     size={'small'}
@@ -81,7 +83,7 @@ const Autocomplete =  forwardRef(({
         </Stack>
         <Stack
           flex={1}
-          sx={{position: 'absolute', top: 40, width: '100%', zIndex: 1}}
+          sx={{position: 'absolute', top: 40, width: '100%', zIndex: 2}}
         >
           <List>
             {

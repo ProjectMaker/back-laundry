@@ -1,6 +1,22 @@
 import { useState } from 'react'
 import {Controller, useFormContext} from "react-hook-form";
-import {TextField as UITextField, Typography, Stack, styled, Switch as UISwitch} from "@mui/material";
+import {
+  TextField as UITextField,
+  Typography,
+  Stack,
+  styled,
+  Switch as UISwitch,
+  MenuItem
+} from "@mui/material";
+
+let hours = []
+for (let cpt=0; cpt<24; cpt++) {
+  if (cpt < 10) {
+    hours.push({label: `0${cpt}`, value: cpt})
+  } else {
+    hours.push({label: cpt, value: cpt})
+  }
+}
 
 export const FormLabel = ({variant = 'body2', children}) => {
   return (
@@ -89,13 +105,13 @@ export const Switch = ({name, defaultValue, label}) => {
     </Stack>
   )
 }
-export const TextField = ({name, onChange, ...props}) => {
+export const TextField = ({name, onChange, children, ...props}) => {
   const {formState, control} = useFormContext()
   return (
     <Controller
       control={control}
       name={name}
-      render={({field: {onChange: onFieldChange, ...field}}) => (
+      render={({field: {onChange: onFieldChange, ...field}}) => console.log(field) || (
         <UITextField
           variant={'outlined'}
           size={'small'}
@@ -108,9 +124,25 @@ export const TextField = ({name, onChange, ...props}) => {
           }}
           {...props}
           {...field}
-        />
+        >
+          {children}
+        </UITextField>
       )}
     />
 
+  )
+}
+
+export const HourField = (props) => {
+  return (
+    <TextField select {...props}>
+      {
+        hours.map(hour => (
+          <MenuItem key={hour.value} value={hour.value}>
+            {hour.label}
+          </MenuItem>
+        ))
+      }
+    </TextField>
   )
 }

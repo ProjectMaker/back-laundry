@@ -9,17 +9,17 @@ import {
 } from '@mui/material'
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useFormContext, Controller } from 'react-hook-form'
 
 
 const Logo = ({children = 'CL'}) => {
+  const theme = useTheme()
   return (
     <Stack
       sx={{
         borderRadius: 18,
         width: 36,
         height: 36,
-        backgroundColor: '#5051F3',
+        backgroundColor: theme.palette.primary.main,
         color: 'white',
         justifyContent: 'center',
         alignItems: 'center'
@@ -72,53 +72,26 @@ const Header = ({children}) => {
             <LocalLaundryServiceIcon />
           </Logo>
           <Breadcrumbs>
-            {
-              pathname.indexOf('/washmap') === 0 && (
-                <Link to={'/washmap'}>
-                  <Typography variant={'h6'}>
-                    Washmap
-                  </Typography>
-                </Link>
-              )
-            }
-            {
-              pathname === '/washmap' && (
-                <Typography variant={'subtitle2'}>
-                  Près de chez vous
-                </Typography>
-              )
-            }
-            {
-              (pathname.indexOf('/laundries') === 0 || pathname.indexOf('/laundry') === 0 ) && (
-                <Link to={'/laundries'}>
-                  <Typography variant={'h6'}>
-                    Club laverie
-                  </Typography>
-                </Link>
-              )
-            }
-            {
-              pathname.indexOf('/laundry') === 0 && (
-                <Typography variant={'subtitle2'}>
-                  Edition
-                </Typography>
-              )
-            }
+            <Link to={'/laundries'}>
+              <Typography variant={'h6'}>
+                Club laverie
+              </Typography>
+            </Link>
           </Breadcrumbs>
         </Stack>
       </Stack>
       <Stack sx={{alignItems: 'end'}} direction={'row'} gap={2}>
         <NavButton
-          active={pathname.indexOf('/washmap') === -1}
+          active={pathname.indexOf('/laundries') === -1}
           onClick={() => navigate('/laundries')}
           >
-          Club laverie
+          Laveries
         </NavButton>
         <NavButton
-          active={pathname.indexOf('/washmap') === 0}
-          onClick={() => navigate('/washmap')}
+          active={pathname.indexOf('/laundries') === 0}
+          onClick={() => navigate('/materials')}
         >
-          WashMap
+          Matériel
         </NavButton>
       </Stack>
 

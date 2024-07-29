@@ -12,10 +12,10 @@ import Theme from './theme'
 import Header from './components/HeaderCard'
 import Authenticated from './components/AuthenticatedRoute'
 
-import FormLaundry from "./pages/club/FormLaundry"
-import List from "./pages/club/List"
-import Detail from "./pages/washmap/Detail"
-import Washmap from './pages/washmap/Home'
+import FormLaundry from "./pages/laundries/FormLaundry"
+import Laundries from "./pages/laundries/List"
+import FormMaterial from "./pages/materials/FormMaterial"
+import Materials from './pages/materials/List.jsx'
 import { client } from './api'
 
 
@@ -45,13 +45,11 @@ function App() {
               <Routes>
                 <Route path={''} element={<Page />}>
                   <Route path={'/'} element={<Navigate to={'/laundries'} />} />
-                  <Route path={'/laundries'} element={<List />} />
+                  <Route path={'/laundries'} element={<Laundries />} />
 
                   <Route path={'/laundry/:id?'} element={<FormLaundry />} />
-                  <Route path={'/washmap'} element={<Washmap />} />
-                  <Route path={'/washmap/new'} element={<Detail />} />
-                  <Route path={'/washmap/:id?'} element={<Detail />} />
-                  <Route path={'*'} element={<Navigate to={'/laundries'}/>} />
+                  <Route path={'/materials'} element={<Materials />} />
+                  <Route path={'/material/:id?'} element={<FormMaterial />} />
                 </Route>
               </Routes>
             </Stack>

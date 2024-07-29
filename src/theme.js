@@ -20,7 +20,7 @@ const ThemeCenter = createTheme({
       tertiary: '#A2AAB8'
     },
     primary: {
-      main: '#5051F3'
+      main: '#0066D3'
     },
     success: {
       main: '#A5D6A7',
@@ -147,6 +147,13 @@ const ThemeCenter = createTheme({
           display: 'flex',
           width: 780,
           gap: 16,
+        })
+      }
+    },
+    MuiList: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          maxHeight: '200px'
         })
       }
     },

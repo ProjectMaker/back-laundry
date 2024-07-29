@@ -2,11 +2,22 @@ import {useQuery, useMutation} from '@tanstack/react-query'
 
 import {supabase, client as queryClient} from './index.js'
 
-const deserializeLaundry = ({lat, long, id, address, machines, ...criteria}) => {
+const deserializeLaundry = ({
+  lat,
+  long,
+  id,
+  address,
+  machines,
+  opened_at,
+  closed_at,
+  ...criteria
+}) => {
   const [street, city] = address.split(',')
   return {
     address,
     id,
+    opened_at,
+    closed_at,
     coordinate: {
       latitude: lat,
       longitude: long,
