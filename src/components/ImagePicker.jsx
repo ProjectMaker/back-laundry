@@ -99,19 +99,18 @@ const ImagePicker = () => {
     name: "pictures", // unique name for your Field Array
   });
   const handleDrop = async (files) => {
-    const images = await Promise.all(
+    await Promise.all(
       files.map(async (file) => {
-        const image = await new Promise(resolve => {
+        const dataUrl = await new Promise(resolve => {
           const reader = new FileReader()
           reader.readAsDataURL(file)
           reader.onload = () => {
             return resolve(reader.result?.toString())
           }
         })
-        return image
+        append({data_url: dataUrl, file})
       })
     )
-    images.forEach(image => append(({data_url: image})))
   }
   return (
     <Stack gap={2}>

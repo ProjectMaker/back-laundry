@@ -23,7 +23,7 @@ const ThemeCenter = createTheme({
       main: '#0066D3'
     },
     success: {
-      main: '#A5D6A7',
+      main: '#02a84d',
       contrastText: '#FFF'
     },
     warning: {
@@ -75,19 +75,6 @@ const ThemeCenter = createTheme({
     }
   }),
   components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          display: 'flex',
-          width: '100vw',
-          height: '100vh',
-          background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(122,171,212,1) 44%, rgba(255,255,255,1) 100%)'
-        },
-        a: {
-          textDecoration: 'none !important'
-        }
-      }
-    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -145,7 +132,7 @@ const ThemeCenter = createTheme({
         root: ({theme}) => ({
           padding: theme.spacing(2),
           display: 'flex',
-          width: 780,
+          width: 900,
           gap: 16,
         })
       }

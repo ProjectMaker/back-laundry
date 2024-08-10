@@ -44,8 +44,8 @@ const NavButton = ({onClick, active, children}) => {
         paddingLeft: 1,
         paddingRight: 1,
         borderRadius: 4,
-        color: active ? 'white' : 'primary.main',
-        backgroundColor: active ? 'primary.main' : 'white',
+        color: active ? 'primary.main' : 'white',
+        backgroundColor: active ? 'white' : 'primary.main',
         border: `1px solid ${theme.palette.primary.main}`
       }}
       variant={'outline'} onClick={onClick} color={'primary'}

@@ -1,7 +1,7 @@
 import { object, string, number, array } from 'yup'
 import { useMutation } from "@tanstack/react-query";
 
-import { upsertLaundry, removePictures, addPictures } from '../../api'
+import { upsertLaundry, removeLaundryPictures, addLaundryPictures } from '../../api'
 
 export const DEFAULT_LAUNDRY = {
   name: '',
@@ -33,14 +33,15 @@ export const buildSchema = () => {
 
 const useSave = () => {
   const saveLaundry = async (newLaundry) => {
+    console.log('new', newLaundry)
     return upsertLaundry(newLaundry)
   }
 
   const savePictures = async (laundryId, pictures) => {
     const idsToRemove = pictures.filter(({uuid, _deleted}) => uuid && _deleted).map(({uuid}) => uuid)
-    await removePictures(idsToRemove)
+    await removeLaundryPictures(idsToRemove)
     const picturesToAdd = pictures.filter(({uuid, _deleted}) => !uuid && !_deleted).map(({data_url}) => data_url)
-    const newPictures = await addPictures({laundryId, dataURLs: picturesToAdd})
+    const newPictures = await addLaundryPictures({laundryId, dataURLs: picturesToAdd})
     return pictures.filter(({uuid, _deleted}) => !_deleted && uuid).concat(newPictures.map(({id, ...picture}) => ({uuid: id, ...picture})))
   }
 

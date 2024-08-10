@@ -2,9 +2,9 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  background-color: aliceblue;
   #min-width: 320px;
   #min-height: 100vh;
-  background: linear-gradient(90deg, rgba(122,171,212,1) 44%, rgba(255,255,255,1) 100%);
 }
 
 a {

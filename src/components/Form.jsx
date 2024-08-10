@@ -8,6 +8,9 @@ import {
   Switch as UISwitch,
   MenuItem
 } from "@mui/material";
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 let hours = []
 for (let cpt=0; cpt<24; cpt++) {
@@ -86,6 +89,36 @@ export const FormGroup = ({label, children}) => {
   )
 }
 
+export const DatePicker = ({name, label, onChange = () => {}}) => {
+  const {formState, control} = useFormContext()
+  return (
+    <>
+      <Controller
+        control={control}
+        name={name}
+        render={({field: {onChange: onFieldChange, ...field}}) => (
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DesktopDatePicker
+              sx={{width: '100%'}}
+              label={label}
+              onChange={value => {
+                onFieldChange(value)
+                onChange(value)
+              }}
+              {...field}
+            />
+          </LocalizationProvider>
+        )}
+      />
+      {
+        Boolean(formState.errors[`${name}`]?.message) && (
+          <Typography variant={'caption'} color={'error'}>{formState.errors[`${name}`]?.message}</Typography>
+        )
+      }
+    </>
+  )
+}
+
 export const Switch = ({name, defaultValue, label}) => {
   const {getValues} = useFormContext()
   const [value, setValue] = useState(defaultValue)
@@ -111,7 +144,7 @@ export const TextField = ({name, onChange, children, ...props}) => {
     <Controller
       control={control}
       name={name}
-      render={({field: {onChange: onFieldChange, ...field}}) => console.log(field) || (
+      render={({field: {onChange: onFieldChange, ...field}}) => (
         <UITextField
           variant={'outlined'}
           size={'small'}

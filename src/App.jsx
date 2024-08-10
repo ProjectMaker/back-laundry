@@ -35,7 +35,7 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <RecoilRoot>
-        <CssBaseline />
+
         <Router>
           <ThemeProvider theme={Theme}>
             <Stack

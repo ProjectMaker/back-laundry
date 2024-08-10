@@ -24,7 +24,7 @@ import {client, getLaundries, removeLaundry} from '../../api'
 const LandriesList = () => {
   const navigate = useNavigate()
   const {data, isLoading, error} = useQuery({
-    queryKey: ['laundry'],
+    queryKey: ['laundries'],
     queryFn: getLaundries
   })
   const mutationRemove = useMutation({
@@ -34,7 +34,7 @@ const LandriesList = () => {
       return id
     },
     onSuccess: (id) => {
-      client.setQueryData(['laundry'], (old) => old.filter(p => p.id !== id))
+      client.setQueryData(['laundries'], (old) => old.filter(p => p.id !== id))
     }
   })
   if (isLoading) {
@@ -53,13 +53,12 @@ const LandriesList = () => {
           Ajouter
         </Button>
       </Stack>
-      <TableContainer component={Paper}>
+      <TableContainer component={'div'}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>Nom</TableCell>
-              <TableCell align="right">Département</TableCell>
-              <TableCell align="right">Ville</TableCell>
+              <TableCell align="right">Adresse</TableCell>
               <TableCell align="right">Surface</TableCell>
               <TableCell align="right">Prix</TableCell>
               <TableCell />
@@ -74,8 +73,7 @@ const LandriesList = () => {
                 <TableCell component="th" scope="row" sx={{width: 200}}>
                   <Box>{row.name}</Box>
                 </TableCell>
-                <TableCell align="right">{row.postal_code}</TableCell>
-                <TableCell align="right">{row.city}</TableCell>
+                <TableCell align="right">{row.postal_code} {row.city}</TableCell>
                 <TableCell align="right">{Number(row.surface).toLocaleString()} m2</TableCell>
                 <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
                 <TableCell align={"right"}>
