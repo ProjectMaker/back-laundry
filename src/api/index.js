@@ -91,7 +91,6 @@ export async function addMaterialPictures({materialId, files}) {
 }
 
 export async function removeMaterialPictures(materialId, pictures) {
-  debugger
   await supabase
     .storage
     .from('images')
