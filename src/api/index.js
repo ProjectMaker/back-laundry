@@ -91,6 +91,7 @@ export async function addMaterialPictures({materialId, files}) {
 }
 
 export async function removeMaterialPictures(materialId, pictures) {
+  debugger
   await supabase
     .storage
     .from('images')
@@ -135,13 +136,12 @@ export async function removeMaterial(id) {
   if (picturesRecords.error) {
     throw new Error(picturesRecords.error.message)
   } else if (picturesRecords.data.length) {
-    await removeMaterialPictures(id, picturesRecords.data)
+    await removeMaterialPictures(id, picturesRecords.data.map(picture => (({...picture, uuid: picture.id}))))
   }
-  const r = await supabase
+  await supabase
     .from('materials')
     .delete()
     .eq('id', id)
-  console.log(r)
 }
 
 export async function upsertLaundry(values) {
