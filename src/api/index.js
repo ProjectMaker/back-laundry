@@ -91,7 +91,6 @@ export async function addMaterialPictures({materialId, files}) {
 }
 
 export async function removeMaterialPictures(materialId, pictures) {
-  debugger
   await supabase
     .storage
     .from('images')
@@ -129,7 +128,6 @@ export async function removeLaundry(id) {
 }
 
 export async function removeMaterial(id) {
-  /*
   const picturesRecords = await supabase
     .from('material_pictures')
     .select()
@@ -139,8 +137,6 @@ export async function removeMaterial(id) {
   } else if (picturesRecords.data.length) {
     await removeMaterialPictures(id, picturesRecords.data)
   }
-
-   */
   const r = await supabase
     .from('materials')
     .delete()
