@@ -78,7 +78,7 @@ const FormMaterial = ({material: {availability_date, ...material}}) => {
                 </Grid>
                 <Grid item xs={6} />
                 <Grid item xs={6}>
-                  <TextField name="price" onChange={handleCalculate} label="Prix" />
+                  <TextField name="price" onChange={handleCalculate} label="Prix HT" />
                 </Grid>
                 <Grid item xs={6}>
                   <TextField name="quantity" onChange={handleCalculate} label="Quantitée" />

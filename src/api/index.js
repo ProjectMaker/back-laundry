@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_KEY
 
-const PERCENTAGE_COM = .9
+const PERCENTAGE_COM = .09
 
 export const calculatePrices = ({price, quantity}) => {
   const totalPrice = Number.parseInt(price * quantity)
