@@ -51,8 +51,7 @@ const useSave = () => {
     onSuccess: (data) => {
       client.setQueryData(['material', data.id], (old) => {
         if (old) {
-          console.log( {...old, sold: data.sold})
-          return {...old, sold: data.sold}
+          return data
         }
       })
     }
