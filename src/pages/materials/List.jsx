@@ -45,6 +45,7 @@ const Item = ({item}) => {
       <TableCell align="right">{Number(item.quantity).toLocaleString()}</TableCell>
 
       <TableCell align="right">{Number(item.com).toLocaleString()} €</TableCell>
+      <TableCell align="right">{item.sold ? 'Oui' : 'Non'}</TableCell>
       <TableCell align={"right"}>
         <IconButton color={'success'} onClick={() => navigate(`/material/${item.id}`)}>
           <EditIcon sx={{fontSize: 18}}/>
@@ -88,6 +89,7 @@ const MaterialsList = () => {
               <TableCell align="right">Prix</TableCell>
               <TableCell align="right">Quantity</TableCell>
               <TableCell align="right">Com</TableCell>
+              <TableCell align="right">Vendu</TableCell>
               <TableCell />
             </TableRow>
           </TableHead>

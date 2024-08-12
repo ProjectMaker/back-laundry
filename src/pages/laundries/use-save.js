@@ -1,12 +1,13 @@
 import { object, string, number, array } from 'yup'
 import { useMutation } from "@tanstack/react-query";
 
-import { upsertLaundry, removeLaundryPictures, addLaundryPictures } from '../../api'
+import {upsertLaundry, removeLaundryPictures, addLaundryPictures, client} from '../../api'
 
 export const DEFAULT_LAUNDRY = {
   name: '',
   postal_code: '',
   city: '',
+  sold: false,
   description: '',
   materials: [],
   pictures: []
@@ -33,7 +34,6 @@ export const buildSchema = () => {
 
 const useSave = () => {
   const saveLaundry = async (newLaundry) => {
-    console.log('new', newLaundry)
     return upsertLaundry(newLaundry)
   }
 
@@ -53,6 +53,14 @@ const useSave = () => {
         ...newLaundry,
         pictures: newPictures
       }
+    },
+    onSuccess: (data) => {
+      client.setQueryData(['laundry', data.id], (old) => {
+        if (old) {
+          console.log( {...old, sold: data.sold})
+          return {...old, sold: data.sold}
+        }
+      })
     }
   })
 

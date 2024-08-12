@@ -15,7 +15,7 @@ import SaveIcon from '@mui/icons-material/Save'
 import {useQuery} from "@tanstack/react-query";
 
 import { buildMaterialSchema } from '../../api/schema'
-import { TextField, DatePicker } from '../../components/Form'
+import { TextField, DatePicker, Checkbox } from '../../components/Form'
 
 import useSave, { DEFAULT_MATERIAL } from './use-save'
 import ImagePicker from '../../components/ImagePicker'
@@ -24,9 +24,11 @@ import {getMaterial, calculatePrices} from "../../api/index";
 
 
 const FormMaterial = ({material: {availability_date, ...material}}) => {
+  console.log(material)
   const [tab, setTab] = useState(0)
   const navigate = useNavigate()
   const {error, loading, save} = useSave()
+  console.log('default sold', material.sold)
   const form = useForm({
     defaultValues: {availability_date: dayjs(availability_date), ...material},
     mode: 'onBlur',
@@ -60,43 +62,31 @@ const FormMaterial = ({material: {availability_date, ...material}}) => {
         <Stack mt={2} gap={2}>
           {
             tab === 0 && (
-              <Grid container spacing={2}>
-                <Grid item xs={6}>
+              <>
+                <Stack gap={2} direction={'row'}>
                   <TextField name="name" label="Nom" />
-                </Grid>
-                <Grid item xs={6}>
+                  <Checkbox name={'sold'} label="Vendu" />
+                </Stack>
+                <Stack gap={2} direction={'row'}>
                   <TextField name="brand" label="Marque" />
-                </Grid>
-                <Grid item xs={6}>
                   <TextField name="model" label="Model" />
-                </Grid>
-                <Grid item xs={6}>
+                </Stack>
+                <Stack gap={2} direction={'row'}>
                   <TextField name="year" label="Année" />
-                </Grid>
-                <Grid item xs={6}>
                   <DatePicker label="Date de disponibilitée" name={'availability_date'} />
-                </Grid>
-                <Grid item xs={6} />
-                <Grid item xs={6}>
+                </Stack>
+                <Stack gap={2} direction={'row'}>
                   <TextField name="price" onChange={handleCalculate} label="Prix HT" />
-                </Grid>
-                <Grid item xs={6}>
                   <TextField name="quantity" onChange={handleCalculate} label="Quantitée" />
-                </Grid>
-                <Grid item xs={6}>
+                </Stack>
+                <Stack gap={2} direction={'row'}>
                   <TextField name="total_price" label="Prix total" disabled/>
-                </Grid>
-                <Grid item xs={6}>
                   <TextField name="com" label="Commission" disabled/>
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField name="sales_price" label="Prix de vente" disabled/>
-                </Grid>
-                <Grid item xs={6} />
-                <Grid item xs={12}>
-                  <TextField name="infos" label="Informations complémentaires" multiline/>
-                </Grid>
-              </Grid>
+                </Stack>
+
+                <TextField name="sales_price" label="Prix de vente" disabled/>
+                <TextField name="infos" label="Informations complémentaires" multiline/>
+              </>
             )
           }
           {
@@ -129,7 +119,7 @@ const FormMaterial = ({material: {availability_date, ...material}}) => {
 const Proxy = () => {
   const {id} = useParams()
   const {data, error, isLoading} = useQuery({
-    queryKey: ['material', id],
+    queryKey: ['material', id ? parseInt(id) : null],
     queryFn: () => getMaterial(id),
     enabled: !!id
   })

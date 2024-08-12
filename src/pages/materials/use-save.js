@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
 import {
+  client,
   upsertMaterial,
   removeMaterialPictures,
   addMaterialPictures
@@ -11,6 +12,7 @@ export const DEFAULT_MATERIAL = {
   brand: '',
   availability_date: null,
   model: '',
+  sold: false,
   year: 2024,
   price: 0,
   quantity: 0,
@@ -45,6 +47,14 @@ const useSave = () => {
         ...newMaterial,
         pictures: newPictures
       }
+    },
+    onSuccess: (data) => {
+      client.setQueryData(['material', data.id], (old) => {
+        if (old) {
+          console.log( {...old, sold: data.sold})
+          return {...old, sold: data.sold}
+        }
+      })
     }
   })
 

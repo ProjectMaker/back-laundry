@@ -61,6 +61,7 @@ const LandriesList = () => {
               <TableCell align="right">Adresse</TableCell>
               <TableCell align="right">Surface</TableCell>
               <TableCell align="right">Prix</TableCell>
+              <TableCell align="right">Vendu</TableCell>
               <TableCell />
             </TableRow>
           </TableHead>
@@ -76,6 +77,7 @@ const LandriesList = () => {
                 <TableCell align="right">{row.postal_code} {row.city}</TableCell>
                 <TableCell align="right">{Number(row.surface).toLocaleString()} m2</TableCell>
                 <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
+                <TableCell align="right">{row.sold ? 'Oui' : 'Non'}</TableCell>
                 <TableCell align={"right"}>
                   <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
                     <EditIcon sx={{fontSize: 18}}/>

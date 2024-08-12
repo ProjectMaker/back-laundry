@@ -22,7 +22,7 @@ import { useQuery } from '@tanstack/react-query'
 
 import { getLaundry } from "../../api/index.js";
 import useSave, { buildSchema, DEFAULT_LAUNDRY } from './use-save'
-import { TextField } from '../../components/Form'
+import { TextField, Checkbox } from '../../components/Form'
 import ImagePicker from '../../components/ImagePicker'
 
 
@@ -75,8 +75,8 @@ const FormLaundry = ({laundry}) => {
     resolver: yupResolver(buildSchema()),
   })
   const handleSubmit = async (values) => {
-    const newLaundry = await save(values)
-    form.reset(newLaundry)
+    await save(values)
+    navigate('/laundries')
   }
   return (
     <>
@@ -94,9 +94,10 @@ const FormLaundry = ({laundry}) => {
             {
               tab === 0 && (
                 <>
-                  <FormControl>
+                  <Stack gap={2} direction={'row'}>
                     <TextField label="Nom" name={'name'} />
-                  </FormControl>
+                    <Checkbox label={'Vendu'} name={'sold'} />
+                  </Stack>
                   <Stack gap={2} direction={'row'} flex={1}>
                     <TextField label="Code postal" name={'postal_code'} />
                     <TextField label="Ville" name={'city'} sx={{flexGrow: 1}} />
@@ -147,7 +148,7 @@ const FormLaundry = ({laundry}) => {
 const Proxy = () => {
   const {id} = useParams()
   const {data, error, isLoading} = useQuery({
-    queryKey: ['laundry', id],
+    queryKey: ['laundry', id ? parseInt(id) : null],
     queryFn: () => getLaundry(id),
     enabled: !!id
   })

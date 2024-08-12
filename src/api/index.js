@@ -23,6 +23,7 @@ const deserializeMaterial = (material) => {
   return {
     id: material.id,
     name: material.name,
+    sold: material.sold,
     brand: material.brand,
     availability_date: material.availability_date,
     model: material.model,
@@ -38,6 +39,7 @@ const serializeMaterial = (material) => {
     id: material.id,
     name: material.name,
     brand: material.brand,
+    sold: material.sold,
     availability_date: material.availability_date,
     model: material.model,
     year: material.year,

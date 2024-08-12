@@ -5,6 +5,7 @@ import {
   Typography,
   Stack,
   styled,
+  Checkbox as UICheckbox,
   Switch as UISwitch,
   MenuItem
 } from "@mui/material";
@@ -21,9 +22,9 @@ for (let cpt=0; cpt<24; cpt++) {
   }
 }
 
-export const FormLabel = ({variant = 'body2', children}) => {
+export const FormLabel = ({variant = 'body2', children, ...props}) => {
   return (
-    <Typography variant={variant}>{children}</Typography>
+    <Typography variant={variant} {...props}>{children}</Typography>
   )
 }
 
@@ -119,25 +120,45 @@ export const DatePicker = ({name, label, onChange = () => {}}) => {
   )
 }
 
-export const Switch = ({name, defaultValue, label}) => {
-  const {getValues} = useFormContext()
-  const [value, setValue] = useState(defaultValue)
+export const Checkbox = ({name, label}) => {
+
   return (
     <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
-      <FormLabel>{label}</FormLabel>
+      <FormLabel sx={{marginRight: 1}}>{label}</FormLabel>
       <Controller
         name={name}
         render={({field}) => {
-          return <SwitchBase checked={getValues(name)} onClick={e => {
-            const newValue = !value
+          return <UICheckbox
+            key={`${name}-${field.value}`}
+            checked={field.value}
+            onChange={e => {
+              const newValue = !field.value
+              field.onChange(newValue)
+            }}
+          />
+        }}
+      />
+    </Stack>
+  )
+}
+
+export const Switch = ({name, label}) => {
+  return (
+    <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
+      <FormLabel sx={{marginRight: 1}}>{label}</FormLabel>
+      <Controller
+        name={name}
+        render={({field}) => {
+          return <SwitchBase defaultChecked={field.value} onChange={e => {
+            const newValue = !field.value
             field.onChange(newValue)
-            setValue(newValue)
           }}/>
         }}
       />
     </Stack>
   )
 }
+
 export const TextField = ({name, onChange, children, ...props}) => {
   const {formState, control} = useFormContext()
   return (

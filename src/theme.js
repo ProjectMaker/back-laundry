@@ -132,7 +132,7 @@ const ThemeCenter = createTheme({
         root: ({theme}) => ({
           padding: theme.spacing(2),
           display: 'flex',
-          width: 900,
+          minWidth: 900,
           gap: 16,
         })
       }

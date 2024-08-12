@@ -3,7 +3,8 @@ import {
   ThemeProvider,
   Card
 } from '@mui/material'
-import CssBaseline from '@mui/material/CssBaseline';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 import { QueryClientProvider } from '@tanstack/react-query'
 import { RecoilRoot } from 'recoil'
 import { Routes, Route, Outlet, BrowserRouter as Router, Navigate } from 'react-router-dom'
@@ -26,6 +27,7 @@ const Page = () => {
         <Header />
         <Outlet />
       </Card>
+      <ReactQueryDevtools initialIsOpen={false} />
     </Authenticated>
   )
 }
