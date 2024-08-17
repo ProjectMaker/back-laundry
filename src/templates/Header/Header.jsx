@@ -1,15 +1,13 @@
 import {
   Stack,
-  Card as UICard,
   Typography,
   Box,
-  TextField as UITextField,
   useTheme,
   Breadcrumbs
 } from '@mui/material'
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-
+import Profile from './Profile'
 
 const Logo = ({children = 'CL'}) => {
   const theme = useTheme()
@@ -28,9 +26,6 @@ const Logo = ({children = 'CL'}) => {
     </Stack>
   )
 }
-
-export const Card = ({children, ...props}) => <UICard variant={'outlined'} {...props}>{children}</UICard>
-
 
 const NavButton = ({onClick, active, children}) => {
   const theme = useTheme()
@@ -55,15 +50,9 @@ const NavButton = ({onClick, active, children}) => {
   )
 }
 
-const FOLDERS = [{
-  path: '/public',
-  name: 'Laveries près de chez vous'
-}]
-
-const Header = ({children}) => {
+const Header = () => {
   const navigate = useNavigate()
   const {pathname} = useLocation()
-  const folder = FOLDERS.find(({path}) => path === pathname)
   return (
     <Stack sx={{flex: 1, justifyContent: 'space-between'}} alignItems={'center'} direction={'row'}>
       <Stack>
@@ -93,10 +82,11 @@ const Header = ({children}) => {
         >
           Matériel
         </NavButton>
+        <Profile />
       </Stack>
 
     </Stack>
   )
 }
-// curl -L -X GET 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input=rue poulet,Paris&types=geocode&key=AIzaSyDzV1XFsUjc78MN5MmfV5sjsj8qtHYFiZk'
+
 export default Header

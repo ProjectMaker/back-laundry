@@ -10,7 +10,7 @@ import { RecoilRoot } from 'recoil'
 import { Routes, Route, Outlet, BrowserRouter as Router, Navigate } from 'react-router-dom'
 import './index.css'
 import Theme from './theme'
-import Header from './components/HeaderCard'
+import Header from './templates/Header'
 import Authenticated from './components/AuthenticatedRoute'
 
 import FormLaundry from "./pages/laundries/FormLaundry"
