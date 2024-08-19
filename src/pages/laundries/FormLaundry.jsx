@@ -7,7 +7,7 @@ import {
   Tab,
   Tabs,
   IconButton,
-  Typography
+  Typography, MenuItem
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddBoxIcon from '@mui/icons-material/AddBox';
@@ -96,7 +96,17 @@ const FormLaundry = ({laundry}) => {
                 <>
                   <Stack gap={2} direction={'row'}>
                     <TextField label="Nom" name={'name'} />
-                    <Checkbox label={'Vendu'} name={'sold'} />
+                    <TextField name="status" label={"Statut"} select>
+                      <MenuItem value={'available'} sx={{ fontSize: '12px' }}>
+                        Disponible
+                      </MenuItem>
+                      <MenuItem value={'reserved'} sx={{ fontSize: '12px' }}>
+                        Réservée
+                      </MenuItem>
+                      <MenuItem value={'sold'} sx={{ fontSize: '12px' }}>
+                        Vendu
+                      </MenuItem>
+                    </TextField>
                   </Stack>
                   <Stack gap={2} direction={'row'} flex={1}>
                     <TextField label="Code postal" name={'postal_code'} />

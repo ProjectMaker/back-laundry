@@ -23,10 +23,7 @@ import { client } from './api'
 const Page = () => {
   return (
     <Authenticated>
-      <Card sx={{flexDirection: 'column'}}>
-        <Header />
-        <Outlet />
-      </Card>
+      <Outlet />
       <ReactQueryDevtools initialIsOpen={false} />
     </Authenticated>
   )

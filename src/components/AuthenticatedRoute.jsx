@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
-import {Box, Button, Stack, Typography} from "@mui/material";
+import {Box, Button, Card as UICard, Stack, Typography} from "@mui/material";
 import {useMutation} from "@tanstack/react-query";
 import { useForm, FormProvider } from 'react-hook-form'
 import SaveIcon from "@mui/icons-material/Save"
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
 import {signUp, supabase} from "../api/index";
 
-import Header, {Card} from './HeaderCard'
 import { TextField } from './Form'
-
+import Header from '../templates/Header'
 import {buildSignUpSchema} from "../api/schema";
 
+export const Card = ({children, ...props}) => <UICard variant={'outlined'} {...props}>{children}</UICard>
 
 const SignUp = () => {
   const form = useForm({
@@ -32,9 +32,6 @@ const SignUp = () => {
   }
   return (
     <Stack gap={2}>
-      <Header>
-        Authentification
-      </Header>
       <Card>
         <Stack gap={2} flex={1}>
           {
@@ -89,11 +86,16 @@ export default function App({children}) {
   }, [])
 
   if (loading) {
-    return <Card><Header><Typography variant={'h6'}>Chargement ...</Typography></Header></Card>
+    return <Typography variant={'h6'}>Chargement ...</Typography>
   } else if (!session) {
     return (<SignUp />)
   }
   else {
-    return children
+    return (
+      <Card sx={{flexDirection: 'column'}}>
+        <Header />
+        {children}
+      </Card>
+    )
   }
 }

@@ -4,7 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 import dayjs from 'dayjs'
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
 import {
-  Grid,
+  MenuItem,
   Stack,
   Tabs,
   Tab, Button, Box, Typography
@@ -65,7 +65,17 @@ const FormMaterial = ({material: {availability_date, ...material}}) => {
               <>
                 <Stack gap={2} direction={'row'}>
                   <TextField name="name" label="Nom" />
-                  <Checkbox name={'sold'} label="Vendu" />
+                  <TextField name="status" label={"Statut"} select>
+                    <MenuItem value={'available'} sx={{ fontSize: '12px' }}>
+                      Disponible
+                    </MenuItem>
+                    <MenuItem value={'reserved'} sx={{ fontSize: '12px' }}>
+                      Réservé
+                    </MenuItem>
+                    <MenuItem value={'sold'} sx={{ fontSize: '12px' }}>
+                      Vendu
+                    </MenuItem>
+                  </TextField>
                 </Stack>
                 <Stack gap={2} direction={'row'}>
                   <TextField name="brand" label="Marque" />

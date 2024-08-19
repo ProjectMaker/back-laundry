@@ -7,7 +7,7 @@ export const DEFAULT_LAUNDRY = {
   name: '',
   postal_code: '',
   city: '',
-  sold: false,
+  status: 'available',
   description: '',
   materials: [],
   pictures: []

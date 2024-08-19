@@ -19,8 +19,9 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from '@mui/icons-material/Add';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import {client, getLaundries, removeLaundry} from '../../api'
-
+import ProductStatus from '../../components/ProductStatus'
 const LandriesList = () => {
   const navigate = useNavigate()
   const {data, isLoading, error} = useQuery({
@@ -61,7 +62,7 @@ const LandriesList = () => {
               <TableCell align="right">Adresse</TableCell>
               <TableCell align="right">Surface</TableCell>
               <TableCell align="right">Prix</TableCell>
-              <TableCell align="right">Vendu</TableCell>
+              <TableCell align="right">Statut</TableCell>
               <TableCell />
             </TableRow>
           </TableHead>
@@ -77,10 +78,13 @@ const LandriesList = () => {
                 <TableCell align="right">{row.postal_code} {row.city}</TableCell>
                 <TableCell align="right">{Number(row.surface).toLocaleString()} m2</TableCell>
                 <TableCell align="right">{Number(row.price).toLocaleString()} €</TableCell>
-                <TableCell align="right">{row.sold ? 'Oui' : 'Non'}</TableCell>
+                <TableCell align="right"><ProductStatus status={row.status} /></TableCell>
                 <TableCell align={"right"}>
                   <IconButton color={'success'} onClick={() => navigate(`/laundry/${row.id}`)}>
                     <EditIcon sx={{fontSize: 18}}/>
+                  </IconButton>
+                  <IconButton color={'success'} onClick={() => window.open(`${import.meta.env.VITE_FRONT_URL}/laundries/${row.id}`, 'blank')}>
+                    <VisibilityIcon sx={{fontSize: 18}}/>
                   </IconButton>
                   <IconButton onClick={() => mutationRemove.mutate(row.id)} color={'error'}>
                     <DeleteIcon sx={{fontSize: 18}} />

@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom'
 
 import {
   IconButton,
-  Paper,
   Table,
   TableBody,
   TableCell,
@@ -17,8 +16,11 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from '@mui/icons-material/Add';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import {useMutation, useQuery} from "@tanstack/react-query";
-import {client, getMaterials, removeMaterial} from "../../api/index.js";
+
+import {client, getMaterials, removeMaterial} from "../../api/index";
+import ProductStatus from '../../components/ProductStatus'
 
 const Item = ({item}) => {
   const navigate = useNavigate()
@@ -45,10 +47,13 @@ const Item = ({item}) => {
       <TableCell align="right">{Number(item.quantity).toLocaleString()}</TableCell>
 
       <TableCell align="right">{Number(item.com).toLocaleString()} €</TableCell>
-      <TableCell align="right">{item.sold ? 'Oui' : 'Non'}</TableCell>
+      <TableCell align="right"><ProductStatus status={item.status} /></TableCell>
       <TableCell align={"right"}>
         <IconButton color={'success'} onClick={() => navigate(`/material/${item.id}`)}>
           <EditIcon sx={{fontSize: 18}}/>
+        </IconButton>
+        <IconButton color={'success'} onClick={() => window.open(`${import.meta.env.VITE_FRONT_URL}/materials/${item.id}`, 'blank')}>
+          <VisibilityIcon sx={{fontSize: 18}}/>
         </IconButton>
         <IconButton onClick={() => mutationRemove.mutate(item.id)} color={'error'}>
           <DeleteIcon sx={{fontSize: 18}} />

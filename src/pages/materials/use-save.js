@@ -12,7 +12,7 @@ export const DEFAULT_MATERIAL = {
   brand: '',
   availability_date: null,
   model: '',
-  sold: false,
+  status: 'available',
   year: 2024,
   price: 0,
   quantity: 0,
