@@ -1,5 +1,9 @@
 create type public.app_role as enum ('admin');
-
+create type public.product_status as enum ('available', 'reserved', 'sold')
+create type public.material_brand as enum ('primus', 'miele', 'electrolux', 'ipso', 'huebsh', 'girbau', 'danube', 'lg', 'lm_control', 'other')
+create type public.material_category as enum ('washing_machine', 'dryer', 'payment', 'detergent_distributor', 'coin_changer', 'beverage_distributor', 'food_distributor')
+create type public.material_subcategory as enum ('6kg', '7kg', '8kg', '9kg', '10kg', '12kg', '13kg', '16kg', '18kg', '20kg', '24kg', 'gas', 'electric', 'heat_pump', 'cash', 'cash_cb', 'connected', 'powder', 'tablet', 'multi_product', 'other')
+create type public.material_price as enum ('1000', '2000', 'more')
 create table public.users (
   id          uuid references auth.users not null primary key, -- UUID from auth.users
   email				text,
@@ -45,15 +49,54 @@ create table public.user_roles (
 );
 comment on table public.user_roles is 'Application roles for each user.';
 
+create or replace function auth.search_users(
+  verbatim text,
+  count integer default 20,
+  page integer default 1
+)
+returns setof auth.users
+language plpgsql
+security definer set search_path = ''
+as $$
+begin
+	return query select *
+  from auth.users
+  where to_tsvector(raw_user_meta_data['firstname']) @@ to_tsquery(verbatim)
+  	or to_tsvector(raw_user_meta_data['lastname']) @@ to_tsquery(verbatim)
+  	or to_tsvector(email) @@ to_tsquery(verbatim)
+  limit count offset (page - 1) * count;
+end;
+$$;
+
+create or replace function public.user_exist(email text)
+returns boolean
+language plpgsql
+security definer set search_path = ''
+as $$
+declare
+	user_id uuid;
+begin
+	select
+		id into user_id
+		from auth.users
+		where email = user_exist.email;
+	if user_id is not null then
+		return true;
+	else
+		return false;
+	end if;
+end;
+$$;
+
 create policy "Allow logged-in read access" on public.materials for select using ( auth.role() = 'authenticated' );
-create policy "Allow individual insert access" on public.materials for insert with check ( authorize() );
-create policy "Allow individual update access" on public.materials for update using ( authorize() );
-create policy "Allow individual delete access" on public.materials for delete using ( authorize() );
+create policy "Allow individual insert access" on public.materials for insert with check ( auth.role() = 'authenticated' );
+create policy "Allow individual update access" on public.materials for update using ( authorize() or (select auth.uid()) = user_id );
+create policy "Allow individual delete access" on public.materials for delete using ( authorize() or (select auth.uid()) = user_id );
 
 create policy "Allow logged-in read access" on public.material_pictures for select using ( auth.role() = 'authenticated' );
-create policy "Allow individual insert access" on public.material_pictures for insert with check ( authorize() );
-create policy "Allow individual update access" on public.material_pictures for update using ( authorize() );
-create policy "Allow individual delete access" on public.material_pictures for delete using ( authorize() );
+create policy "Allow individual insert access" on public.material_pictures for insert with check ( authorize() or exists (select 1 from materials where materials.id = material_pictures.material_id) );
+create policy "Allow individual update access" on public.material_pictures for update using ( authorize() or exists (select 1 from materials where materials.id = material_pictures.material_id) );
+create policy "Allow individual delete access" on public.material_pictures for delete using ( authorize() or exists (select 1 from materials where materials.id = material_pictures.material_id) );
 
 create policy "Allow logged-in read access" on public.laundry for select using ( auth.role() = 'authenticated' );
 create policy "Allow individual insert access" on public.laundry for insert with check ( authorize() );
@@ -64,3 +107,16 @@ create policy "Allow logged-in read access" on public.laundry_picture for select
 create policy "Allow individual insert access" on public.laundry_picture for insert with check ( authorize() );
 create policy "Allow individual update access" on public.laundry_picture for update using ( authorize() );
 create policy "Allow individual delete access" on public.laundry_picture for delete using ( authorize() );
+
+create policy "Allow logged-in read access" on public.search_materials for select using ( auth.role() = 'authenticated');
+create policy "Allow individual insert" on public.search_materials for insert with check ( auth.role() = 'authenticated');
+--create policy "Allow individual update" on public.search_materials for update using ( authorize() or (select auth.uid()) = user_id);
+--create policy "Allow individual update" on public.search_materials for delete using ( authorize() or (select auth.uid()) = user_id);
+
+create policy "Allow logged-in read access" on public.search_material_messages for select using ( auth.role() = 'authenticated');
+create policy "Allow individual insert" on public.search_material_messages for insert with check ( auth.role() = 'authenticated');
+
+create policy "Allow logged-in read access" on public.onboarding_users for select using ( authorize() );
+create policy "Allow individual insert" on public.onboarding_users for insert with check ( authorize() );
+create policy "Allow individual update" on public.onboarding_users for update using ( authorize() );
+create policy "Allow individual update" on public.onboarding_users for delete using ( authorize() );

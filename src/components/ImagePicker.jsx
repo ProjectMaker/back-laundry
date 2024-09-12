@@ -7,7 +7,7 @@ import {
   Grid,
   useTheme
 } from '@mui/material';
-import {useFieldArray, useFormContext} from 'react-hook-form'
+import {useFieldArray} from 'react-hook-form'
 import { useDropzone } from 'react-dropzone'
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';

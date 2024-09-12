@@ -13,14 +13,14 @@ import {
   Stack, Typography
 } from '@mui/material'
 
-import EditIcon from '@mui/icons-material/Edit';
+
 import DeleteIcon from "@mui/icons-material/Delete";
-import AddIcon from '@mui/icons-material/Add';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {useMutation, useQuery} from "@tanstack/react-query";
 
 import {client, getMaterials, removeMaterial} from "../../api/index";
 import ProductStatus from '../../components/ProductStatus'
+import { MATERIAL_CATEGORY } from '../../constants'
 
 const Item = ({item}) => {
   const navigate = useNavigate()
@@ -39,7 +39,9 @@ const Item = ({item}) => {
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
       <TableCell component="th" scope="row" sx={{width: 200}}>
-        <Box>{item.name}</Box>
+        {
+          MATERIAL_CATEGORY.find(({name}) => name === item.category)?.label
+        }
       </TableCell>
       <TableCell align="right">{item.brand} {item.model}</TableCell>
       <TableCell align="right">{item.year}</TableCell>
@@ -49,9 +51,6 @@ const Item = ({item}) => {
       <TableCell align="right">{Number(item.com).toLocaleString()} €</TableCell>
       <TableCell align="right"><ProductStatus status={item.status} /></TableCell>
       <TableCell align={"right"}>
-        <IconButton color={'success'} onClick={() => navigate(`/material/${item.id}`)}>
-          <EditIcon sx={{fontSize: 18}}/>
-        </IconButton>
         <IconButton color={'success'} onClick={() => window.open(`${import.meta.env.VITE_FRONT_URL}/materials/${item.id}`, 'blank')}>
           <VisibilityIcon sx={{fontSize: 18}}/>
         </IconButton>
@@ -74,42 +73,31 @@ const MaterialsList = () => {
     return <Typography variant={'caption'} color={'error'}>{error.message}</Typography>
   }
   return (
-    <>
-      <Stack justifyContent={'end'} direction={'row'} flex={1}>
-        <Button
-          startIcon={<AddIcon />}
-          size={'small'}
-          onClick={() => navigate('/material')} color={'success'} variant={'contained'}
-        >
-          Ajouter
-        </Button>
-      </Stack>
-      <TableContainer component={'div'}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Nom</TableCell>
-              <TableCell align="right">Marque / Modèle</TableCell>
-              <TableCell align="right">Année</TableCell>
-              <TableCell align="right">Prix</TableCell>
-              <TableCell align="right">Quantity</TableCell>
-              <TableCell align="right">Com</TableCell>
-              <TableCell align="right">Vendu</TableCell>
-              <TableCell />
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map((row) => (
-              <Item
-                key={row.id}
-                item={row}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
+    <TableContainer component={'div'}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Nom</TableCell>
+            <TableCell align="right">Marque / Modèle</TableCell>
+            <TableCell align="right">Année</TableCell>
+            <TableCell align="right">Prix</TableCell>
+            <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Com</TableCell>
+            <TableCell align="right">Vendu</TableCell>
+            <TableCell />
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((row) => (
+            <Item
+              key={row.id}
+              item={row}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 

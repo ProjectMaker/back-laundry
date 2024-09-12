@@ -85,6 +85,10 @@ const FormMaterial = ({material: {availability_date, ...material}}) => {
                   <TextField name="year" label="Année" />
                   <DatePicker label="Date de disponibilitée" name={'availability_date'} />
                 </Stack>
+                <Stack gap={2} direction={'row'} flex={1}>
+                  <TextField label="Code postal" name={'postal_code'} />
+                  <TextField label="Ville" name={'address'} sx={{flexGrow: 1}} />
+                </Stack>
                 <Stack gap={2} direction={'row'}>
                   <TextField name="price" onChange={handleCalculate} label="Prix HT" />
                   <TextField name="quantity" onChange={handleCalculate} label="Quantitée" />
