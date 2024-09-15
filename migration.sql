@@ -68,6 +68,36 @@ begin
 end;
 $$;
 
+CREATE OR REPLACE FUNCTION stats_analytics_global(starts_at date default now() - interval '1 day', ends_at date default now() + interval '1 day', scale text default 'hour')
+RETURNS table (stats json) AS
+$$
+BEGIN
+    RETURN QUERY SELECT row_to_json(a) FROM (
+      SELECT DATE_TRUNC(scale, created_at) as created_at, count(code) as count
+      FROM analytics
+      WHERE created_at BETWEEN starts_at and ends_at
+      ORDER BY created_at
+      GROUP BY DATE_TRUNC(scale, created_at)
+    ) as a;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION stats_materials_status()
+RETURNS table(status product_status, count bigint) AS
+$$
+BEGIN
+    RETURN QUERY SELECT materials.status, count(*) as count FROM materials GROUP BY materials.status;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION stats_laundries_status()
+RETURNS table(status product_status, count bigint) AS
+$$
+BEGIN
+    RETURN QUERY SELECT laundry.status, count(*) as count FROM laundry GROUP BY laundry.status;
+END;
+$$ LANGUAGE plpgsql;
+
 create or replace function public.user_exist(email text)
 returns boolean
 language plpgsql
@@ -119,4 +149,9 @@ create policy "Allow individual insert" on public.search_material_messages for i
 create policy "Allow logged-in read access" on public.onboarding_users for select using ( authorize() );
 create policy "Allow individual insert" on public.onboarding_users for insert with check ( authorize() );
 create policy "Allow individual update" on public.onboarding_users for update using ( authorize() );
-create policy "Allow individual update" on public.onboarding_users for delete using ( authorize() );
+create policy "Allow individual delete" on public.onboarding_users for delete using ( authorize() );
+
+create policy "Allow logged-in read access" on public.analytics for select using ( auth.role() = 'authenticated' );
+create policy "Allow individual insert" on public.analytics for insert with check ( auth.role() = 'authenticated' );
+create policy "Allow individual update" on public.analytics for update using ( auth.role() = 'authenticated' );
+create policy "Allow individual delete" on public.analytics for delete using ( auth.role() = 'authenticated' );

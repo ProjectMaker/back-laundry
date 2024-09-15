@@ -4,6 +4,7 @@ import {useMutation} from "@tanstack/react-query";
 import { useForm, FormProvider } from 'react-hook-form'
 import SaveIcon from "@mui/icons-material/Save"
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
+import { jwtDecode } from 'jwt-decode'
 import {signUp, supabase} from "../api/index";
 
 import { TextField } from './Form'
@@ -67,19 +68,31 @@ const SignUp = () => {
 
 export default function App({children}) {
   const [loading, setLoading] = useState(true)
-  const [session, setSession] = useState(null)
+  const [user, setUser] = useState(null)
+
+  const handleAuthChange = async (session) => {
+    if (session) {
+      console.log(jwtDecode(session.access_token))
+      const {user_role} = jwtDecode(session.access_token)
+      setUser({...session.user, admin: user_role === 'admin'})
+    } else {
+      setUser(null)
+    }
+  }
 
   useEffect(() => {
     setLoading(true)
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-      setLoading(false)
-    })
-
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => handleAuthChange(session))
+      .then(() => setLoading(false))
+      .catch(() => setLoading(false))
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
+      handleAuthChange(session)
+        .then(() => setLoading(false))
+        .catch(() => setLoading(false))
     })
 
     return () => subscription.unsubscribe()
@@ -87,7 +100,7 @@ export default function App({children}) {
 
   if (loading) {
     return <Typography variant={'h6'}>Chargement ...</Typography>
-  } else if (!session) {
+  } else if (!user || !user.admin) {
     return (<SignUp />)
   }
   else {
