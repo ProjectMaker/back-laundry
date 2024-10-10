@@ -158,7 +158,10 @@ export async function removeMaterial(id) {
 export async function upsertLaundry(values) {
   const {data, error} = await supabase
     .from('laundry')
-    .upsert(values)
+    .upsert({
+      ...values,
+      updated_at: new Date()
+    })
     .select()
   if (error) {
     throw new Error(error.message)
