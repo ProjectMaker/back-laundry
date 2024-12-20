@@ -77,6 +77,12 @@ const Header = () => {
           Laveries
         </NavButton>
         <NavButton
+          active={pathname.indexOf('/pressing') === 0}
+          onClick={() => navigate('/pressings')}
+        >
+          Pressings
+        </NavButton>
+        <NavButton
           active={pathname.indexOf('/laundries') === 0}
           onClick={() => navigate('/materials')}
         >

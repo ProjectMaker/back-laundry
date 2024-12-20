@@ -16,7 +16,9 @@ import Authenticated from './components/AuthenticatedRoute'
 import FormLaundry from "./pages/laundries/FormLaundry"
 import Laundries from "./pages/laundries/List"
 import FormMaterial from "./pages/materials/FormMaterial"
-import Materials from './pages/materials/List.jsx'
+import Materials from './pages/materials/List'
+import FormPressing from "./pages/pressings/FormPressing"
+import Pressings from './pages/pressings/List'
 import { client } from './api'
 
 
@@ -49,6 +51,8 @@ function App() {
                   <Route path={'/laundry/:id?'} element={<FormLaundry />} />
                   <Route path={'/materials'} element={<Materials />} />
                   <Route path={'/material/:id?'} element={<FormMaterial />} />
+                  <Route path={'/pressings'} element={<Pressings />} />
+                  <Route path={'/pressing/:id?'} element={<FormPressing />} />
                 </Route>
               </Routes>
             </Stack>
