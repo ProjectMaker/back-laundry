@@ -71,19 +71,19 @@ const Header = () => {
       </Stack>
       <Stack sx={{alignItems: 'end'}} direction={'row'} gap={2}>
         <NavButton
-          active={pathname.indexOf('/laundries') === -1}
+          active={pathname.indexOf('/laundries') === 0 || pathname.indexOf('/laundry') === 0}
           onClick={() => navigate('/laundries')}
           >
           Laveries
         </NavButton>
         <NavButton
-          active={pathname.indexOf('/pressing') === 0}
+          active={pathname.indexOf('/pressings') === 0 || pathname.indexOf('/pressing') === 0}
           onClick={() => navigate('/pressings')}
         >
           Pressings
         </NavButton>
         <NavButton
-          active={pathname.indexOf('/laundries') === 0}
+          active={pathname.indexOf('/materials') === 0 || pathname.indexOf('/material') === 0}
           onClick={() => navigate('/materials')}
         >
           Matériel
